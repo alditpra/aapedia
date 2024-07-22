@@ -3,35 +3,18 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
-      links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
-      ],
+      text: 'Beranda',
+      href: getPermalink('/'),
     },
     {
-      text: 'Pages',
+      text: 'Halaman',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Layanan (Anchor Link)',
+          href: getPermalink('/#layanan'),
         },
         {
-          text: 'Services',
+          text: 'Services test',
           href: getPermalink('/services'),
         },
         {
@@ -57,62 +40,25 @@ export const headerData = {
       ],
     },
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
-    },
-    {
       text: 'Blog',
       links: [
         {
-          text: 'Blog List',
+          text: 'Postingan',
           href: getBlogPermalink(),
         },
         {
-          text: 'Article',
+          text: 'Post',
           href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
         },
         {
-          text: 'Article (with MDX)',
+          text: 'Post (pake MDX)',
           href: getPermalink('markdown-elements-demo-post', 'post'),
         },
         {
-          text: 'Category Page',
+          text: 'Halaman Kategori test',
           href: getPermalink('tutorials', 'category'),
         },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
       ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
     },
   ],
   actions: [{ text: 'Hubungi Kami', href: 'https://google.com', target: '_blank' }],
