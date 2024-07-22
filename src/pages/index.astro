@@ -106,7 +106,15 @@ const metadata = {
         title: 'Publikasi Jurnal Ilmiah',
         description: "Dapatkan bantuan untuk menerbitkan artikel ilmiah Anda di jurnal yang kredibel.",
         icon: 'flat-color-icons:template',
-callToAction: '<a href=https://google.com>selengkapnya</a>',
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hubungi Kami',
+        href: 'https://google.com',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
       },
       {
         title: 'Penulisan Artikel Jurnal',
@@ -364,5 +372,5 @@ callToAction: '<a href=https://google.com>selengkapnya</a>',
     <Fragment slot="subtitle">
       Hubungi Kami Sekarang untuk Konsultasi Gratis <br class="hidden md:inline" />Jangan sampai tugasmu tertunda!
     </Fragment>
-  </CallToAction>
+  </>
 </Layout>
