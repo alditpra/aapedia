@@ -40,7 +40,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-        <span class="font-semibold">AApedia</span> adalah lembaga berbadan hukum yang bergerak di bidang akademis yang menawarkan berbagai layanan komprehensif untuk membantu para akademisi, peneliti, dan mahasiswa dalam meraih kesuksesan di dunia akademik
+        <span class="font-semibold">AApedia</span> tidak hanya sebagai penerbit berbadan hukum. Kami menawarkan berbagai layanan komprehensif untuk membantu para akademisi, peneliti, dan mahasiswa dalam meraih kesuksesan di dunia akademik
     </Fragment>
   </Hero>
 
@@ -54,7 +54,7 @@ const metadata = {
     id="layanan"
     tagline="Layanan"
     title="Apa saja layanan AApedia"
-    subtitle="Kami percaya bahwa penelitian dan publikasi ilmiah adalah kunci untuk kemajuan bangsa dan peradaban manusia. Oleh karena itu, kami berkomitmen untuk menyediakan layanan yang berkualitas dan terjangkau untuk membantu para akademisi, peneliti, dan mahasiswa."
+    subtitle="Kami percaya bahwa penelitian dan publikasi ilmiah adalah kunci untuk kemajuan bangsa. Oleh karena itu, kami berkomitmen untuk menyediakan layanan yang berkualitas dan terjangkau untuk membantu para akademisi, peneliti, dan mahasiswa."
     items={[
       {
         title: 'Publikasi Jurnal Ilmiah',
@@ -95,7 +95,96 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Serahkan pengerjaan tugas kepada tim kami dan fokuskan waktu berharga Anda pada hal lain"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Download</span>',
+        description:
+          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Add content</span>',
+        description:
+          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        description:
+          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Apa saja layanan AApedia?"
+    subtitle="Kami percaya bahwa penelitian dan publikasi ilmiah adalah kunci untuk kemajuan bangsa. Oleh karena itu, kami berkomitmen untuk menyediakan layanan yang berkualitas dan terjangkau untuk membantu para akademisi, peneliti, dan mahasiswa."
+    tagline="Layanan"
+    items={[
+      {
+        title: 'Publikasi Jurnal Ilmiah',
+        description: "Dapatkan bantuan untuk menerbitkan artikel ilmiah Anda di jurnal yang kredibel.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Penulisan Artikel Jurnal',
+        description:
+          "Jasa pembuatan artikel jurnal ilmiah berkualitas sesuai standar jurnal yang dituju.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Penyelesaian Skripsi & Thesis',
+        description:
+          'Dapatkan pendampingan dalam mengerjakan skripsi dan thesis dari awal hingga akhir.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Analisis Statistik',
+        description:
+          "Bantuan analisis data penelitian menggunakan metode statistik yang tepat.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Pelatihan Penulisan Ilmiah',
+        description:
+          'Tingkatkan kemampuan Anda dalam menulis artikel ilmiah yang berkualitas.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Konsultasi Penelitian',
+        description: 'Dapatkan saran dan arahan dari para profesional untuk penelitian Anda.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Penerjemahan Naskah Ilmiah',
+        description: 'Ubah naskah ilmiah Anda ke berbagai bahasa dengan terjemahan yang akurat dan profesional',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+<!-- Content Widget **************** -->
 
   <Content
     isReversed
@@ -207,93 +296,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Serahkan pengerjaan tugas kepada tim kami dan fokuskan waktu berharga Anda pada hal lain"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Layanan Kami"
-    subtitle="Kami percaya bahwa penelitian dan publikasi ilmiah adalah kunci untuk kemajuan bangsa dan peradaban manusia. Oleh karena itu, kami berkomitmen untuk menyediakan layanan yang berkualitas dan terjangkau untuk membantu para akademisi, peneliti, dan mahasiswa."
-    tagline="Components"
-    items={[
-      {
-        title: 'Publikasi Jurnal Ilmiah',
-        description: "Dapatkan bantuan untuk menerbitkan artikel ilmiah Anda di jurnal yang kredibel.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Penulisan Artikel Jurnal',
-        description:
-          "Jasa pembuatan artikel jurnal ilmiah berkualitas sesuai standar jurnal yang dituju.",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Penyelesaian Skripsi & Thesis',
-        description:
-          'Dapatkan pendampingan dalam mengerjakan skripsi dan thesis dari awal hingga akhir.',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Analisis Statistik',
-        description:
-          "Bantuan analisis data penelitian menggunakan metode statistik yang tepat.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Pelatihan Penulisan Ilmiah',
-        description:
-          'Tingkatkan kemampuan Anda dalam menulis artikel ilmiah yang berkualitas.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Konsultasi Penelitian',
-        description: 'Dapatkan saran dan arahan dari para profesional untuk penelitian Anda.',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Penerjemahan Naskah Ilmiah',
-        description: 'Ubah naskah ilmiah Anda ke berbagai bahasa dengan terjemahan yang akurat dan profesional',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
 
