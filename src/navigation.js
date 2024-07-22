@@ -115,7 +115,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Hubungi Kami', href: 'https://google.com', target: '_blank' }],
 };
 
 export const footerData = {
