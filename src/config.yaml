@@ -11,12 +11,12 @@ metadata:
   title:
     default: AApedia
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Under Development, Belum Release."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: AApedia.com
     images:
       - url: '~/assets/images/default.png'
         width: 1200
