@@ -32,6 +32,27 @@ const {
       // panel:
       //   "text-center bg-page items-center md:text-left rtl:md:text-right md:items-start p-6 p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-800",
       icon: 'w-12 h-12 mb-6 text-primary',
+
+
+              <div class="flex items-center">
+                {image && (
+                  <div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600">
+                    {typeof image === 'string' ? (
+                      <Fragment set:html={image} />
+                    ) : (
+                      <Image
+                        class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
+                        width={40}
+                        height={40}
+                        widths={[400, 768]}
+                        layout="fixed"
+                        {...image}
+                      />
+                    )}
+                  </div>
+
+
+
       ...((classes?.items as Record<string, never>) ?? {}),
     }}
   />
