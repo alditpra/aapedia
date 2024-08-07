@@ -18,7 +18,7 @@ const metadata = {
     tagline="Publikasi Jurnal"
     title="Lindungi Karya Ilmiah Anda dengan Layanan Penerbit yang Kredibel"
     subtitle="Kami berkomitmen menjaga profesionalitas dalam pengelolaan jurnal untuk memastikan kualitas dan kredibilitas."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    actions={[{ variant: 'primary', target: '_blank', text: 'Jelajahi', href: '#daftarjurnal' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'AstroWind Hero Image',
@@ -28,6 +28,7 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
+    id="daftarjurnal"
     title="Jurnal Rekanan AApedia"
     subtitle="AApedia menawarkan berbagai pilihan jurnal yang sesuai dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan."
     columns={3}
@@ -37,6 +38,10 @@ const metadata = {
         description:
           'AAKOBIS. AAnya itu Article Access / Akses Artikel juga bisa. Keren ga.  Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
         icon: 'tabler:building-store',
+        callToAction: {
+          text: `Lihat`,
+          href: '#daftarjurnal',
+        },
       },
       {
         title: 'Kesehatan',
