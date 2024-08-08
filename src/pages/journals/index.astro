@@ -1,11 +1,9 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
   title: 'Publikasi Jurnal AApedia',
@@ -40,12 +38,13 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
   </Hero>
 
 
+
   <!-- Features2 Widget ************** -->
 
   <Features2
     id="daftarjurnal"
-    title="Daftar Jurnal AApedia"
-    subtitle="<span class="font-semibold">AApedia</span> menawarkan berbagai pilihan jurnal yang dapat disesuaikan dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan."
+    title="Jurnal Rekanan AApedia"
+    subtitle="AApedia menawarkan berbagai pilihan jurnal yang dapat disesuaikan dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan."
     columns={3}
     items={[
       {
@@ -89,7 +88,6 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
           '<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.  Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
         icon: 'tabler:arrow-big-up-lines',
       },
-
       {
         title: 'Belum Tau',
         description:
@@ -98,9 +96,10 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
       },
 
 
+
+      },
     ]}
   />
-
 
 
 
