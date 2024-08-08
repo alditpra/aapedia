@@ -14,8 +14,6 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <!-- Hero Widget ******************* -->
-
   <Hero
     actions={[
       { text: 'Lihat Jurnal', href: '#jurnalrekanan' },
@@ -40,119 +38,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
 
 
 
-<!-- Content Widget **************** -->
 
-  <Content
-    id="jurnalrekanan"
-    title="Jurnal Rekanan AApedia"
-    subtitle="AApedia menawarkan berbagai pilihan jurnal yang dapat disesuaikan dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan artikel."
-    items={[
-      {
-        id:'aakobis',
-        title: 'Focus & Scope:',
-        description:
-          'AAnya itu Article Access atau Akses Artikel. Maknanya jadi berbunyi Akses Artikel Ekonomi Bisnis. Gitu maksude. Keren ga. Tapi cuma contoh aja. Jurnal ini memuat hasil karya tulis di bidang ekonomi, bisnis, akuntansi. Terbit 3 kali setahun.',
-      },
-      {
-        title: 'Indexing:',
-        description:
-          'Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/tarbiyahmu.webp',
-      alt: 'Tech Design Image',
-    }}
-    callToAction={{
-      target: '#hero',
-      text: 'Lihat Web Jurnal',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        AAKOBIS: <br /><span class="text-2xl">Jurnal Ekonomi dan Bisnis</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Focus & Scope:',
-        description:
-          'Memuat tentang hasil penerbitan atau pemikiran bidang kesehatan yang dilakukan oleh peneliti, akademisi, dan praktisi kesehatan. Terbit 3 kali setahun.',
-      },
-      {
-        title: 'Indexing:',
-        description: `Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/tarbiyahmu.webp',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Lihat Web Jurnal',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        AAKETAN: <br /><span class="text-2xl">Jurnal Kesehatan</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Focus & Scope:',
-        description: `Memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan. Terbit 3 kali setahun..`,
-      },
-      {
-        title: 'Indexing:',
-        description: `Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.`,
-      },
-    ]}
-    image={{
-      src: '~/assets/images/tarbiyahmu.webp',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      text: 'Lihat Web Jurnal',
-      icon: 'tabler:chevron-right',
-      href: '#aakobis',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        AAIKAN: <br /><span class="text-2xl">Jurnal Pendidikan</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
 
 
   <!-- Features2 Widget ************** -->
