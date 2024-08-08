@@ -32,11 +32,10 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, image, icon, callToAction, classes: itemClasses = {} }) => (
         <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
 
                 {image && (
-                  <div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600">
                     {typeof image === 'string' ? (
                       <Fragment set:html={image} />
                     ) : (
@@ -49,7 +48,6 @@ const {
                         {...image}
                       />
                     )}
-                  </div>
 
 
           {(icon || defaultIcon) && (
