@@ -32,22 +32,38 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, image, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
         <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
 
-                {image && (
-                    {typeof image === 'string' ? (
-                      <Fragment set:html={image} />
-                    ) : (
-                      <Image
-                        class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
-                        width={40}
-                        height={40}
-                        widths={[400, 768]}
-                        layout="fixed"
-                        {...image}
-                      />
-                    )}
+
+
+
+        {
+          image && (
+            <div class="relative m-auto max-w-4xl">
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Image
+                  class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+                  width={500}
+                  height={500}
+                  widths={[400, 768]}
+                  sizes="(max-width: 768px) 100vw, 432px"
+                  layout="responsive"
+                  {...image}
+                />
+              )}
+            </div>
+          )
+        }
+
+
+
+
+
+
+
 
 
           {(icon || defaultIcon) && (
