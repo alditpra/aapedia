@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: AApedia
-    template: '%s — AstroWind'
+    template: '%s — AApedia'
   description: "\U0001F680 Under Development, Belum Release."
   robots:
     index: true
