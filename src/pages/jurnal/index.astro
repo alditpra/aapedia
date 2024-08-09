@@ -1,6 +1,5 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
@@ -25,7 +24,6 @@ const metadata = {
         variant: 'primary',
         text: 'Biaya Publikasi',
         href: '#biaya',
-        target: '_blank',
         icon: 'tabler:arrow-right',
       },
     ]}
@@ -46,7 +44,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
   <Features2
     id="daftarjurnal"
     title="Daftar Jurnal AApedia"
-    subtitle="AApedia menawarkan berbagai pilihan untuk jurnal ilmiah yang dapat disesuaikan dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan artikel."
+    subtitle="AApedia menawarkan berbagai pilihan untuk karya ilmiah yang dapat disesuaikan dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan artikel."
     columns={3}
     items={[
       {
@@ -104,23 +102,23 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Alur Publikasi Artikel Jurnal Ilmiah"
+    title="Alur Publikasi Artikel"
     subtitle="Kami menawarkan kemudahan bagi para penulis dengan membebaskan biaya pengiriman artikel. Proses pembayaran baru akan dilakukan setelah artikel Anda lolos tahap review dan siap untuk dipublikasikan.  Dengan demikian, Anda dapat fokus pada kualitas tulisan tanpa perlu khawatir mengenai biaya di awal proses."
     items={[
       {
-        title: 'Submit Artikel Jurnal',
+        title: 'Submit Artikel',
         description:
           'Unggah artikel Anda melalui platform jurnal yang disediakan oleh Aapedia, pastikan naskah Anda telah disusun sesuai dengan template dan pedoman penulisan jurnal.',
       },
       {
         title: 'Proses Editorial',
         description:
-          'Jika naskah Anda lolos penilaian awal, maka akan dikirimkan ke reviewer untuk dilakukan peer review. Reviewer akan memberikan masukan dan penilaian terhadap karya ilmiah Anda.',
+          'Jika naskah Anda lolos penilaian awal, maka akan dikirimkan ke reviewer untuk dilakukan peer review. Reviewer akan memberikan masukan, penilaian terhadap karya ilmiah Anda.',
       },
       {
         title: 'Terbit / Dapatkan LOA',
         description:
-          'Setelah Anda menyelesaikan proses revisi dan pembayaran biaya publikasi, kami akan mengirimkan Letter of Acceptance (LoA). LoA merupakan surat resmi yang menyatakan bahwa naskah Anda telah diterima dan siap untuk dipublikasikan.',
+          'Setelah Anda menyelesaikan proses revisi dan pembayaran biaya publikasi, kami akan mengirimkan Letter of Acceptance (LoA). LoA merupakan surat resmi yang menyatakan bahwa naskah Anda telah diterima kemudian siap untuk dipublikasikan.',
       },
     ]}
   />
@@ -136,15 +134,15 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
     items={[
       {
         title: 'Legalitas',
-        description: 'AApedia adalah penerbit yang terdaftar secara resmi dan memiliki izin operasional. Artikel yang Anda publikasikan memiliki kekuatan hukum yang diakui.',
+        description: 'AApedia adalah penerbit yang terdaftar secara resmi serta memiliki izin operasional. Artikel yang Anda publikasikan memiliki kekuatan hukum yang diakui.',
       },
       {
         title: 'Standar Nasional',
-        description: 'Setiap jurnal memiliki ISSN yang sah oleh Badan Riset Inovasi Nasional, dan sudah terindeks di Google Schoolar serta Garuda',
+        description: 'Setiap jurnal memiliki ISSN yang sah oleh Badan Riset Inovasi Nasional, dan terindeks di Google Schoolar serta Garuda',
       },
       {
         title: 'Digital Object Identifier',
-        description: 'DOI unik dari Crossref melalui RJI menunjukkan bahwa artikel ilmiah Anda telah melalui proses publikasi yang serius dan memenuhi standar internasional.',
+        description: 'DOI unik dari Crossref melalui RJI menunjukkan bahwa artikel ilmiah Anda telah melalui proses publikasi yang serius sehingga memenuhi standar internasional.',
       },
       {
         title: 'Database Jurnal Internasional',
@@ -152,7 +150,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
       },
       {
         title: 'Etika Penelitian',
-        description: 'AApedia menjunjung tinggi etika penelitian dan memastikan bahwa semua artikel ilmiah yang diterbitkan memenuhi standar etika yang berlaku.',
+        description: 'AApedia menjunjung tinggi etika penelitian serta memastikan bahwa semua artikel ilmiah yang diterbitkan memenuhi standar etika yang berlaku.',
       },
       {
         title: 'Tim Editor',
@@ -164,7 +162,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
       },
       {
         title: 'Keamanan Data',
-        description: 'AApedia melakukan backup data server secara berkala dan memastikan keamanan sistem jurnal, untuk melindungi data berharga penelitian Anda.',
+        description: 'AApedia melakukan backup data server secara berkala serta memastikan keamanan sistem jurnal, untuk melindungi data berharga penelitian Anda.',
       },
       {
         title: 'Proofreading & Cek Plagiarisme',
