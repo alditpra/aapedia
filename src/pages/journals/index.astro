@@ -19,6 +19,13 @@ const metadata = {
   <Hero
     actions={[
       { text: 'Lihat Jurnal', href: '#daftarjurnal' },
+      {
+        variant: 'primary',
+        text: 'Biaya Publikasi',
+        href: '#',
+        target: '_blank',
+        icon: 'tabler:arrow-right',
+      },
     ]}
     image={{ src: '~/assets/images/banner_belajar.webp', alt: 'AApedia Hero Image' }}
   >
@@ -164,5 +171,45 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
     ]}
   />
 
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Biaya Publikasi"
+    subtitle="Hanya bayar setelah siap terbit"
+    prices={[
+      {
+        title: 'Harga Transparan',
+        subtitle: 'Untuk setiap jurnal AApedia',
+        price: 100 ribu,
+        period: 'Per Artikel',
+        items: [
+          {
+            description: 'ISSN',
+          },
+          {
+            description: 'Garuda',
+          },
+          {
+            description: 'Google Scholar',
+          },
+          {
+            description: 'IndexCopernicus',
+          },
+          {
+            description: 'Gratis Proofreading',
+          },
+          {
+            description: 'Gratis Cek Plagiasi Turnitin',
+          },
+        ],
+        callToAction: {
+          text: 'Hubungi',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'promosi',
+      },
+    ]}
+  />
 
 </Layout>
