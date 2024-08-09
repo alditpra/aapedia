@@ -173,13 +173,13 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
   />
 
   <!-- Pricing Widget ******************* -->
-
+<center>
   <Prices
     title="Biaya Publikasi"
-    subtitle="Hanya bayar setelah siap terbit"
+    subtitle="Proses pembayaran yang terjangkau dan transparan. Bayar hanya setelah artikel siap terbit"
     prices={[
       {
-        title: 'Harga Transparan',
+        title: 'Harga',
         subtitle: 'Untuk setiap jurnal AApedia',
         price: 100000,
         period: 'Per Artikel',
@@ -209,6 +209,42 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
         },
         hasRibbon: true,
         ribbonTitle: 'promo',
+      },
+    ]}
+  />
+
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Tanya Jawab"
+    subtitle="Pertanyaan umum yang sering diajukan"
+    columns={1}
+    items={[
+      {
+        title: 'Kenapa harus ada biaya publikasi?',
+        description:
+          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+      },
+      {
+        title: 'Kenapa biayanya murah?',
+        description:
+          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+      },
+      {
+        title: 'Berapa lama artikel saya akan diterbitkan?',
+        description:
+          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+      },
+      {
+        title: 'Berapa lama proses review?',
+        description:
+          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+      },
+      {
+        title: 'Kapan dan bagaimana cara saya melakukan pembayaran publikasi?',
+        description:
+          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
       },
     ]}
   />
