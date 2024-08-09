@@ -11,7 +11,7 @@ import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
-  title: 'Publikasi Jurnal AApedia',
+  title: 'Publikasi Artikel Jurnal Ilmiah AApedia',
 };
 ---
 
@@ -24,7 +24,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Biaya Publikasi',
-        href: '#',
+        href: '#biaya',
         target: '_blank',
         icon: 'tabler:arrow-right',
       },
@@ -36,7 +36,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
     </Fragment>
 
     <Fragment slot="subtitle">
-        <span class="font-semibold">AApedia</span> selalu berupaya meningkatkan kualitas dan kredibilitas jurnal agar dapat menjadi rujukan yang terpercaya bagi para pembaca
+        <span class="font-semibold">AApedia</span> selalu berupaya meningkatkan kualitas dan kredibilitas dalam publikasi artikel jurnal ilmiah agar dapat menjadi rujukan yang terpercaya bagi para pembaca
     </Fragment>
   </Hero>
 
@@ -46,13 +46,13 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
   <Features2
     id="daftarjurnal"
     title="Daftar Jurnal AApedia"
-    subtitle="AApedia menawarkan berbagai pilihan jurnal yang dapat disesuaikan dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan."
+    subtitle="AApedia menawarkan berbagai pilihan untuk jurnal ilmiah yang dapat disesuaikan dengan kebutuhan. Kami menyediakan dukungan penuh mulai dari konsultasi hingga penerbitan artikel."
     columns={3}
     items={[
       {
         title: 'Jurnal Ekonomi Bisnis',
         description:
-          '<span class="font-semibold">AAKOBIS</span>. AAnya itu bisa berarti Article Access / Akses Artikel. Keren ga. Memuat hasil karya tulis di bidang ekonomi dan bisnis. Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
+          '<span class="font-semibold">AAKOBIS</span>. AAnya itu bisa berarti Article Access / Akses Artikel. Keren ga. Memuat hasil karya tulis di bidang ekonomi dan bisnis.',
         icon: 'tabler:tie',
         callToAction: {
           text: `coming soon`,
@@ -62,7 +62,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
       {
         title: 'Jurnal Kesehatan',
         description:
-          '<span class="font-semibold">AAKETAN</span> memuat tentang hasil penerbitan atau pemikiran bidang kesehatan yang dilakukan oleh peneliti, akademisi, dan praktisi kesehatan.  Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
+          '<span class="font-semibold">AAKETAN</span> memuat tentang hasil penerbitan atau pemikiran bidang kesehatan yang dilakukan oleh peneliti, akademisi, dan praktisi kesehatan.',
         icon: 'tabler:vaccine',
         callToAction: {
           text: `coming soon`,
@@ -71,7 +71,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
       },
       {
         title: 'Jurnal Pendidikan',
-        description: `<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.  Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.`,
+        description: `<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.  Terbit 3 kali setahun.`,
         icon: 'tabler:school',
         callToAction: {
           text: `coming soon`,
@@ -81,19 +81,19 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
       {
         title: 'Coming Soon',
         description:
-          '<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.  Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
+          '<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.',
         icon: 'tabler:article',
       },
       {
         title: 'Coming Soon',
         description:
-          '<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.  Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
+          '<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.',
         icon: 'tabler:arrow-big-up-lines',
       },
       {
         title: 'Coming Soon',
         description:
-          '<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.  Terbit 3 kali setahun. Terindeks Google Scholar, Garuda, Coppernicus, DOAJ.',
+          '<span class="font-semibold">AAIKAN</span> memuat tentang hasil penerbitan atau pemikiran bidang pendidikan yang dilakukan oleh peneliti, akademisi, dan praktisi pendidikan.',
         icon: 'tabler:arrow-big-up-lines',
       },
     ]}
@@ -104,23 +104,23 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Alur Publikasi Jurnal"
+    title="Alur Publikasi Artikel Jurnal Ilmiah"
     subtitle="Kami menawarkan kemudahan bagi para penulis dengan membebaskan biaya pengiriman artikel. Proses pembayaran baru akan dilakukan setelah artikel Anda lolos tahap review dan siap untuk dipublikasikan.  Dengan demikian, Anda dapat fokus pada kualitas tulisan tanpa perlu khawatir mengenai biaya di awal proses."
     items={[
       {
-        title: 'Submit Artikel Jurnal Gratis',
+        title: 'Submit Artikel Jurnal',
         description:
-          'Unggah artikel Anda melalui platform jurnal yang disediakan oleh Aapedia, pastikan manuscript Anda telah disusun sesuai dengan template dan pedoman penulisan jurnal.',
+          'Unggah artikel Anda melalui platform jurnal yang disediakan oleh Aapedia, pastikan naskah Anda telah disusun sesuai dengan template dan pedoman penulisan jurnal.',
       },
       {
-        title: 'Proses Editorial Team',
+        title: 'Proses Editorial',
         description:
-          'Jika manuscript Anda lolos penilaian awal, maka akan dikirimkan ke beberapa reviewer untuk dilakukan peer review. Reviewer akan memberikan masukan dan penilaian terhadap manuscript Anda.',
+          'Jika naskah Anda lolos penilaian awal, maka akan dikirimkan ke reviewer untuk dilakukan peer review. Reviewer akan memberikan masukan dan penilaian terhadap karya ilmiah Anda.',
       },
       {
         title: 'Terbit / Dapatkan LOA',
         description:
-          'Setelah Anda menyelesaikan proses revisi dan pembayaran biaya publikasi, kami akan mengirimkan Letter of Acceptance (LoA). LoA merupakan surat resmi yang menyatakan bahwa manuskrip Anda telah diterima dan siap untuk dipublikasikan.',
+          'Setelah Anda menyelesaikan proses revisi dan pembayaran biaya publikasi, kami akan mengirimkan Letter of Acceptance (LoA). LoA merupakan surat resmi yang menyatakan bahwa naskah Anda telah diterima dan siap untuk dipublikasikan.',
       },
     ]}
   />
@@ -130,7 +130,7 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
 
   <Features3
     title="Fitur Utama"
-    subtitle="Beberapa poin sebagai pertimbangan kenapa harus submit di jurnal AApedia."
+    subtitle="Beberapa poin sebagai pertimbangan kenapa harus publikasi artikel di jurnal AApedia."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
@@ -140,19 +140,19 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
       },
       {
         title: 'Standar Nasional',
-        description: 'Setiap jurnal memiliki ISSN yang sah oleh Badan Riset Inovasi Nasional, dan setidaknya sudah terindeks di Google Schoolar serta Garuda',
+        description: 'Setiap jurnal memiliki ISSN yang sah oleh Badan Riset Inovasi Nasional, dan sudah terindeks di Google Schoolar serta Garuda',
       },
       {
         title: 'Digital Object Identifier',
-        description: 'DOI unik dari Crossref melalui RJI menunjukkan bahwa artikel Anda telah melalui proses publikasi yang serius dan memenuhi standar internasional.',
+        description: 'DOI unik dari Crossref melalui RJI menunjukkan bahwa artikel ilmiah Anda telah melalui proses publikasi yang serius dan memenuhi standar internasional.',
       },
       {
         title: 'Database Jurnal Internasional',
-        description: 'Dengan indeksasi seperti Copernicus dan Dimension, artikel Anda akan memiliki visibilitas yang lebih luas dan mudah ditemukan oleh peneliti lain.',
+        description: 'Dengan indeksasi seperti Copernicus dan Dimension, artikel yang dipublikasikan akan memiliki visibilitas yang lebih luas dan mudah ditemukan oleh peneliti global.',
       },
       {
         title: 'Etika Penelitian',
-        description: 'AApedia menjunjung tinggi etika penelitian dan memastikan bahwa semua artikel yang diterbitkan memenuhi standar etika yang berlaku.',
+        description: 'AApedia menjunjung tinggi etika penelitian dan memastikan bahwa semua artikel ilmiah yang diterbitkan memenuhi standar etika yang berlaku.',
       },
       {
         title: 'Tim Editor',
@@ -174,9 +174,9 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
   />
 
   <!-- Pricing Widget ******************* -->
-<center>
   <Prices
-    title="Biaya Publikasi"
+    id="biaya"
+    title="Biaya Publikasi Artikel Jurnal Ilmiah"
     subtitle="Proses pembayaran yang terjangkau dan transparan. Bayar hanya setelah artikel siap terbit"
     prices={[
       {
@@ -228,14 +228,14 @@ Lindungi Karya Ilmiah Anda melalui <span class="text-accent dark:text-white high
           'Jurnal kami saat ini masih baru dan belum terakreditasi SINTA. Proses akreditasi membutuhkan waktu dan usaha yang signifikan. Kami terus berupaya untuk memenuhi standar akreditasi dan akan menginformasikan jika ada perkembangan terkait akreditasi.',
       },
       {
-        title: 'Apakah jurnal akan diakreditasi?',
+        title: 'Apakah jurnal AApedia akan diakreditasikan?',
         description:
           'Kami berencana untuk mengajukan akreditasi di masa depan. Sehingga sangat memungkinkan artikel jurnal yang Anda submit sekarang akan terindeks SINTA nantinya.',
       },
       {
         title: 'Kenapa harus ada biaya publikasi?',
         description:
-          'Biaya publikasi diperlukan untuk menutupi biaya proses editorial, pemeliharaan server jurnal, dan distribusi artikel. Ini membantu menjaga kualitas dan keberlanjutan publikasi.',
+          'Biaya publikasi artikel jurnal diperlukan untuk menutupi biaya proses editorial, pemeliharaan server jurnal, dan distribusi artikel. Ini membantu menjaga kualitas dan keberlanjutan publikasi.',
       },
       {
         title: 'Kenapa biayanya murah?',
