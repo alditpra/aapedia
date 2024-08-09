@@ -7,27 +7,23 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
-      text: 'Halaman',
+      text: 'Jurnal',
+      href: getPermalink('/jurnal'),
+    },
+    {
+      text: 'Layanan',
       links: [
         {
-          text: 'Layanan (Anchor Link)',
-          href: getPermalink('/#layanan'),
+          text: 'Layanan 1 (belum)',
+          href: getPermalink('/'),
         },
         {
-          text: 'Services test',
-          href: getPermalink('/services'),
+          text: 'Layanan 2 (belum)',
+          href: getPermalink('/'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
+          text: 'Layanan 3 (belum)',
+          href: getPermalink('/'),
         },
         {
           text: 'Terms',
@@ -43,71 +39,42 @@ export const headerData = {
       text: 'Blog',
       links: [
         {
-          text: 'Postingan',
+          text: 'Semua Kategori',
           href: getBlogPermalink(),
         },
         {
-          text: 'Post',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Post (pake MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Halaman Kategori test',
+          text: 'Kategori 1',
           href: getPermalink('tutorials', 'category'),
+        },
+          {
+          text: 'Kategori 2',
+          href: getPermalink('documentation', 'category'),
         },
       ],
     },
   ],
-  actions: [{ text: 'Hubungi Kami', href: 'https://google.com', target: '_blank' }],
+  actions: [{ text: 'Hubungi Kami', href: 'https://wa.me/6287851150691', target: '_blank' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Beranda',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Legalitas', href: '#' },
+        { text: 'Layanan', href: '#' },
+        { text: 'Nilai Plus', href: '#' },
+        { text: 'FAQ', href: '#' },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Jurnal',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Daftar Jurnal', href: '/jurnal#daftarjurnal' },
+        { text: 'Alur Publikasi', href: '/jurnal#alurpublikasi' },
+        { text: 'Fiture Utama', href: '/jurnal#fiturutama' },
+        { text: 'Biaya Publikasi', href: '/jurnal#biayapublikasi' },
+        { text: 'FAQ', href: '/jurnal#faq' },
       ],
     },
   ],
@@ -120,7 +87,7 @@ export const footerData = {
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/alditpra' },
   ],
   footNote: `
     AApedia.com · All rights reserved.
