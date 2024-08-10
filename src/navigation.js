@@ -7,22 +7,18 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
-      text: 'Jurnal',
-      href: getPermalink('/jurnal'),
-    },
-    {
-      text: 'Layanan',
+      text: 'Halaman',
       links: [
         {
-          text: 'Layanan 1 (belum)',
+          text: 'Jurnal',
+          href: getPermalink('/jurnal'),
+        },
+        {
+          text: 'Webinar dan Pelatihan (belum)',
           href: getPermalink('/'),
         },
         {
-          text: 'Layanan 2 (belum)',
-          href: getPermalink('/'),
-        },
-        {
-          text: 'Layanan 3 (belum)',
+          text: 'Jasa 1 2 3 4 5 (belum)',
           href: getPermalink('/'),
         },
         {
