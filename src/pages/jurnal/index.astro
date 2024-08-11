@@ -8,6 +8,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Publikasi Artikel Jurnal Ilmiah Kredibel',
@@ -245,5 +246,26 @@ Publikasi Artikel <span class="text-accent dark:text-white highlight">Jurnal Ilm
     ]}
   />
 
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hubungi Kami',
+        href: 'https://wa.me/6287851150691',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      AApedia &nbsp;<br class="block sm:hidden" /> Academic Assistance
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Hubungi kami sekarang untuk konsultasi gratis &nbsp;<br class="hidden md:inline" />Jangan sampai tugasmu tertunda!
+    </Fragment>
+  </>
 
 </Layout>
