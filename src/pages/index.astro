@@ -53,15 +53,15 @@ const metadata = {
     id="legalitas"
     tagline="Legalitas"
     title="Sekilas Tentang"
-    subtitle="Article Access Academic Assistance Authentic Assessment Available Advice Application Accesibility Analysis Accelerate Author Accreditation Affordability Archive Advancement Articulate Action Actual Apprentice Awesome Aim Always Adapt Anything Alliance Alternative Amplify Acknowledge Able Ahead Around Attack!"
+    subtitle="AApedia adalah lembaga penerbit oleh komunitas (legal: AHU 01/02/2024) untuk layanan yang lebih profesional. <br>Article Access Academic Assistance Authentic Assessment Available Advice Application Accesibility Analysis Accelerate Author Accreditation Affordability Archive Advancement Articulate Action Actual Apprentice Awesome Aim Always Adapt Anything Alliance Alternative Amplify Acknowledge Able Ahead Around Attack!"
   />
 
 <!-- Features2 Widget ************** -->
 
   <Features2
     id="layanan"
-    title="Apa saja layanan AApedia?"
-    subtitle="Kami percaya bahwa pendidikan, penelitian, dan pengabdian kepada masyarakat (PkM) adalah kunci untuk kemajuan bangsa. Oleh karena itu, kami berkomitmen untuk menyediakan layanan yang berkualitas dan terjangkau."
+    title="Apa yang AApedia Tawarkan"
+    subtitle="Kami percaya bahwa pendidikan, penelitian, dan pengabdian kepada masyarakat (PkM) salah satu kunci untuk kemajuan bangsa. Oleh karena itu, kami berkomitmen untuk menyediakan layanan yang berkaitan dengan karya tulis ilmiah."
     tagline="Layanan"
     items={[
       {
@@ -78,7 +78,7 @@ const metadata = {
       {
         title: 'Webinar dan Pelatihan',
         description:
-          'Diadakan secara berkala untuk meningkatkan pengetahuan tentang karya tulis.',
+          'Diadakan secara gratis dan berkala untuk meningkatkan pengetahuan tentang karya tulis.',
         icon: 'flat-color-icons:voice-presentation',
         callToAction: {
           text: `coming soon`,
@@ -107,7 +107,7 @@ const metadata = {
       },
       {
         title: 'Website Jurnal',
-        description: 'Jasa gratis instalasi jurnal OJS untuk institusi atau lembaga dengan ketentuan yang berlaku.',
+        description: 'Jasa gratis instalasi jurnal OJS untuk institusi atau lembaga dengan SK pendirian yang jelas.',
         icon: 'flat-color-icons:template',
         callToAction: {
           text: `coming soon`,
@@ -217,11 +217,17 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="faq"
     title="Pertanyaan Umum"
-    subtitle="Tanya jawab apa saja yang sering diajukan"
+    subtitle="Tanya jawab apa saja yang sering diajukan tentang AApedia"
     tagline="FAQ"
     classes={{ container: 'max-w-6xl' }}
     items={[
+      {
+        title: 'Apa latar belakang dari AApedia?',
+        description:
+          "Pada mulanya kami adalah komunitas dari beberapa akademisi yang saling membantu dalam bidang karya tulis ilmiah. Mengikuti berkembangnya komunitas, maka AApedia didirikan dengan tujuan layanan yang lebih profesional.",
+      },
       {
         title: 'Apa saja fokus/ruang lingkup serta pilihan jurnal untuk publikasi?',
         description:
@@ -233,11 +239,6 @@ const metadata = {
           'Waktu penyelesaian jasa penulisan artikel jurnal di AApedia bervariasi tergantung pada kompleksitas topik, panjang artikel, dan ketersediaan tim.',
       },
       {
-        title: 'Berapa lama waktu yang dibutuhkan untuk menyelesaikan skripsi atau tesis?',
-        description:
-          "Waktu penyelesaian skripsi atau tesis di AApedia bervariasi tergantung pada kompleksitas penelitian, ketersediaan data, dan komitmen Anda. Tim AApedia akan bekerja sama dengan Anda untuk menentukan timeline yang realistis dan memastikan penyelesaian tepat waktu.",
-      },
-      {
         title: "Apakah AApedia menyediakan jasa revisi setelah artikel jurnal selesai?",
         description:
           "Ya, AApedia menyediakan jasa revisi untuk memastikan artikel jurnal atau skripsi/tesis Anda memenuhi standar kualitas dan siap untuk diterbitkan atau dipresentasikan.",
@@ -245,25 +246,16 @@ const metadata = {
       {
         title: 'Apa saja metode statistik yang ditawarkan AApedia untuk analisis data penelitian?',
         description:
-          "AApedia menawarkan berbagai metode statistik untuk analisis data penelitian, termasuk analisis deskriptif, analisis inferensial, regresi linier, analisis multivariat, dsb. Tim ahli statistik kami akan membantu Anda memilih metode yang tepat untuk data dan tujuan penelitian Anda",
+          "AApedia menawarkan berbagai metode statistik untuk analisis data penelitian, termasuk analisis deskriptif, analisis inferensial, regresi linier,  dsb. Tim ahli statistik kami akan membantu Anda memilih metode yang tepat untuk data dan tujuan penelitian Anda",
       },
       {
-        title: 'Bagaimana cara mendaftar jasa pembuatan website jurnal OJS di AApedia?',
+        title: 'Saya perlu membuat artikel jurnal tetapi bingung harus dimulai dari mana?',
         description:
-          "Untuk mendaftar jasa pembuatan website jurnal OJS di AApedia, silakan hubungi kami.",
+          "Jangan ragu untuk konsultasi gratis, silahkan hubungi kami.",
       },
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Alamat Kantor', amount: '2' },
-      { title: 'Editor', amount: '11+' },
-      { title: 'Reviewer', amount: '32+' },
-    ]}
-  />
 
   <!-- CallToAction Widget *********** -->
 
@@ -279,11 +271,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      AApedia <br class="block sm:hidden" /> Academic Assistance
+      AApedia &nbsp;<br class="block sm:hidden" /> Academic Assistance
     </Fragment>
 
     <Fragment slot="subtitle">
-      Hubungi kami sekarang untuk konsultasi gratis<br class="hidden md:inline" />Jangan sampai tugasmu tertunda!
+      Hubungi kami sekarang untuk konsultasi gratis<br><br class="hidden md:inline" />Jangan sampai tugasmu tertunda!
     </Fragment>
   </>
 </Layout>
