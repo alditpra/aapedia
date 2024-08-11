@@ -10,7 +10,7 @@ import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
-  title: 'Publikasi Artikel Jurnal Ilmiah',
+  title: 'Publikasi Artikel Jurnal Ilmiah Kredibel',
 };
 ---
 
@@ -167,8 +167,8 @@ Publikasi Artikel <span class="text-accent dark:text-white highlight">Jurnal Ilm
     subtitle="Terjangkau, transparan, dan tidak ada lagi biaya tersembunyi. Cocok untuk berbagai keperluan seperti tugas kuliah, tugas akhir atau kelulusan, kenaikan pangkat, dan beban kerja dosen (BKD)"
     prices={[
       {
-        title: 'Jurnal Nasional',
-        subtitle: 'Untuk setiap submit',
+        title: 'Publikasi Artikel',
+        subtitle: 'Setelah tahap review',
         price: 12345,
         period: 'Per Artikel',
         items: [
@@ -199,18 +199,17 @@ Publikasi Artikel <span class="text-accent dark:text-white highlight">Jurnal Ilm
           href: '#daftarjurnal',
         },
         hasRibbon: true,
-        ribbonTitle: 'promo',
+        ribbonTitle: 'terbatas',
       },
     ]}
   />
-
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     id="faq"
-    title="Tanya Jawab"
-    subtitle="Pertanyaan umum yang sering diajukan terkait publikasi artikel di jurnal AApedia"
+    title="Tanya Jawab Terkait Jurnal"
+    subtitle="Pertanyaan umum yang sering diajukan"
     columns={1}
     items={[
       {
