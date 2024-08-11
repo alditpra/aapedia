@@ -1,12 +1,13 @@
 ---
-publishDate: 2023-08-06T00:00:00Z
-title: How to customize AstroWind template to suit your branding
-excerpt: Personalize AstroWind template for your brand. Our guide unlocks seamless customization steps for a unique online presence.
+publishDate: 2024-08-01T00:00:00Z
+title: Undangan Webinar Januari 2024
+excerpt: Silahkan daftar, acara akan dilakukan melalui zoom meeting pada hari x tanggal x 2024 .Hanya perlu mengisi formulir tanpa ada biaya.
 image: https://images.unsplash.com/photo-1546984575-757f4f7c13cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+category: Webinar
 tags:
-  - astro
-  - tailwind css
-  - theme
+  - Webinar
+  - Zoom
+  - Undangan
 metadata:
   canonical: https://astrowind.vercel.app/how-to-customize-astrowind-to-your-brand
 ---
