@@ -11,7 +11,7 @@ metadata:
   title:
     default: AApedia
     template: '%s — AApedia'
-  description: "\U0001F680 Under Development, Belum Release."
+  description: "\U0001F680 Konsep dulu, belum release. Host & domain gratisan sek."
   robots:
     index: true
     follow: true
