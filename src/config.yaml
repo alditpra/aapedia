@@ -18,13 +18,13 @@ metadata:
   openGraph:
     site_name: AApedia.com
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/aapediacover.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@aapedia'
+    site: '@aapedia'
     cardType: summary_large_image
 
 i18n:
