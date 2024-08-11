@@ -14,8 +14,8 @@ export const headerData = {
           href: getPermalink('/jurnal'),
         },
         {
-          text: 'Webinar dan Pelatihan (belum)',
-          href: getPermalink('/'),
+          text: 'Webinar dan Pelatihan',
+          href: getPermalink('webinar', 'category'),
         },
         {
           text: 'Jasa 1 2 3 4 5 (belum)',
