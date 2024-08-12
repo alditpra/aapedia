@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
+import Hero from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -21,7 +21,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
+  <Hero2
     actions={[
       { text: 'Pelajari', href: '#legalitas' },
       {
@@ -31,7 +31,7 @@ const metadata = {
         icon: 'tabler:arrow-right',
       },
     ]}
-    image={{ src: '~/assets/images/banner_belajar.webp', alt: 'AApedia Hero Image' }}
+    image={{ src: '~/assets/images/aapedia_hero.webp', alt: 'AApedia Hero Image' }}
   >
     <Fragment slot="title">
       Dari Naskah Sampai Publikasi <br>
