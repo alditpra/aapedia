@@ -59,5 +59,5 @@ Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalan
 ### Ringkasan dan Implikasi Etimologi "Pedia"
 Kata "pedia" memiliki asal usul yang kaya dan beragam, mulai dari bahasa Yunani kuno hingga penggunaannya dalam nama-nama brand populer saat ini. Perkembangan makna kata ini menunjukkan bagaimana bahasa dapat beradaptasi dengan perubahan budaya dan teknologi 
  
-## Pandangan ke Depan
+### Pandangan ke Depan
 Melihat perkembangan kata "pedia" dari masa ke masa, kita dapat melihat bagaimana bahasa terus berkembang dan beradaptasi dengan perubahan zaman. Di masa depan, kata "pedia" kemungkinan akan terus digunakan dalam konteks yang lebih luas dan beragam, mencerminkan perkembangan ilmu pengetahuan dan teknologi.
