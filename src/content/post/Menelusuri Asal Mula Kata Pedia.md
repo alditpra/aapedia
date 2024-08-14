@@ -12,14 +12,16 @@ metadata:
   canonical: https://aapedia.netlify.app/menelusuri-asal-mula-kata-pedia
 ---
 
-Tujuan dari penulisan artikel ini adalah untuk memberikan pemahaman yang mendalam tentang asal usul kata "pedia", bagaimana kata ini berkembang dan digunakan dalam berbagai konteks, serta relevansinya dalam dunia modern.
+Ketika kita melihat kata "pedia" dalam bahasa modern, seperti dalam "encyclopedia" atau "Wikipedia", kita seringkali mengaitkannya dengan pengetahuan yang tertulis atau tersimpan secara digital. Namun, akar kata ini jauh lebih dalam dan kaya makna, berasal dari bahasa Yunani Kuno.
 
 ## Etimologi Kata "Pedia"
 
 ### Asal Usul dari Bahasa Yunani
-Kata "pedia" berasal dari bahasa Yunani "paideia" (παιδεία), yang berarti pendidikan atau pembelajaran.  Dalam konteks Yunani kuno, "paideia" merujuk pada sistem pendidikan dan pelatihan budaya yang komprehensif, mencakup aspek intelektual, moral, dan fisik.
+Kata "pedia" berasal dari bahasa Yunani "paideia" (παιδεία), yang berarti pendidikan atau pembelajaran.  Dalam konteks Yunani Kuno, "paideia" merujuk pada proses pembentukan individu yang utuh, baik secara intelektual, moral, maupun fisik. Ini mencakup tidak hanya penguasaan ilmu pengetahuan, tetapi juga pengembangan karakter, keterampilan sosial, dan kebugaran jasmani.
 ### Perkembangan dalam Bahasa Latin
 Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". Dalam bahasa Latin, kata ini tetap mempertahankan makna yang berhubungan dengan pendidikan dan pembelajaran.
+###Bagaimana "Paideia" Menjadi "Pedia"?
+Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
 ### Adaptasi dalam Bahasa Inggris
 Dalam bahasa Inggris, kata "pedia" sering digunakan sebagai akhiran untuk menunjukkan sesuatu yang berhubungan dengan pengetahuan atau pendidikan. Contoh yang paling terkenal adalah "encyclopedia" (ensiklopedia), yang berarti kumpulan pengetahuan yang luas dan komprehensif.
 
@@ -39,13 +41,13 @@ Dalam era digital, kata "pedia" juga digunakan dalam konteks teknologi dan infor
 ### Ensiklopedia
 Ensiklopedia adalah kumpulan pengetahuan yang luas dan komprehensif tentang berbagai topik. Kata ini berasal dari bahasa Yunani "enkyklios paideia" yang berarti "pendidikan umum".
 ### Pediatri
-Pediatri adalah cabang ilmu kedokteran yang berfokus pada kesehatan anak-anak. Kata ini berasal dari bahasa Yunani "pais" (anak) dan "iatros" (dokter).
+Terbentuk dari kata Yunani "pais" (anak) dan "iatros" (dokter). Secara langsung mengacu pada cabang ilmu kedokteran yang khusus menangani kesehatan anak-anak.
 ### Wikipedia
-Wikipedia adalah ensiklopedia daring yang menyediakan informasi tentang berbagai topik. Nama ini berasal dari gabungan kata "wiki" (situs web kolaboratif) dan "encyclopedia".
+Gabungan dari "wiki" (situs web kolaboratif) dan "encyclopedia". Menunjukkan bahwa Wikipedia adalah ensiklopedia yang dibuat dan disunting bersama oleh banyak orang.
 ### Tokopedia
-Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan berbagai macam produk dan layanan. Nama "Tokopedia" berasal dari gabungan kata "toko" dan "pedia", yang mencerminkan misi perusahaan untuk menjadi sumber pengetahuan dan solusi belanja bagi masyarakat.
+Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan berbagai macam produk dan layanan. Nama "Tokopedia" berasal dari gabungan kata "toko" dan "pedia", yang mencerminkan misi perusahaan untuk menjadi sumber pengetahuan atau informasi produk dan solusi belanja bagi masyarakat.
 ### AApedia
-AApedia menawarkan layanan komprehensif untuk institusi, akademisi, peneliti, dan mahasiswa meraih kesuksesan melalui karya tulis ilmiah. AApedia menyediakan berbagai jurnal ilmiah yang dapat diakses oleh akademisi dan peneliti, dengan fokus pada kualitas dan kredibilitas publikasi artikel jurnal. Makna dari “pedia” disini adalah komprehensif atau “lengkap” dalam bidang karya tulis ilmiah yang masih bersinggungan dengan pendidikan.
+AApedia adalah sebuah lembaga yang dirancang khusus untuk mendukung para akademisi dan penulis dalam proses penulisan dan publikasi karya ilmiah. Nama "AApedia" sendiri merupakan gabungan dari "AA" yang dapat diartikan sebagai "Academic" atau "Author Assistance" (asistensi akademisi atau penulis) dan "pedia" yang berarti "komprehensif" atau "lengkap" yang masih berhubungan dalam karya tulis ilmiah.
 
 ## Perkembangan Makna dari Masa ke Masa
 ![Super wide](~/assets/images/darimasakemasa.webp)
