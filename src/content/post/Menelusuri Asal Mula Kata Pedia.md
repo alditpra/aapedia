@@ -37,7 +37,15 @@ Dalam dunia kedokteran, kata "pedia" digunakan dalam istilah seperti "pediatrics
 ### Teknologi dan Digital
 Dalam era digital, kata "pedia" juga digunakan dalam konteks teknologi dan informasi. Contoh yang paling terkenal adalah "Wikipedia", sebuah ensiklopedia daring yang menyediakan informasi tentang berbagai topik.
 
-## Contoh Kata dan Fleksibilitas Kata "Pedia"
+## Perkembangan Makna dari Masa ke Masa
+![Super wide](~/assets/images/darimasakemasa.webp)
+### Pengaruh Budaya dan Bahasa
+Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usulnya dari bahasa Yunani kuno yang mementingkan pendidikan (paideia) mencerminkan nilai-nilai budaya yang menghargai pengetahuan dan pembelajaran. Kata ini kemudian beradaptasi ke berbagai bahasa, mencerminkan fleksibilitas dan daya tariknya yang universal. Dalam konteks modern, "pedia" sering dikaitkan dengan akses universal terhadap informasi dan nilai-nilai egalitarian. Penggunaan "pedia" dalam nama merek atau produk juga dapat membentuk identitas budaya suatu komunitas. Singkatnya, kata "pedia" tidak hanya memiliki sejarah yang panjang, tetapi juga memiliki makna budaya yang kaya, mencerminkan dinamika bahasa.
+
+### Perubahan Makna dalam Konteks Modern
+Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
+
+## Contoh dan Fleksibilitas "Pedia"
 
 ### Ensiklopedia
 Ensiklopedia adalah kumpulan pengetahuan yang luas dan komprehensif tentang berbagai topik. Kata ini berasal dari bahasa Yunani "enkyklios paideia" yang berarti "pendidikan umum".
@@ -48,15 +56,7 @@ Gabungan dari "wiki" (situs web kolaboratif) dan "encyclopedia". Menunjukkan bah
 ### Tokopedia
 Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan berbagai macam produk dan layanan. Nama "Tokopedia" berasal dari gabungan kata "toko" dan "pedia", yang mencerminkan misi perusahaan untuk menjadi sumber pengetahuan atau informasi produk dan solusi belanja bagi masyarakat.
 ### AApedia
-AApedia adalah sebuah lembaga yang dirancang khusus untuk mendukung para akademisi dan penulis dalam proses penulisan dan publikasi karya ilmiah. Nama "AApedia" sendiri merupakan gabungan dari "AA" yang dapat diartikan sebagai "Academic" atau "Author Assistance" (asistensi akademisi atau penulis) dan "pedia" yang berarti "komprehensif" atau "lengkap" yang masih berhubungan dalam karya tulis ilmiah.
-
-## Perkembangan Makna dari Masa ke Masa
-![Super wide](~/assets/images/darimasakemasa.webp)
-### Pengaruh Budaya dan Bahasa
-Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usulnya dari bahasa Yunani kuno yang mementingkan pendidikan (paideia) mencerminkan nilai-nilai budaya yang menghargai pengetahuan dan pembelajaran. Kata ini kemudian beradaptasi ke berbagai bahasa, mencerminkan fleksibilitas dan daya tariknya yang universal. Dalam konteks modern, "pedia" sering dikaitkan dengan akses universal terhadap informasi dan nilai-nilai egalitarian. Penggunaan "pedia" dalam nama merek atau produk juga dapat membentuk identitas budaya suatu komunitas. Singkatnya, kata "pedia" tidak hanya memiliki sejarah yang panjang, tetapi juga memiliki makna budaya yang kaya, mencerminkan dinamika bahasa.
-
-### Perubahan Makna dalam Konteks Modern
-Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
+AApedia adalah sebuah lembaga yang dirancang khusus untuk mendukung para akademisi dan penulis dalam proses penulisan dan publikasi karya ilmiah. Nama "AApedia" sendiri merupakan gabungan dari "AA" yang dapat diartikan sebagai "Academic" atau "Author Assistance" (asistensi akademisi atau penulis) dan "pedia" yang berarti "komprehensif" atau "lengkap" tentang karya tulis ilmiah, yang masih berhubungan dengan ilmu pengetahuan.
 
 ## Kesimpulan
 ### Ringkasan dan Implikasi Etimologi "Pedia"
