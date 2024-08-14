@@ -42,7 +42,7 @@ Namun, ada yang unik tentang "-pedia". Meskipun sering digunakan, kata "pedia" s
 ## Contoh dari Fleksibilitas "Pedia"
 
 ### Ensiklopedia
-Ensiklopedia adalah kumpulan pengetahuan yang luas dan komprehensif tentang berbagai topik. Kata ini berasal dari bahasa Yunani "enkyklios paideia" yang berarti "pendidikan umum".
+Ensiklopedia secara harfiah berasal dari bahasa Yunani. Enkyklios artinya "umum" atau "lengkap", paideia artinya "pendidikan/pembelajaran" atau "pengetahuan/informasi". Jadi, secara harfiah, ensiklopedia berarti "lingkup pengetahuan yang lengkap" atau "sumber informasi yang komprehensif".
 ### Wikipedia
 Gabungan dari "wiki" (situs web kolaboratif) dan "encyclopedia". Menunjukkan bahwa Wikipedia adalah ensiklopedia yang dibuat dan disunting bersama oleh banyak orang.
 ### Tokopedia
