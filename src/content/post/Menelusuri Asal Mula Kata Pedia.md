@@ -18,18 +18,22 @@ Ketika kita melihat kata "pedia" dalam bahasa modern, seperti dalam "encyclopedi
 
 ### Asal Usul dari Bahasa Yunani
 Kata "pedia" berasal dari bahasa Yunani "paideia" (παιδεία), yang berarti pendidikan atau pembelajaran.  Dalam konteks Yunani Kuno, "paideia" merujuk pada proses pembentukan individu yang utuh, baik secara intelektual, moral, maupun fisik. Ini mencakup tidak hanya penguasaan ilmu pengetahuan, tetapi juga pengembangan karakter, keterampilan sosial, dan kebugaran jasmani.
+Konsep “paideia” menekankan pentingnya pendidikan sebagai proses yang holistik. Ini berarti bahwa pendidikan tidak hanya berfokus pada aspek akademis, tetapi juga pada pembentukan nilai-nilai etika dan moral serta kemampuan sosial. Pendidikan “paideia” bertujuan untuk menciptakan warga negara yang ideal, yang mampu berkontribusi secara positif dalam kehidupan masyarakat.
+
 ### Perkembangan dalam Bahasa Latin
-Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". Dalam bahasa Latin, kata ini tetap mempertahankan makna yang berhubungan dengan pendidikan dan pembelajaran.
-### Bagaimana "Paideia" Menjadi "Pedia"?
-Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
+Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". Dalam bahasa Latin, kata ini tetap mempertahankan makna yang berhubungan dengan pendidikan dan pembelajaran. Penggunaan kata “paedia” dalam berbagai konteks menunjukkan pentingnya pendidikan dan pembelajaran sebagai fondasi dalam berbagai aspek kehidupan. Ini mencerminkan bagaimana konsep pendidikan dari Yunani Kuno terus memengaruhi cara kita memahami dan mengorganisir pengetahuan hingga saat ini.
 
 ## Perkembangan Makna dari Masa ke Masa
 ![kata pedia dari masa ke masa](~/assets/images/darimasakemasa.webp)
-### Pengaruh Budaya dan Bahasa
-Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usulnya dari bahasa Yunani kuno yang mementingkan pendidikan (paideia) mencerminkan nilai-nilai budaya yang menghargai pengetahuan dan pembelajaran. Kata ini kemudian beradaptasi ke berbagai bahasa, mencerminkan fleksibilitas dan daya tariknya yang universal. Dalam konteks modern, "pedia" sering dikaitkan dengan akses universal terhadap informasi dan nilai-nilai egalitarian. Penggunaan "pedia" dalam nama merek atau produk juga dapat membentuk identitas budaya suatu komunitas. Singkatnya, kata "pedia" tidak hanya memiliki sejarah yang panjang, tetapi juga memiliki makna budaya yang kaya, mencerminkan dinamika bahasa.
+### Bagaimana "Paideia" Menjadi "Pedia"?
+Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
 
 ### Perubahan Makna dalam Konteks Modern
 Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
+Akhiran "-pedia" itu seperti stempel "pengetahuan lengkap". Ketika kita menambahkan "-pedia" di akhir sebuah kata, kita sedang mengatakan bahwa kata tersebut mencakup semua informasi atau pengetahuan tentang suatu hal. Contohnya, "Ensiklopedia" artinya buku yang berisi semua pengetahuan.
+Cara kerja "-pedia" ini mirip dengan akhiran lain dalam bahasa Indonesia. Misalnya, "-wan" mengubah kata menjadi pekerjaan (misal: wartawan), "-isme" menjadi ideologi (misal: nasionalisme), dan "-wi" menjadi sifat (misalnya: duniawi).
+Namun, ada yang unik tentang "-pedia". Meskipun sering digunakan, kata "pedia" sendiri sebenarnya bukan kata asli Indonesia. Jadi, kata ini lebih sering kita temui di nama-nama perusahaan atau istilah khusus, seperti "Wikipedia" atau "Tokopedia". Jadi, meskipun kita sering menggunakannya, "pedia" belum resmi menjadi bagian dari kamus besar bahasa Indonesia.
+
 
 ## Contoh dari Fleksibilitas "Pedia"
 
@@ -41,6 +45,8 @@ Gabungan dari "wiki" (situs web kolaboratif) dan "encyclopedia". Menunjukkan bah
 Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan berbagai macam produk dan layanan. Nama "Tokopedia" berasal dari gabungan kata "toko" dan "pedia", yang mencerminkan misi perusahaan untuk menjadi sumber pengetahuan atau informasi tentang berbagai toko sebagai solusi belanja bagi masyarakat.
 ### Investopedia
 Secara harfiah, “Investopedia” adalah gabungan dari dua kata: “Invest” dan “Ensiklopedia”. Jadi, Investopedia secara harfiah berarti sebuah ensiklopedia yang menyediakan ilmu pengetahuan atau informasi komprehensif tentang investasi dan keuangan.
+### Technopedia
+Technopedia adalah sebuah web sumber informasi yang komprehensif dan terpercaya seputar teknologi. Istilah ini berasal dari gabungan kata "techno" yang berarti teknologi dan "pedia" yang berarti ensiklopedia. Jadi, technopedia dapat diartikan sebagai "ensiklopedia teknologi" atau "sumber informasi yang komprehensif tentang teknologi.
 ### AApedia
 AApedia adalah sebuah lembaga penerbit dari Indonesia yang mendukung para akademisi dan penulis dalam proses penulisan dan publikasi artikel jurnal. Nama "AApedia" sendiri merupakan gabungan dari dan "AA", yang dapat diartikan sebagai "Academic" atau "Author Assistance", dan "pedia" yang mencerminkan bahwa AApedia bergerak di bidang pendidikan atau ilmu pengetahuan dalam bentuk karya tulis ilmiah.
 
