@@ -55,7 +55,7 @@ Makna kata "pedia" telah berkembang seiring dengan perubahan budaya dan bahasa. 
 Dalam konteks modern, kata "pedia" sering digunakan untuk menunjukkan sumber informasi yang komprehensif dan dapat diakses oleh banyak orang. Ini menunjukkan bagaimana kata ini telah beradaptasi dengan perkembangan teknologi dan informasi.
 
 ### Relevansi dalam Dunia Modern
-### Penggunaan dalam Teknologi dan Pendidikan
+#### Penggunaan dalam Teknologi dan Pendidikan
 Dalam dunia modern, kata "pedia" sering digunakan dalam konteks teknologi dan pendidikan. Contoh yang paling terkenal adalah "Wikipedia", yang menyediakan informasi tentang berbagai topik secara daring.
 
 ### Kesimpulan
