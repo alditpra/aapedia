@@ -50,14 +50,10 @@ AApedia menawarkan layanan komprehensif untuk institusi, akademisi, peneliti, da
 ## Perkembangan Makna dari Masa ke Masa
 ![Super wide](~/assets/images/darimasakemasa.webp)
 ### Pengaruh Budaya dan Bahasa
-Makna kata "pedia" telah berkembang seiring dengan perubahan budaya dan bahasa. Dari makna awalnya yang berhubungan dengan pendidikan umum, kata ini telah berkembang untuk mencakup berbagai bidang ilmu pengetahuan dan teknologi.
+Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usulnya dari bahasa Yunani kuno yang mementingkan pendidikan (paideia) mencerminkan nilai-nilai budaya yang menghargai pengetahuan dan pembelajaran. Kata ini kemudian beradaptasi ke berbagai bahasa, mencerminkan fleksibilitas dan daya tariknya yang universal. Dalam konteks modern, "pedia" sering dikaitkan dengan akses universal terhadap informasi dan nilai-nilai egalitarian. Penggunaan "pedia" dalam nama merek atau produk juga dapat membentuk identitas budaya suatu komunitas. Singkatnya, kata "pedia" tidak hanya memiliki sejarah yang panjang, tetapi juga memiliki makna budaya yang kaya, mencerminkan dinamika bahasa.
 
 ### Perubahan Makna dalam Konteks Modern
-Dalam konteks modern, kata "pedia" sering digunakan untuk menunjukkan sumber informasi yang komprehensif dan dapat diakses oleh banyak orang. Ini menunjukkan bagaimana kata ini telah beradaptasi dengan perkembangan teknologi dan informasi.
-
-## Relevansi dalam Dunia Modern
-### Penggunaan dalam Teknologi dan Pendidikan
-Dalam dunia modern, kata "pedia" sering digunakan dalam konteks teknologi dan pendidikan. Contoh yang paling terkenal adalah "Wikipedia", yang menyediakan informasi tentang berbagai topik secara daring.
+Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
 
 ## Kesimpulan
 ### Ringkasan dan Implikasi Etimologi "Pedia"
