@@ -22,6 +22,7 @@ Kata "pedia" berasal dari bahasa Yunani "paideia" (παιδεία), yang berarti
 Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". Dalam bahasa Latin, kata ini tetap mempertahankan makna yang berhubungan dengan pendidikan dan pembelajaran.
 ### Bagaimana "Paideia" Menjadi "Pedia"?
 Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
+
 ### Adaptasi dalam Bahasa Inggris
 Dalam bahasa Inggris, kata "pedia" sering digunakan sebagai akhiran untuk menunjukkan sesuatu yang berhubungan dengan pengetahuan atau pendidikan. Contoh yang paling terkenal adalah "encyclopedia" (ensiklopedia), yang berarti kumpulan pengetahuan yang luas dan komprehensif.
 
