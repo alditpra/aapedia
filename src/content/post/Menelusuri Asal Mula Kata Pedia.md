@@ -23,8 +23,13 @@ Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". 
 ### Bagaimana "Paideia" Menjadi "Pedia"?
 Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
 
-### Adaptasi dalam Bahasa Inggris
-Dalam bahasa Inggris, kata "pedia" sering digunakan sebagai akhiran untuk menunjukkan sesuatu yang berhubungan dengan pengetahuan atau pendidikan. Contoh yang paling terkenal adalah "encyclopedia" (ensiklopedia), yang berarti kumpulan pengetahuan yang luas dan komprehensif.
+## Perkembangan Makna dari Masa ke Masa
+![Super wide](~/assets/images/darimasakemasa.webp)
+### Pengaruh Budaya dan Bahasa
+Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usulnya dari bahasa Yunani kuno yang mementingkan pendidikan (paideia) mencerminkan nilai-nilai budaya yang menghargai pengetahuan dan pembelajaran. Kata ini kemudian beradaptasi ke berbagai bahasa, mencerminkan fleksibilitas dan daya tariknya yang universal. Dalam konteks modern, "pedia" sering dikaitkan dengan akses universal terhadap informasi dan nilai-nilai egalitarian. Penggunaan "pedia" dalam nama merek atau produk juga dapat membentuk identitas budaya suatu komunitas. Singkatnya, kata "pedia" tidak hanya memiliki sejarah yang panjang, tetapi juga memiliki makna budaya yang kaya, mencerminkan dinamika bahasa.
+
+### Perubahan Makna dalam Konteks Modern
+Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
 
 ## Penggunaan dalam Berbagai Konteks
 
@@ -36,14 +41,6 @@ Dalam dunia kedokteran, kata "pedia" digunakan dalam istilah seperti "pediatrics
 
 ### Teknologi dan Digital
 Dalam era digital, kata "pedia" juga digunakan dalam konteks teknologi dan informasi. Contoh yang paling terkenal adalah "Wikipedia", sebuah ensiklopedia daring yang menyediakan informasi tentang berbagai topik.
-
-## Perkembangan Makna dari Masa ke Masa
-![Super wide](~/assets/images/darimasakemasa.webp)
-### Pengaruh Budaya dan Bahasa
-Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usulnya dari bahasa Yunani kuno yang mementingkan pendidikan (paideia) mencerminkan nilai-nilai budaya yang menghargai pengetahuan dan pembelajaran. Kata ini kemudian beradaptasi ke berbagai bahasa, mencerminkan fleksibilitas dan daya tariknya yang universal. Dalam konteks modern, "pedia" sering dikaitkan dengan akses universal terhadap informasi dan nilai-nilai egalitarian. Penggunaan "pedia" dalam nama merek atau produk juga dapat membentuk identitas budaya suatu komunitas. Singkatnya, kata "pedia" tidak hanya memiliki sejarah yang panjang, tetapi juga memiliki makna budaya yang kaya, mencerminkan dinamika bahasa.
-
-### Perubahan Makna dalam Konteks Modern
-Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
 
 ## Contoh dan Fleksibilitas "Pedia"
 
@@ -63,4 +60,4 @@ AApedia adalah sebuah lembaga yang dirancang khusus untuk mendukung para akademi
 Kata "pedia" memiliki asal usul yang kaya dan beragam, mulai dari bahasa Yunani kuno hingga penggunaannya dalam nama-nama brand populer saat ini. Perkembangan makna kata ini menunjukkan bagaimana bahasa dapat beradaptasi dengan perubahan budaya dan teknologi 
  
 ### Pandangan ke Depan
-Melihat perkembangan kata "pedia" dari masa ke masa, kita dapat melihat bagaimana bahasa terus berkembang dan beradaptasi dengan perubahan zaman. Di masa depan, kata "pedia" kemungkinan akan terus digunakan dalam konteks yang lebih luas dan beragam, mencerminkan perkembangan ilmu pengetahuan dan teknologi.
+Melihat perkembangan kata "pedia" dari masa ke masa, kita dapat melihat bagaimana bahasa terus berkembang dan beradaptasi dengan perubahan zaman. Di masa depan, kata "pedia" kemungkinan akan terus digunakan dalam konteks yang lebih luas dan beragam.
