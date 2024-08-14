@@ -48,6 +48,7 @@ Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan be
 AApedia menawarkan layanan komprehensif untuk institusi, akademisi, peneliti, dan mahasiswa meraih kesuksesan melalui karya tulis ilmiah. AApedia menyediakan berbagai jurnal ilmiah yang dapat diakses oleh akademisi dan peneliti, dengan fokus pada kualitas dan kredibilitas publikasi artikel jurnal. Makna dari “pedia” disini adalah komprehensif atau “lengkap” dalam bidang karya tulis ilmiah yang masih bersinggungan dengan pendidikan.
 
 ## Perkembangan Makna dari Masa ke Masa
+![Super wide](~/assets/images/darimasakemasa.webp)
 ### Pengaruh Budaya dan Bahasa
 Makna kata "pedia" telah berkembang seiring dengan perubahan budaya dan bahasa. Dari makna awalnya yang berhubungan dengan pendidikan umum, kata ini telah berkembang untuk mencakup berbagai bidang ilmu pengetahuan dan teknologi.
 
