@@ -25,17 +25,18 @@ Konsep “paideia” menekankan pentingnya pendidikan sebagai proses yang holist
 Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". Dalam bahasa Latin, kata ini tetap mempertahankan makna yang berhubungan dengan pendidikan dan pembelajaran. Penggunaan kata “paedia” dalam berbagai konteks menunjukkan pentingnya pendidikan dan pembelajaran sebagai fondasi dalam berbagai aspek kehidupan. Ini mencerminkan bagaimana konsep pendidikan dari Yunani Kuno terus memengaruhi cara kita memahami dan mengorganisir pengetahuan hingga saat ini.
 
 ## Perkembangan Makna dari Masa ke Masa
-![kata pedia dari masa ke masa](~/assets/images/darimasakemasa.webp)
+![pedia dari masa ke masa](~/assets/images/darimasakemasa.webp)
 ### Bagaimana "Paideia" Menjadi "Pedia"?
 Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
 
 ### Perubahan Makna dalam Konteks Modern
 Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi.\
 \
-Akhiran "-pedia" itu seperti stempel "pengetahuan lengkap". Ketika kita menambahkan "-pedia" di akhir sebuah kata, kita sedang mengatakan bahwa kata tersebut mencakup semua informasi atau pengetahuan tentang suatu hal. Contohnya, "Ensiklopedia" artinya buku yang berisi semua pengetahuan.\
-Cara kerja "-pedia" ini mirip dengan akhiran lain dalam bahasa Indonesia. Misalnya, "-wan" mengubah kata menjadi pekerjaan (misal: wartawan), "-isme" menjadi ideologi (misal: nasionalisme), dan "-wi" menjadi sifat (misalnya: duniawi).\
+Akhiran "-pedia" itu seperti stempel "pengetahuan atau informasi lengkap". Ketika kita menambahkan "-pedia" di akhir sebuah kata, kita sedang mengatakan bahwa kata tersebut mencakup semua informasi atau pengetahuan tentang suatu hal. Contohnya, "Ensiklopedia" artinya buku yang berisi pengetahuan.\
 \
-Namun, ada yang unik tentang "-pedia". Meskipun sering digunakan, kata "pedia" sendiri sebenarnya bukan kata asli Indonesia. Jadi, kata ini lebih sering kita temui di nama-nama perusahaan atau istilah khusus, seperti "Wikipedia" atau "Tokopedia". Jadi, meskipun kita sering menggunakannya, "pedia" belum resmi menjadi bagian dari kamus besar bahasa Indonesia.
+Cara kerja "-pedia" ini mirip dengan akhiran lain dalam bahasa Indonesia. Misalnya, "-wan" atau "-wati" mengubah kata menjadi pekerjaan (misal: karyawan, binaragawan), "-isme" menjadi ideologi (misal: nasionalisme), dan "-wi" menjadi sifat (misalnya: duniawi).\
+\
+Namun, ada yang unik tentang "-pedia". Meskipun sering digunakan, kata "pedia" sendiri sebenarnya bukan kata asli bahasa Indonesia. Kata ini lebih sering kita temui di nama-nama perusahaan atau istilah khusus, seperti "Wikipedia" atau "Tokopedia". Meskipun kita sering mendengarnya, "pedia" belum resmi menjadi bagian dari kamus besar bahasa Indonesia.
 
 
 ## Contoh dari Fleksibilitas "Pedia"
@@ -49,13 +50,13 @@ Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan be
 ### Investopedia
 Secara harfiah, “Investopedia” adalah gabungan dari dua kata: “Invest” dan “Ensiklopedia”. Jadi, Investopedia secara harfiah berarti sebuah ensiklopedia yang menyediakan ilmu pengetahuan atau informasi komprehensif tentang investasi dan keuangan.
 ### Technopedia
-Technopedia adalah sebuah web sumber informasi yang komprehensif dan terpercaya seputar teknologi. Istilah ini berasal dari gabungan kata "techno" yang berarti teknologi dan "pedia" yang berarti ensiklopedia. Jadi, technopedia dapat diartikan sebagai "ensiklopedia teknologi" atau "sumber informasi yang komprehensif tentang teknologi.
+Technopedia adalah sebuah situs web sumber informasi yang komprehensif dan terpercaya seputar teknologi. "Technopedia" berasal dari gabungan kata "techno" yang berarti teknologi dan "pedia" yang diambil dari kata ensiklopedia. Jadi, technopedia dapat diartikan sebagai "ensiklopedia teknologi" atau "sumber informasi yang komprehensif tentang teknologi.
 ### AApedia
-AApedia adalah sebuah lembaga penerbit dari Indonesia yang mendukung para akademisi dan penulis dalam proses penulisan dan publikasi artikel jurnal. Nama "AApedia" sendiri merupakan gabungan dari dan "AA", yang dapat diartikan sebagai "Academic" atau "Author Assistance", dan "pedia" yang mencerminkan bahwa AApedia bergerak di bidang pendidikan atau ilmu pengetahuan dalam bentuk karya tulis ilmiah.
+AApedia adalah sebuah lembaga penerbit dari Indonesia yang mendukung para akademisi dan penulis dalam proses penulisan dan publikasi artikel jurnal. Nama "AApedia" sendiri merupakan gabungan dari dan "AA", yang merupakan singkatan dari "Academic" atau "Author Assistance", dan "pedia" yang mencerminkan bahwa AApedia bergerak di bidang pendidikan atau ilmu pengetahuan yang memberikan layanan komprehensif tentang karya tulis ilmiah.
 
 ## Kesimpulan
 ### Ringkasan dan Implikasi Etimologi "Pedia"
 Perjalanan kata "pedia" dari masa lalu hingga kini adalah cerminan dari dinamika bahasa yang terus beradaptasi dengan perkembangan zaman. Berasal dari bahasa Yunani kuno, kata ini awalnya merujuk pada ilmu pengetahuan atau pembelajaran. Seiring berjalannya waktu, "pedia" mengalami evolusi makna dan kini sering dikaitkan dengan basis data atau ensiklopedia yang komprehensif. Banyak perusahaan yang menggunakan kata ini untuk menunjukkan bahwa mereka menyediakan informasi atau layanan yang komprehensif dan edukatif. Meskipun penggunaannya berkembang, esensi "pedia" sebagai representasi dari ilmu pengetahuan masih tetap terjaga.
  
 ### Pandangan ke Depan
-Perjalanan kata 'pedia' dari masa ke masa menjadi bukti betapa dinamisnya bahasa. Kata ini telah berhasil beradaptasi dengan perubahan zaman dan teknologi, menunjukkan fleksibilitas bahasa dalam merespons kebutuhan manusia. Di masa depan, kita dapat menantikan inovasi lebih lanjut dalam penggunaan 'pedia' yang semakin kreatif dan beragam.
+Perjalanan kata "pedia" dari masa ke masa menjadi bukti betapa dinamisnya bahasa. Kata ini telah berhasil beradaptasi dengan perubahan zaman dan teknologi, menunjukkan fleksibilitas bahasa dalam merespons kebutuhan manusia. Di masa depan, kita dapat menantikan inovasi lebih lanjut dalam penggunaan "pedia" yang semakin kreatif dan beragam.
