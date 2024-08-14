@@ -31,17 +31,6 @@ Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usul
 ### Perubahan Makna dalam Konteks Modern
 Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
 
-## Penggunaan dalam Berbagai Konteks
-
-### Pendidikan dan Pembelajaran
-Dalam konteks pendidikan, kata "pedia" sering digunakan untuk menunjukkan bidang studi atau ilmu pengetahuan tertentu. Misalnya, "encyclopedia" adalah kumpulan pengetahuan yang luas, sementara "pediatrics" (pediatri) adalah cabang ilmu kedokteran yang berfokus pada kesehatan anak-anak.
-
-### Kedokteran dan Ilmu Kesehatan
-Dalam dunia kedokteran, kata "pedia" digunakan dalam istilah seperti "pediatrics" yang berarti ilmu kesehatan anak. Ini menunjukkan bagaimana kata ini telah berkembang untuk mencakup bidang-bidang spesifik dalam ilmu pengetahuan.
-
-### Teknologi dan Digital
-Dalam era digital, kata "pedia" juga digunakan dalam konteks teknologi dan informasi. Contoh yang paling terkenal adalah "Wikipedia", sebuah ensiklopedia daring yang menyediakan informasi tentang berbagai topik.
-
 ## Contoh dan Fleksibilitas "Pedia"
 
 ### Ensiklopedia
