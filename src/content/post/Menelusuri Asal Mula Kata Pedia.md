@@ -17,7 +17,7 @@ Ketika kita melihat kata "pedia" dalam bahasa modern, seperti dalam "encyclopedi
 ## Etimologi Kata "Pedia"
 
 ### Asal Usul dari Bahasa Yunani
-Kata "pedia" berasal dari bahasa Yunani "paideia" (παιδεία), yang berarti pendidikan atau pembelajaran.  Dalam konteks Yunani Kuno, "paideia" merujuk pada proses pembentukan individu yang utuh, baik secara intelektual, moral, maupun fisik. Ini mencakup tidak hanya penguasaan ilmu pengetahuan, tetapi juga pengembangan karakter, keterampilan sosial, dan kebugaran jasmani.\\
+Kata "pedia" berasal dari bahasa Yunani "paideia" (παιδεία), yang berarti pendidikan atau pembelajaran.  Dalam konteks Yunani Kuno, "paideia" merujuk pada proses pembentukan individu yang utuh, baik secara intelektual, moral, maupun fisik. Ini mencakup tidak hanya penguasaan ilmu pengetahuan, tetapi juga pengembangan karakter, keterampilan sosial, dan kebugaran jasmani.\&nbsp; \
 Konsep “paideia” menekankan pentingnya pendidikan sebagai proses yang holistik. Ini berarti bahwa pendidikan tidak hanya berfokus pada aspek akademis, tetapi juga pada pembentukan nilai-nilai etika dan moral serta kemampuan sosial. Pendidikan “paideia” bertujuan untuk menciptakan warga negara yang ideal, yang mampu berkontribusi secara positif dalam kehidupan masyarakat.
 
 ### Perkembangan dalam Bahasa Latin
@@ -29,9 +29,9 @@ Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". 
 Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
 
 ### Perubahan Makna dalam Konteks Modern
-Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi.\\
-Akhiran "-pedia" itu seperti stempel "pengetahuan lengkap". Ketika kita menambahkan "-pedia" di akhir sebuah kata, kita sedang mengatakan bahwa kata tersebut mencakup semua informasi atau pengetahuan tentang suatu hal. Contohnya, "Ensiklopedia" artinya buku yang berisi semua pengetahuan.\\
-Cara kerja "-pedia" ini mirip dengan akhiran lain dalam bahasa Indonesia. Misalnya, "-wan" mengubah kata menjadi pekerjaan (misal: wartawan), "-isme" menjadi ideologi (misal: nasionalisme), dan "-wi" menjadi sifat (misalnya: duniawi).\\
+Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi.\&nbsp; \
+Akhiran "-pedia" itu seperti stempel "pengetahuan lengkap". Ketika kita menambahkan "-pedia" di akhir sebuah kata, kita sedang mengatakan bahwa kata tersebut mencakup semua informasi atau pengetahuan tentang suatu hal. Contohnya, "Ensiklopedia" artinya buku yang berisi semua pengetahuan.\&nbsp; \
+Cara kerja "-pedia" ini mirip dengan akhiran lain dalam bahasa Indonesia. Misalnya, "-wan" mengubah kata menjadi pekerjaan (misal: wartawan), "-isme" menjadi ideologi (misal: nasionalisme), dan "-wi" menjadi sifat (misalnya: duniawi).\&nbsp; \
 Namun, ada yang unik tentang "-pedia". Meskipun sering digunakan, kata "pedia" sendiri sebenarnya bukan kata asli Indonesia. Jadi, kata ini lebih sering kita temui di nama-nama perusahaan atau istilah khusus, seperti "Wikipedia" atau "Tokopedia". Jadi, meskipun kita sering menggunakannya, "pedia" belum resmi menjadi bagian dari kamus besar bahasa Indonesia.
 
 
