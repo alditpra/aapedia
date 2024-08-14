@@ -24,7 +24,7 @@ Dari bahasa Yunani, kata ini diadaptasi ke dalam bahasa Latin sebagai "paedia". 
 Seiring berjalannya waktu, makna "paideia" mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata "pedia" kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
 
 ## Perkembangan Makna dari Masa ke Masa
-![Super wide](~/assets/images/darimasakemasa.webp)
+![kata pedia dari masa ke masa](~/assets/images/darimasakemasa.webp)
 ### Pengaruh Budaya dan Bahasa
 Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usulnya dari bahasa Yunani kuno yang mementingkan pendidikan (paideia) mencerminkan nilai-nilai budaya yang menghargai pengetahuan dan pembelajaran. Kata ini kemudian beradaptasi ke berbagai bahasa, mencerminkan fleksibilitas dan daya tariknya yang universal. Dalam konteks modern, "pedia" sering dikaitkan dengan akses universal terhadap informasi dan nilai-nilai egalitarian. Penggunaan "pedia" dalam nama merek atau produk juga dapat membentuk identitas budaya suatu komunitas. Singkatnya, kata "pedia" tidak hanya memiliki sejarah yang panjang, tetapi juga memiliki makna budaya yang kaya, mencerminkan dinamika bahasa.
 
