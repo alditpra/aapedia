@@ -31,22 +31,22 @@ Pengaruh budaya dan bahasa terhadap kata "pedia" sangatlah signifikan. Asal-usul
 ### Perubahan Makna dalam Konteks Modern
 Kata "pedia" telah mengalami transformasi makna yang signifikan seiring berjalannya waktu. "Pedia" kini lebih merujuk pada kumpulan informasi spesifik yang dapat diakses secara digital. Perubahan ini didorong oleh perkembangan teknologi yang memungkinkan siapa saja untuk berkontribusi dan mengakses informasi. 
 
-## Contoh dan Fleksibilitas "Pedia"
+## Contoh dari Fleksibilitas "Pedia"
 
 ### Ensiklopedia
 Ensiklopedia adalah kumpulan pengetahuan yang luas dan komprehensif tentang berbagai topik. Kata ini berasal dari bahasa Yunani "enkyklios paideia" yang berarti "pendidikan umum".
-### Pediatri
-Terbentuk dari kata Yunani "pais" (anak) dan "iatros" (dokter). Secara langsung mengacu pada cabang ilmu kedokteran yang khusus menangani kesehatan anak-anak.
 ### Wikipedia
 Gabungan dari "wiki" (situs web kolaboratif) dan "encyclopedia". Menunjukkan bahwa Wikipedia adalah ensiklopedia yang dibuat dan disunting bersama oleh banyak orang.
 ### Tokopedia
-Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan berbagai macam produk dan layanan. Nama "Tokopedia" berasal dari gabungan kata "toko" dan "pedia", yang mencerminkan misi perusahaan untuk menjadi sumber pengetahuan atau informasi produk dan solusi belanja bagi masyarakat.
+Tokopedia adalah salah satu e-commerce terbesar di Indonesia yang menyediakan berbagai macam produk dan layanan. Nama "Tokopedia" berasal dari gabungan kata "toko" dan "pedia", yang mencerminkan misi perusahaan untuk menjadi sumber pengetahuan atau informasi tentang berbagai toko sebagai solusi belanja bagi masyarakat.
+### Investopedia
+Secara harfiah, “Investopedia” adalah gabungan dari dua kata: “Invest” dan “Ensiklopedia”. Jadi, Investopedia secara harfiah berarti sebuah ensiklopedia yang menyediakan ilmu pengetahuan atau informasi komprehensif tentang investasi dan keuangan.
 ### AApedia
-AApedia adalah sebuah lembaga yang dirancang khusus untuk mendukung para akademisi dan penulis dalam proses penulisan dan publikasi karya ilmiah. Nama "AApedia" sendiri merupakan gabungan dari "AA" yang dapat diartikan sebagai "Academic" atau "Author Assistance" (asistensi akademisi atau penulis) dan "pedia" yang berarti "komprehensif" atau "lengkap" tentang karya tulis ilmiah, yang masih berhubungan dengan ilmu pengetahuan.
+AApedia adalah sebuah lembaga penerbit dari Indonesia yang mendukung para akademisi dan penulis dalam proses penulisan dan publikasi artikel jurnal. Nama "AApedia" sendiri merupakan gabungan dari dan "AA", yang dapat diartikan sebagai "Academic" atau "Author Assistance", dan "pedia" yang mencerminkan bahwa AApedia bergerak di bidang pendidikan atau ilmu pengetahuan dalam bentuk karya tulis ilmiah.
 
 ## Kesimpulan
 ### Ringkasan dan Implikasi Etimologi "Pedia"
-Kata "pedia" memiliki asal usul yang kaya dan beragam, mulai dari bahasa Yunani kuno hingga penggunaannya dalam nama-nama brand populer saat ini. Perkembangan makna kata ini menunjukkan bagaimana bahasa dapat beradaptasi dengan perubahan budaya dan teknologi 
+Perjalanan kata "pedia" dari masa lalu hingga kini adalah cerminan dari dinamika bahasa yang terus beradaptasi dengan perkembangan zaman. Berasal dari bahasa Yunani kuno, kata ini awalnya merujuk pada ilmu pengetahuan atau pembelajaran. Seiring berjalannya waktu, "pedia" mengalami evolusi makna dan kini sering dikaitkan dengan basis data atau ensiklopedia yang komprehensif. Banyak perusahaan yang menggunakan kata ini untuk menunjukkan bahwa mereka menyediakan informasi atau layanan yang komprehensif dan edukatif. Meskipun penggunaannya berkembang, esensi "pedia" sebagai representasi dari ilmu pengetahuan masih tetap terjaga.
  
 ### Pandangan ke Depan
-Melihat perkembangan kata "pedia" dari masa ke masa, kita dapat melihat bagaimana bahasa terus berkembang dan beradaptasi dengan perubahan zaman. Di masa depan, kata "pedia" kemungkinan akan terus digunakan dalam konteks yang lebih luas dan beragam.
+Perjalanan kata 'pedia' dari masa ke masa menjadi bukti betapa dinamisnya bahasa. Kata ini telah berhasil beradaptasi dengan perubahan zaman dan teknologi, menunjukkan fleksibilitas bahasa dalam merespons kebutuhan manusia. Di masa depan, kita dapat menantikan inovasi lebih lanjut dalam penggunaan 'pedia' yang semakin kreatif dan beragam.
