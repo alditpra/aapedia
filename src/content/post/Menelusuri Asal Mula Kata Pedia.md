@@ -54,6 +54,7 @@ Secara harfiah, 'Investopedia' adalah gabungan dari dua kata: 'Invest' dan 'Ensi
 Technopedia adalah sebuah situs web sumber informasi yang komprehensif dan terpercaya seputar teknologi. 'Technopedia' berasal dari gabungan kata 'techno' yang berarti teknologi dan 'pedia' yang diambil dari kata ensiklopedia. Jadi, technopedia dapat diartikan sebagai 'ensiklopedia teknologi' atau 'sumber informasi yang komprehensif tentang teknologi.
 #### AApedia
 Nama 'AApedia' adalah contoh adaptasi kontemporer dari kata 'pedia', yang menggabungkan dua elemen: 'AA' yang bisa diartikan sebagai 'Academic' atau 'Author Assistance', mencerminkan fleksibilitas layanan, dan 'pedia' yang merujuk pada tradisi sebagai sumber pengetahuan komprehensif.\
+\
 Gabungan ini menciptakan identitas yang kuat dan relevan, dengan fokus pada komitmen akademis, dukungan untuk penulis, dan layanan komprehensif dalam penerbitan artikel jurnal atau karya tulis ilmiah.
 
 ## 'Pedia' dalam Berbagai Bahasa
