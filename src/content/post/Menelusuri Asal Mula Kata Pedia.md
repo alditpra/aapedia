@@ -27,15 +27,14 @@ Penulis dan pemikir Romawi seperti Cicero dan Quintilian sering menggunakan isti
 ## Perkembangan Makna dari Masa ke Masa
 ![pedia dari masa ke masa](~/assets/images/darimasakemasa.webp)
 ### Bagaimana 'Paideia' Menjadi 'Pedia'?
-Seiring berjalannya waktu, makna 'paideia' mengalami penyempitan. Fokusnya bergeser dari proses pendidikan yang komprehensif menjadi lebih spesifik pada pengetahuan yang tertulis dan terorganisir. Kata 'pedia' kemudian muncul sebagai akhiran yang menunjukkan kumpulan pengetahuan yang sistematis.
+Evolusi linguistik dari 'paideia' menjadi 'pedia' adalah contoh menarik dari perubahan bahasa seiring waktu, melibatkan beberapa tahap yang dipengaruhi oleh faktor linguistik dan historis. Kata Yunani asli 'παιδεία' (paideia) mengalami perubahan fonologis saat diadopsi ke dalam bahasa Latin, di mana diftong 'αι' diubah menjadi 'ae'. Seiring perkembangan bahasa Latin Vulgar dan bahasa-bahasa Romana, pengucapan dan ejaan 'ae' disederhanakan menjadi 'e', yang akhirnya menjadi 'pedia' dalam bahasa Inggris modern, dipengaruhi oleh kebutuhan untuk penyederhanaan dalam tipografi dan teknologi.
 
 ### Perubahan Makna dalam Konteks Modern
 Dalam era informasi digital, 'pedia' telah mengalami pergeseran makna yang signifikan, mencerminkan demokratisasi pengetahuan yang belum pernah terjadi sebelumnya. Jika dulu 'pedia' diasosiasikan dengan otoritas akademik dan sumber pengetahuan yang dikurasi secara ketat, kini kata ini sering kali mewakili akses terbuka dan kontribusi kolaboratif terhadap pengetahuan.\
 \
 Wikipedia, sebagai contoh utama, telah mengubah paradigma tentang bagaimana pengetahuan dikumpulkan, divalidasi, dan disebarluaskan. Konsep 'wisdom of the crowd' atau kebijaksanaan massa telah menjadi aspek penting dalam pemahaman modern tentang 'pedia'. Ini menandai pergeseran dari model top-down tradisional penyebaran pengetahuan ke model yang lebih partisipatif dan dinamis.\
 \
-Penggunaan 'pedia' kini telah meluas jauh melampaui batas-batas tradisionalnya dalam dunia akademis dan ensiklopedis. Seperti yang kita lihat dalam kasus Tokopedia, kata ini telah diadopsi dalam konteks komersial dan teknologi, menunjukkan fleksibilitas dan daya tariknya yang berkelanjutan.\
-\
+Penggunaan 'pedia' kini telah meluas jauh melampaui batas-batas tradisionalnya dalam dunia akademis dan ensiklopedis. Seperti yang kita lihat dalam kasus Tokopedia, kata ini telah diadopsi dalam konteks komersial dan teknologi, menunjukkan fleksibilitas dan daya tariknya yang berkelanjutan.
 
 ## Penggunaan dalam Istilah Ilmiah
 Dalam perkembangan modern, 'pedia' juga sering digunakan sebagai akhiran dalam berbagai bidang studi, menandakan kompilasi pengetahuan yang komprehensif dalam bidang tertentu. Contohnya termasuk 'orthopedia' (studi tentang tulang dan sendi), 'logopedia' (studi tentang gangguan bicara), dan 'cyclopedia' (ringkasan pengetahuan umum).\
@@ -59,7 +58,7 @@ Technopedia adalah sebuah situs web sumber informasi yang komprehensif dan terpe
 ### AApedia
 AApedia adalah sebuah lembaga penerbit dari Indonesia yang mendukung para akademisi dan penulis dalam proses penulisan dan publikasi artikel jurnal. Nama 'AApedia' sendiri merupakan gabungan dari dan 'AA', yang merupakan singkatan dari 'Academic' atau 'Author Assistance', dan 'pedia' yang mencerminkan bahwa AApedia bergerak di bidang pendidikan atau ilmu pengetahuan dan memberikan layanan komprehensif tentang karya tulis ilmiah.
 
-### 'Pedia' dalam Berbagai Bahasa
+## 'Pedia' dalam Berbagai Bahasa
 Adopsi dan adaptasi 'pedia' di berbagai bahasa modern menunjukkan daya tarik universal dan fleksibilitas konsep ini. Dalam bahasa Inggris, 'pedia' telah menjadi suffiks yang produktif. Bahasa-bahasa lain telah mengadopsinya dengan variasi, seperti '-pédie' dalam bahasa Prancis atau '-pädie' dalam bahasa Jerman.
 Variasi penggunaan dan pengucapan 'pedia' di berbagai bahasa mencerminkan bagaimana konsep ini telah disesuaikan dengan konteks linguistik dan budaya lokal, sambil mempertahankan esensi dasarnya sebagai penanda pengetahuan komprehensif.
 
