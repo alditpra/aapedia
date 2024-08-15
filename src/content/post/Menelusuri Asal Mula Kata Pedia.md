@@ -30,7 +30,7 @@ Evolusi linguistik dari 'paideia' menjadi 'pedia' adalah contoh menarik dari per
 ## Perkembangan Makna dari Masa ke Masa
 ![pedia dari masa ke masa](~/assets/images/darimasakemasa.webp)
 
-Dalam era informasi digital, 'pedia' telah mengalami pergeseran makna yang signifikan, mencerminkan demokratisasi pengetahuan yang belum pernah terjadi sebelumnya. Jika dulu 'pedia' diasosiasikan dengan otoritas akademik dan sumber pengetahuan yang dikurasi secara ketat, kini kata ini sering kali mewakili akses terbuka dan kontribusi kolaboratif terhadap pengetahuan.\
+Dalam era informasi digital, 'pedia' telah mengalami pergeseran makna yang signifikan, mencerminkan demokratisasi pengetahuan yang belum pernah terjadi sebelumnya. Jika dulu 'pedia' diasosiasikan dengan otoritas akademik dan sumber pengetahuan yang dikurasi secara ketat, kini kata ini sering kali mewakili akses terbuka dan kontribusi kolaboratif terhadap pengetahuan.
 
 ### Penggunaan dalam Istilah Ilmiah
 Dalam perkembangan modern, 'pedia' juga sering digunakan sebagai akhiran dalam berbagai bidang studi, menandakan kompilasi pengetahuan yang komprehensif dalam bidang tertentu. Contohnya termasuk 'orthopedia' (studi tentang tulang dan sendi), 'logopedia' (studi tentang gangguan bicara), dan 'cyclopedia' (ringkasan pengetahuan umum).\
