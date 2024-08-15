@@ -12,7 +12,7 @@ metadata:
   canonical: https://aapedia.netlify.app/menelusuri-asal-mula-kata-pedia
 ---
 
-Ketika kita melihat kata "pedia" dalam bahasa modern, seperti dalam "encyclopedia" atau "Wikipedia", kita seringkali mengaitkannya dengan pengetahuan yang tertulis atau tersimpan secara digital. Namun, akar kata ini jauh lebih dalam dan kaya makna, berasal dari bahasa Yunani Kuno.
+Dalam dunia modern, akhiran '-pedia' sering kali diasosiasikan dengan ensiklopedia atau sumber pengetahuan komprehensif, seperti yang kita lihat dalam Wikipedia. Namun, pemahaman yang lebih dalam mengenai asal-usul dan evolusi kata ini dapat memberikan wawasan penting mengenai bagaimana bahasa berkembang dan diadaptasi dalam konteks budaya yang berbeda. Artikel ini bertujuan untuk menelusuri asal-usul kata '-pedia,' menjelaskan evolusi linguistiknya dari bahasa Yunani kuno hingga menjadi bagian dari nama merek populer, dan memberikan konteks historis dan linguistik yang mendasari perubahan tersebut.
 
 ## Etimologi Kata "Pedia"
 
