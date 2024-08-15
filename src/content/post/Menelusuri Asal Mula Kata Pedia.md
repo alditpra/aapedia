@@ -65,7 +65,9 @@ Variasi penggunaan dan pengucapan 'pedia' di berbagai bahasa mencerminkan bagaim
 
 ## Kesimpulan
 ### Ringkasan dan Implikasi Etimologi 'Pedia'
-Perjalanan kata 'pedia' dari masa lalu hingga kini adalah cerminan dari dinamika bahasa yang terus beradaptasi dengan perkembangan zaman. Berasal dari bahasa Yunani kuno, kata ini awalnya merujuk pada ilmu pengetahuan atau pembelajaran. Seiring berjalannya waktu, 'pedia' mengalami evolusi makna dan kini sering dikaitkan dengan basis data atau ensiklopedia yang komprehensif. Banyak perusahaan yang menggunakan kata ini untuk menunjukkan bahwa mereka menyediakan informasi atau layanan yang komprehensif dan edukatif. Meskipun penggunaannya berkembang, esensi 'pedia' sebagai representasi dari ilmu pengetahuan masih tetap terjaga.\
+Perjalanan kata 'pedia' dari masa lalu hingga kini adalah cerminan dari dinamika bahasa yang terus beradaptasi dengan perkembangan zaman. Berasal dari bahasa Yunani kuno, kata ini awalnya merujuk pada ilmu pengetahuan atau pembelajaran. Seiring berjalannya waktu, 'pedia' mengalami evolusi makna dan kini sering dikaitkan dengan basis data atau ensiklopedia yang komprehensif.\
+\
+Banyak perusahaan yang menggunakan kata ini untuk menunjukkan bahwa mereka menyediakan informasi atau layanan yang komprehensif dan edukatif. Meskipun penggunaannya berkembang, esensi 'pedia' sebagai representasi dari ilmu pengetahuan masih tetap terjaga.\
 \
 Namun, meskipun sering digunakan, kata 'pedia' sendiri sebenarnya bukan kata asli bahasa Indonesia. Meskipun kita sering mendengarnya, 'pedia' belum resmi menjadi bagian dari kamus besar bahasa Indonesia.
  
