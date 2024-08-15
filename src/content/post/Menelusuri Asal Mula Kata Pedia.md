@@ -34,6 +34,7 @@ Dalam era informasi digital, 'pedia' telah mengalami pergeseran makna yang signi
 
 ### Penggunaan dalam Istilah Ilmiah
 Dalam perkembangan modern, 'pedia' juga sering digunakan sebagai akhiran dalam berbagai bidang studi, menandakan kompilasi pengetahuan yang komprehensif dalam bidang tertentu. Contohnya termasuk 'orthopedia' (studi tentang tulang dan sendi), 'logopedia' (studi tentang gangguan bicara), dan 'cyclopedia' (ringkasan pengetahuan umum).\
+\
 Penggunaan 'pedia' dalam terminologi ilmiah ini menekankan aspek komprehensif dan sistematis dari bidang studi tersebut. Ini mencerminkan bagaimana konsep asli paideía Yunani telah beradaptasi untuk memenuhi kebutuhan spesialisasi ilmiah modern sambil mempertahankan esensi 'pendidikan menyeluruh'.
 
 ### Contoh brand atau platform 'Pedia'
