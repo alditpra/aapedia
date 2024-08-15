@@ -58,7 +58,7 @@ Nama 'AApedia' adalah contoh adaptasi kontemporer dari kata 'pedia', yang mengga
 \
 Gabungan ini menciptakan identitas yang kuat dan relevan, dengan fokus pada komitmen akademis, dukungan untuk penulis, dan layanan komprehensif dalam penerbitan artikel jurnal atau karya tulis ilmiah.
 
-## 'Pedia' dalam Berbagai Bahasa
+### 'Pedia' dalam Berbagai Bahasa
 Adopsi dan adaptasi 'pedia' di berbagai bahasa modern menunjukkan daya tarik universal dan fleksibilitas konsep ini. Dalam bahasa Inggris, 'pedia' telah menjadi suffiks yang produktif. Bahasa-bahasa lain telah mengadopsinya dengan variasi, seperti '-pédie' dalam bahasa Prancis atau '-pädie' dalam bahasa Jerman.
 Variasi penggunaan dan pengucapan 'pedia' di berbagai bahasa mencerminkan bagaimana konsep ini telah disesuaikan dengan konteks linguistik dan budaya lokal, sambil mempertahankan esensi dasarnya sebagai penanda pengetahuan komprehensif.
 
