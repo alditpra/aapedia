@@ -14,84 +14,83 @@ metadata:
 
 ### **Garis Besar Artikel: Penerbitan Artikel Jurnal**
 
-1. [**Pengantar Publikasi Artikel Jurnal**](#Pengantar-Publikasi-Artikel-Jurnal)
+1. [**Pengantar Publikasi Artikel Jurnal**](#pengantar-publikasi-artikel-jurnal)
    - [Apa itu Publikasi Artikel Jurnal](#definisi-publikasi-artikel-jurnal)
-   - Mengapa Publikasi Penting bagi Karier Akademik?
+   - [Mengapa Publikasi Penting bagi Karier Akademik?]
 
-2. **Memahami Jenis-Jenis Jurnal**
-   - Jurnal Akses Terbuka vs. Berlangganan
-   - Peer-Reviewed vs. Non-Peer-Reviewed
-   - Jurnal Internasional vs. Lokal
+2. [**Memahami Jenis-Jenis Jurnal**]
+   - [Jurnal Akses Terbuka vs. Berlangganan]
+   - [Peer-Reviewed vs. Non-Peer-Reviewed]
+   - [Jurnal Internasional vs. Lokal]
 
-3. **Langkah Pertama: Menulis Artikel Jurnal yang Berkualitas**
-   - Pemilihan Topik dan Relevansi
-   - Struktur Artikel: Pendahuluan, Metode, Hasil, dan Diskusi
-   - Penggunaan Bahasa yang Tepat dan Jelas
+3. [**Langkah Pertama: Menulis Artikel Jurnal yang Berkualitas**]
+   - [Pemilihan Topik dan Relevansi]
+   - [Struktur Artikel: Pendahuluan, Metode, Hasil, dan Diskusi]
+   - [Penggunaan Bahasa yang Tepat dan Jelas]
 
-4. **Pemilihan Jurnal yang Tepat**
-   - Cara Menemukan Jurnal yang Sesuai
-   - Memahami Kriteria Jurnal
-   - Menghindari Jurnal Predator
+4. [**Pemilihan Jurnal yang Tepat**]
+   - [Cara Menemukan Jurnal yang Sesuai]
+   - [Memahami Kriteria Jurnal]
+   - [Menghindari Jurnal Predator]
 
-5. **Proses Pengiriman dan Penilaian (Peer Review)**
-   - Langkah-langkah dalam Pengiriman Artikel
-   - Proses Peer Review: Apa yang Harus Diharapkan?
-   - Revisi dan Resubmisi: Tips untuk Sukses
+5. [**Proses Pengiriman dan Penilaian (Peer Review)**]
+   - [Langkah-langkah dalam Pengiriman Artikel]
+   - [Proses Peer Review: Apa yang Harus Diharapkan?]
+   - [Revisi dan Resubmisi: Tips untuk Sukses]
 
-6. **Mengatasi Penolakan dan Tantangan dalam Publikasi**
-   - Mengapa Artikel Ditolak?
-   - Cara Merespon Kritik dan Umpan Balik
-   - Mengubah Penolakan menjadi Peluang
+6. [**Mengatasi Penolakan dan Tantangan dalam Publikasi**]
+   - [Mengapa Artikel Ditolak?]
+   - [Cara Merespon Kritik dan Umpan Balik]
+   - [Mengubah Penolakan menjadi Peluang]
 
-7. **Etika dalam Publikasi Jurnal**
-   - Menghindari Plagiarisme dan Kesalahan Etis
-   - Pengungkapan Konflik Kepentingan
-   - Mengelola Hak Cipta dan Hak Penerbitan
+7. [**Etika dalam Publikasi Jurnal**]
+   - [Menghindari Plagiarisme dan Kesalahan Etis]
+   - [Pengungkapan Konflik Kepentingan]
+   - [Mengelola Hak Cipta dan Hak Penerbitan]
 
-8. **Strategi Meningkatkan Peluang Publikasi**
-   - Menulis dengan Fokus pada Pembaca
-   - Kolaborasi dengan Penulis Lain
-   - Mengikuti Tren dan Inovasi di Bidang Anda
+8. [**Strategi Meningkatkan Peluang Publikasi**]
+   - [Menulis dengan Fokus pada Pembaca]
+   - [Kolaborasi dengan Penulis Lain]
+   - [Mengikuti Tren dan Inovasi di Bidang Anda]
 
-9. **Dampak Publikasi pada Reputasi Akademik**
-   - Bagaimana Publikasi Meningkatkan Kredibilitas Anda?
-   - Pengaruh terhadap Karier dan Pendanaan
-   - Membangun Jaringan Akademik Melalui Publikasi
+9. [**Dampak Publikasi pada Reputasi Akademik**]
+   - [Bagaimana Publikasi Meningkatkan Kredibilitas Anda?]
+   - [Pengaruh terhadap Karier dan Pendanaan]
+   - [Membangun Jaringan Akademik Melalui Publikasi]
 
-10. **Peran Editor dan Reviewer dalam Proses Publikasi**
-    - Tugas dan Tanggung Jawab Editor
-    - Peran Reviewer dalam Menilai Kualitas Artikel
-    - Bagaimana Bekerja Sama dengan Editor dan Reviewer
+10. [**Peran Editor dan Reviewer dalam Proses Publikasi**]
+    - [Tugas dan Tanggung Jawab Editor]
+    - [Peran Reviewer dalam Menilai Kualitas Artikel]
+    - [Bagaimana Bekerja Sama dengan Editor dan Reviewer]
 
-11. **Panduan untuk Penulis Baru**
-    - Langkah-langkah Memulai Karier Publikasi
-    - Kesalahan Umum yang Harus Dihindari
-    - Sumber Daya untuk Penulis Baru
+11. [**Panduan untuk Penulis Baru**]
+    - [Langkah-langkah Memulai Karier Publikasi]
+    - [Kesalahan Umum yang Harus Dihindari]
+    - [Sumber Daya untuk Penulis Baru]
 
-12. **Masa Depan Publikasi Artikel Jurnal**
-    - Tren Terbaru dalam Publikasi Akademik
-    - Inovasi Teknologi dalam Dunia Publikasi
-    - Tantangan dan Peluang di Masa Depan
+12. [**Masa Depan Publikasi Artikel Jurnal**]
+    - [Tren Terbaru dalam Publikasi Akademik]
+    - [Inovasi Teknologi dalam Dunia Publikasi]
+    - [Tantangan dan Peluang di Masa Depan]
 
-13. **Studi Kasus: Sukses Publikasi di Jurnal Terkemuka**
-    - Kisah Sukses dari Penulis Berpengalaman
-    - Strategi yang Digunakan untuk Menembus Jurnal Bergengsi
-    - Pelajaran yang Bisa Dipetik dari Pengalaman Mereka
+13. [**Studi Kasus: Sukses Publikasi di Jurnal Terkemuka**]
+    - [Kisah Sukses dari Penulis Berpengalaman]
+    - [Strategi yang Digunakan untuk Menembus Jurnal Bergengsi]
+    - [Pelajaran yang Bisa Dipetik dari Pengalaman Mereka]
 
-14. **Kesimpulan dan Rekomendasi**
-    - Ringkasan Poin-poin Penting
-    - Langkah Praktis untuk Sukses Publikasi
-    - Tips Terakhir untuk Menjaga Semangat
+14. [**Kesimpulan dan Rekomendasi**]
+    - [Ringkasan Poin-poin Penting]
+    - [Langkah Praktis untuk Sukses Publikasi]
+    - [Tips Terakhir untuk Menjaga Semangat]
 
-15. **FAQ tentang Publikasi Artikel Jurnal**
-    - Berapa Lama Waktu yang Dibutuhkan untuk Publikasi?
-    - Bagaimana Cara Memilih Jurnal yang Tepat?
-    - Apa yang Harus Dilakukan Jika Artikel Ditolak?
-    - Bagaimana Menghindari Jurnal Predator?
-    - Apa Saja Etika yang Harus Diperhatikan dalam Publikasi?
+15. [**FAQ tentang Publikasi Artikel Jurnal**]
+    - [Berapa Lama Waktu yang Dibutuhkan untuk Publikasi?]
+    - [Bagaimana Cara Memilih Jurnal yang Tepat?]
+    - [Apa yang Harus Dilakukan Jika Artikel Ditolak?]
+    - [Bagaimana Menghindari Jurnal Predator?]
+    - [Apa Saja Etika yang Harus Diperhatikan dalam Publikasi?]
 
 ---
-<div id="Pengantar-Publikasi-Artikel-Jurnal">---</div>
 
 ## Pengantar Publikasi Artikel Jurnal
 
