@@ -1,20 +1,18 @@
 ---
 publishDate: 2023-08-12T00:00:00Z
-author: John Smith
-title: Get started with AstroWind to create a website using Astro and Tailwind CSS
-excerpt: Start your web journey with AstroWind – harness Astro and Tailwind CSS for a stunning site. Explore our guide now.
+author: alditpra
+title: 'Panduan Publikasi Artikel Jurnal: Dari Penulisan hingga Publikasi'
+excerpt: Dapatkan jawaban untuk pertanyaan umum seputar publikasi artikel jurnal. Panduan komprehensif dari persiapan naskah hingga proses peer review dan publikasi.
 image: https://images.unsplash.com/photo-1516996087931-5ae405802f9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
-category: Tutorials
+category: Panduan
 tags:
-  - astro
-  - tailwind css
+  - Jurnal
+  - Penulisan
+  - Publikasi
 metadata:
   canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
 
-Tentu, saya akan mengubah konten tersebut ke dalam format GitHub Markdown. Berikut adalah versi yang telah diubah:
-
-# Publikasi Artikel Jurnal: Panduan Lengkap untuk Peneliti dan Akademisi
 
 ## Daftar Isi
 1. [Pengantar Publikasi Artikel Jurnal](#pengantar-publikasi-artikel-jurnal)
