@@ -91,8 +91,8 @@ metadata:
     - Apa Saja Etika yang Harus Diperhatikan dalam Publikasi?
 
 ---
-
-## <div id="Pengantar Publikasi Artikel Jurnal">Pengantar Publikasi Artikel Jurnal</div>
+<div id="Pengantar-Publikasi-Artikel-Jurnal"></div>
+## Pengantar Publikasi Artikel Jurnal
 
 ### Definisi Publikasi Artikel Jurnal
 
