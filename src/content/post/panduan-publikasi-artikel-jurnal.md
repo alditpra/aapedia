@@ -3,7 +3,7 @@ publishDate: 2023-08-12T00:00:00Z
 author: alditpra
 title: 'Panduan Publikasi Artikel Jurnal: Dari Penulisan hingga Publikasi'
 excerpt: Dapatkan jawaban untuk pertanyaan umum seputar publikasi artikel jurnal. Panduan komprehensif dari persiapan naskah hingga proses peer review dan publikasi.
-image: https://images.unsplash.com/photo-1516996087931-5ae405802f9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+image: "~/assets/images/panduan-publikasi-artikel-jurnal/1.webp"
 category: Panduan
 tags:
   - Jurnal
@@ -78,7 +78,7 @@ Dalam dunia publikasi akademik, jurnal dibedakan berdasarkan beberapa kategori y
 Memahami karakteristik berbagai jenis jurnal ini akan membantu peneliti dalam memilih outlet yang paling sesuai untuk mempublikasikan hasil penelitian mereka. Faktor-faktor seperti target pembaca, prestise jurnal, dan kecepatan publikasi harus dipertimbangkan saat memilih jurnal untuk pengiriman artikel.
 
 ### Langkah-langkah dalam Proses Publikasi
-
+![langkah langkah proses publikasi](~/assets/images/panduan-publikasi-artikel-jurnal/2.webp)
 Proses publikasi artikel jurnal terdiri dari beberapa langkah kritis yang harus diikuti dengan cermat untuk meningkatkan peluang diterimanya sebuah artikel. Berikut adalah penjelasan rinci tentang langkah-langkah tersebut:
 
 1. **Menulis naskah artikel yang berkualitas**
@@ -171,10 +171,8 @@ Proses publikasi artikel jurnal tidak lepas dari berbagai tantangan yang harus d
    - Biaya pemrosesan artikel: Beberapa jurnal, terutama open-access, membebankan biaya publikasi yang signifikan.
    - Mencari pendanaan: Menemukan sumber dana untuk menutupi biaya publikasi bisa menjadi tantangan tersendiri
 
-Tentu, saya akan melanjutkan artikel dalam format GitHub Markdown:
-
 ### Strategi Meningkatkan Peluang Publikasi
-
+![strategi peluang publikasi jurnal](~/assets/images/panduan-publikasi-artikel-jurnal/3.webp)
 Untuk meningkatkan peluang publikasi artikel jurnal, peneliti dapat menerapkan beberapa strategi berikut:
 
 1. **Menulis dengan jelas dan terstruktur**
@@ -230,7 +228,7 @@ Untuk meningkatkan peluang publikasi artikel jurnal, peneliti dapat menerapkan b
 ## Bagian 2: Dampak dan FAQ
 
 ### Dampak Publikasi Artikel Jurnal terhadap Karier Akademik
-
+![dampak publikasi artikel jurnal](~/assets/images/panduan-publikasi-artikel-jurnal/4.webp)
 Publikasi artikel jurnal memiliki dampak signifikan terhadap karier akademik seorang peneliti:
 
 1. **Peningkatan reputasi akademik**
