@@ -13,9 +13,6 @@ metadata:
   canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
 
-
-**Daftar Isi**
-
 **Bagian 1: Tentang Publikasi**
 1. [Pengantar Publikasi Artikel Jurnal](#pengantar)
 2. [Jenis-jenis Jurnal](#jenis-jenis-jurnal)
