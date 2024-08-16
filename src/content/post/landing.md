@@ -12,7 +12,7 @@ metadata:
   canonical: https://astrowind.vercel.app/landing
 ---
 
-### **Garis Besar Artikel: Penerbitan Artikel Jurnal**
+### **Daftar Isi Artikel**
 
 1. [**Pengantar Publikasi Artikel Jurnal**](#pengantar-publikasi-artikel-jurnal)
    - [Apa itu Publikasi Artikel Jurnal](#definisi-publikasi-artikel-jurnal)
@@ -92,13 +92,13 @@ metadata:
 
 ---
 
-## Pengantar Publikasi Artikel Jurnal
+## 1. Pengantar: Publikasi Artikel Jurnal
 
-### Definisi Publikasi Artikel Jurnal
+### 1 Definisi Publikasi Artikel Jurnal
 
 Publikasi artikel jurnal merujuk pada proses penulisan, peninjauan, dan penerbitan artikel ilmiah dalam jurnal akademik. Artikel ini berisi hasil penelitian, tinjauan literatur, atau analisis data yang dikembangkan oleh penulis untuk berkontribusi pada pengetahuan di bidang tertentu. Jurnal akademik bertindak sebagai platform untuk mendistribusikan penelitian dan memungkinkan komunitas ilmiah untuk berbagi temuan serta berdiskusi mengenai perkembangan terbaru.
 
-### Pentingnya Publikasi Artikel Jurnal dalam Akademia dan Industri
+### 2 Pentingnya Publikasi Artikel Jurnal dalam Akademia dan Industri
 
 Publikasi ilmiah sangat penting dalam akademia dan industri karena membantu menyebarluaskan pengetahuan baru, memvalidasi temuan melalui peer review, dan membangun reputasi penulis sebagai ahli di bidangnya. Dalam dunia akademis, publikasi artikel jurnal adalah indikator utama produktivitas dan kualitas penelitian. Di industri, publikasi ilmiah dapat mempengaruhi inovasi, menarik investor, dan meningkatkan kredibilitas perusahaan. Dengan demikian, publikasi artikel jurnal memainkan peran kunci dalam kemajuan ilmiah dan profesional.
 
