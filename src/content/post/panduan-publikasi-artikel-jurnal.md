@@ -17,7 +17,7 @@ metadata:
 **Daftar Isi**
 
 **Bagian 1: Tentang Publikasi**
-1. [Pengantar Publikasi Artikel Jurnal](#pengantar-publikasi-artikel-jurnal)
+1. [Pengantar Publikasi Artikel Jurnal](#pengantar)
 2. [Jenis-jenis Jurnal](#jenis-jenis-jurnal)
 3. [Langkah-langkah dalam Proses Publikasi](#langkah-langkah-dalam-proses-publikasi)
 4. [Tantangan dalam Publikasi Artikel Jurnal](#tantangan-dalam-publikasi-artikel-jurnal)
@@ -35,7 +35,7 @@ metadata:
 
 ## Bagian 1: Tentang Publikasi Artikel Jurnal
 
-### Pengantar Publikasi Artikel Jurnal
+### Pengantar
 
 Publikasi artikel jurnal merupakan proses yang sangat penting dalam dunia akademia dan industri. Proses ini berfungsi sebagai sarana utama untuk menyebarluaskan pengetahuan, temuan penelitian, dan inovasi terbaru kepada komunitas ilmiah global. Dalam konteks akademik, publikasi artikel jurnal sering kali menjadi tolok ukur kesuksesan seorang peneliti, dosen, atau mahasiswa pascasarjana.
 
