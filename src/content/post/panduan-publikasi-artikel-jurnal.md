@@ -15,11 +15,15 @@ metadata:
 
 
 ## Daftar Isi
+**Bagian 1: Tentang Publikasi Artikel Jurnal**
 1. [Pengantar Publikasi Artikel Jurnal](#pengantar-publikasi-artikel-jurnal)
 2. [Jenis-jenis Jurnal](#jenis-jenis-jurnal)
 3. [Langkah-langkah dalam Proses Publikasi](#langkah-langkah-dalam-proses-publikasi)
 4. [Tantangan dalam Publikasi Artikel Jurnal](#tantangan-dalam-publikasi-artikel-jurnal)
 5. [Strategi Meningkatkan Peluang Publikasi](#strategi-meningkatkan-peluang-publikasi)
+   
+**Bagian 2: Dampak dan FAQ**
+
 6. [Dampak Publikasi Artikel Jurnal terhadap Karier Akademik](#dampak-publikasi-artikel-jurnal-terhadap-karier-akademik)
 7. [Peran Publikasi Artikel Jurnal dalam Pengembangan Ilmu Pengetahuan](#peran-publikasi-artikel-jurnal-dalam-pengembangan-ilmu-pengetahuan)
 8. [FAQ tentang Publikasi Artikel Jurnal](#faq-tentang-publikasi-artikel-jurnal)
@@ -28,7 +32,7 @@ metadata:
     
 ---
 
-## Bagian 1: Pengantar dan Proses Publikasi Artikel Jurnal
+## Bagian 1: Tentang Publikasi Artikel Jurnal
 
 ### Pengantar Publikasi Artikel Jurnal
 
