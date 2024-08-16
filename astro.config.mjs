@@ -24,7 +24,6 @@ export default defineConfig({
     // Applied to .md and .mdx files
     remarkPlugins: [remarkToc],
   },
-});
 
 import {
   readingTimeRemarkPlugin,
