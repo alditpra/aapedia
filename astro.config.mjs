@@ -11,6 +11,7 @@ import icon from 'astro-icon';
 import compress from 'astro-compress';
 
 import astrowind from './vendor/integration';
+import astroRemark from "@astrojs/markdown-remark";
 
 import {
   readingTimeRemarkPlugin,
@@ -83,6 +84,25 @@ export default defineConfig({
     remarkPlugins: [readingTimeRemarkPlugin],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
   },
+
+      markdownOptions: {
+        render: [
+            astroRemark,
+            {
+                rehypePlugins: [
+                    "rehype-slug",
+                    [
+                        "rehype-autolink-headings",
+                        { behavior: "append"},
+                    ],
+                    [
+                        "rehype-toc",
+                        { headings: ["h1", "h2"] }
+                    ]
+                ],
+            },
+        ],
+    },
 
   vite: {
     resolve: {
