@@ -12,6 +12,8 @@ import compress from 'astro-compress';
 
 import astrowind from './vendor/integration';
 
+import remarkToc from 'remark-toc';
+
 import {
   readingTimeRemarkPlugin,
   responsiveTablesRehypePlugin,
@@ -26,6 +28,11 @@ const whenExternalScripts = (items = []) =>
 
 export default defineConfig({
   output: 'static',
+
+  markdown: {
+    // Applied to .md and .mdx files
+    remarkPlugins: [remarkToc],
+  },
 
   integrations: [
     tailwind({
