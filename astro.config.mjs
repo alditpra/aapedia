@@ -11,7 +11,7 @@ import icon from 'astro-icon';
 import compress from 'astro-compress';
 
 import astrowind from './vendor/integration';
-import remarkToc from 'remark-toc';
+
 import {
   readingTimeRemarkPlugin,
   responsiveTablesRehypePlugin,
@@ -82,8 +82,6 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
-    // Applied to .md and .mdx files
-    remarkPlugins: [remarkToc],
   },
 
   vite: {
