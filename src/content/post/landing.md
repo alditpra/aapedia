@@ -92,7 +92,7 @@ metadata:
 
 ---
 
-## <a name="Pengantar Publikasi Artikel Jurnal">Pengantar Publikasi Artikel Jurnal</a>
+## <div id="Pengantar Publikasi Artikel Jurnal">Pengantar Publikasi Artikel Jurnal</div>
 
 ### Definisi Publikasi Artikel Jurnal
 
