@@ -1,5 +1,5 @@
 ---
-publishDate: 2023-08-12T00:00:00Z
+publishDate: 2024-08-17T00:00:00Z
 author: alditpra
 title: 'Panduan Publikasi Artikel Jurnal: Dari Penulisan hingga Publikasi'
 excerpt: Dapatkan jawaban untuk pertanyaan umum seputar publikasi artikel jurnal. Panduan komprehensif dari persiapan naskah hingga proses peer review dan publikasi.
@@ -14,8 +14,9 @@ metadata:
 ---
 
 
-## Daftar Isi
-**Bagian 1: Tentang Publikasi Artikel Jurnal**
+**Daftar Isi**
+
+**Bagian 1: Tentang Publikasi**
 1. [Pengantar Publikasi Artikel Jurnal](#pengantar-publikasi-artikel-jurnal)
 2. [Jenis-jenis Jurnal](#jenis-jenis-jurnal)
 3. [Langkah-langkah dalam Proses Publikasi](#langkah-langkah-dalam-proses-publikasi)
@@ -225,7 +226,7 @@ Untuk meningkatkan peluang publikasi artikel jurnal, peneliti dapat menerapkan b
     - Minta umpan balik dari rekan sejawat
     - Periksa tata bahasa, ejaan, dan format dengan cermat
 
-## Bagian 2: Dampak dan FAQ
+## Bagian 2: Dampak dan Tanya - Jawab
 
 ### Dampak Publikasi Artikel Jurnal terhadap Karier Akademik
 ![dampak publikasi artikel jurnal](~/assets/images/panduan-publikasi-artikel-jurnal/4.webp)
