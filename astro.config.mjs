@@ -12,6 +12,20 @@ import compress from 'astro-compress';
 
 import astrowind from './vendor/integration';
 
+import { defineConfig } from 'astro/config';
+import remarkToc from 'remark-toc';
+import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis';
+
+import { defineConfig } from 'astro/config';
+import remarkToc from 'remark-toc';
+
+export default defineConfig({
+  markdown: {
+    // Applied to .md and .mdx files
+    remarkPlugins: [remarkToc],
+  },
+});
+
 import {
   readingTimeRemarkPlugin,
   responsiveTablesRehypePlugin,
