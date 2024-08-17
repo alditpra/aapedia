@@ -74,9 +74,13 @@ Selanjutnya, lakukan riset. Baca jurnal-jurnal yang Anda minati. Apakah gaya pen
 
 Tapi ingat, jangan terlalu ambisius. Mengirim artikel ke jurnal top memang menggoda, tapi jika penelitian Anda belum sekaliber itu, Anda hanya akan membuang-buang waktu. Lebih baik pilih jurnal yang realistis tapi tetap berkualitas.
 
+Anda juga harus waspada terhadap jurnal predator yang menawarkan publikasi cepat dengan biaya mahal tetapi tidak dikelola dengan profesional. Mereka biasanya hanya mempublikasi artikel anda apa adanya ke jurnal mereka, artikel anda yang sudah publish bisa hilang kapan saja. Publikasi di jurnal predator juga mungkin dapat memberikan dampak negatif terhadap reputasi Anda.
+
+Tapi tenang, ada jurnal AApedia disini. Kami memiliki izin resmi dan dikelola secara profesional, termasuk jurnal berkualitas loh :)
+
 ### 2.2 Penulisan dan Penyusunan Artikel
 
-Nah, ini dia bagian yang sering membuat para peneliti muda (dan terkadang yang sudah berpengalaman juga) menggigit jari. Menulis artikel ilmiah itu bukan perkara gampang. Ini bukan seperti menulis status di media sosial yang bisa asal jeplak.
+Nah, ini dia bagian yang sering membuat para peneliti muda (dan terkadang yang sudah berpengalaman juga) menggigit jari. Menulis artikel ilmiah itu bukan perkara gampang. Ini bukan seperti menulis status di media sosial yang bisa asal jeplak saja.
 
 Pertama, struktur adalah kunci. Mulailah dengan abstrak yang padat dan jelas. Ini adalah "trailer" dari artikel Anda. Buatlah pembaca penasaran tapi juga berikan informasi cukup agar mereka tahu apa yang akan mereka dapatkan.
 
@@ -106,17 +110,17 @@ Editor akan mengirimkan artikel Anda ke beberapa ahli di bidang yang relevan. Me
 
 Proses ini bisa memakan waktu beberapa minggu hingga beberapa bulan. Ya, memang lama. Tapi ingat, para reviewer ini melakukan pekerjaan mereka secara sukarela, di samping pekerjaan utama mereka. Jadi, bersabarlah.
 
-Ketika hasilnya kembali, Anda mungkin akan mendapatkan salah satu dari tiga hasil: diterima (ini jarang terjadi pada submit pertama), revisi (minor atau major), atau ditolak. Jika Anda diminta untuk merevisi, jangan patah semangat! Ini sebenarnya kabar baik. Artinya reviewer melihat potensi dalam pekerjaan Anda.
+Ketika hasilnya kembali, Anda mungkin akan mendapatkan salah satu dari empat hasil: diterima (ini jarang terjadi pada submit pertama), revisi (minor atau major), ditolak, atau diabaikan lama karena si penerbit jurnal tidak profesional. Jika Anda diminta untuk merevisi, jangan patah semangat! Ini sebenarnya kabar baik. Artinya reviewer melihat potensi dalam pekerjaan Anda.
 
 ## 3. Tantangan dalam Publikasi Artikel Jurnal
 
-Jika Anda pikir menulis artikel dan mengirimkannya adalah bagian tersulit, well, saya punya berita untuk Anda. Ada beberapa tantangan lain yang mungkin akan Anda hadapi dalam perjalanan publikasi Anda.
+Jika Anda pikir menulis artikel dan mengirimkannya adalah bagian tersulit, hmm, saya punya berita untuk Anda. Ada beberapa tantangan lain yang mungkin akan Anda hadapi dalam perjalanan publikasi Anda.
 
 ### 3.1 Masalah Etika dalam Publikasi
 
 Etika dalam publikasi ilmiah itu seperti aturan lalu lintas di jalan raya ilmu pengetahuan. Melanggarnya bisa berakibat fatal bagi karir Anda.
 
-Plagiarisme adalah bos monster besar yang harus dihindari dengan segala cara. Ini bukan hanya soal menyalin kata per kata dari karya orang lain. Bahkan menggunakan ide orang lain tanpa memberikan kredit yang tepat bisa dianggap plagiarisme. Jadi, selalu pastikan untuk mengutip sumber Anda dengan benar.
+Plagiarisme adalah bos monster besar yang harus dihindari dengan segala cara. Kita harus mengalahkanya! Ini bukan hanya soal menyalin kata per kata dari karya orang lain. Bahkan menggunakan ide orang lain tanpa memberikan kredit yang tepat bisa dianggap plagiarisme. Jadi, selalu pastikan untuk mengutip sumber Anda dengan benar.
 
 Tapi bukan hanya plagiarisme yang perlu diwaspadai. Ada juga masalah fabrikasi data (ya, beberapa orang nekat melakukan ini), manipulasi gambar, atau bahkan sekadar melebih-lebihkan signifikansi temuan Anda. Ingat, integritas adalah aset terpenting seorang ilmuwan. Sekali Anda kehilangannya, sangat sulit untuk mendapatkannya kembali.
 
@@ -124,13 +128,13 @@ Konflik kepentingan juga menjadi isu yang semakin penting. Jika penelitian Anda 
 
 ### 3.2 Kesulitan dalam Proses Peer-Review
 
-Ini adalah proses yang bisa membuat peneliti paling berpengalaman sekalipun merasa seperti mahasiswa yang sedang diuji. Terkadang, Anda mungkin merasa reviewer tidak memahami poin utama penelitian Anda. Atau mungkin mereka meminta revisi yang menurut Anda tidak masuk akal.
+Ini adalah proses yang bisa membuat peneliti paling berpengalaman sekalipun merasa seperti kembali menjadi mahasiswa yang sedang diuji skripsi lagi. Terkadang, Anda mungkin merasa reviewer tidak memahami poin utama penelitian Anda. Atau mungkin mereka meminta revisi yang menurut Anda tidak masuk akal.
 
-Kuncinya adalah untuk tetap tenang dan profesional. Ingat, reviewer juga manusia. Mereka mungkin punya hari yang buruk, atau mungkin mereka memang tidak sepenuhnya paham dengan metode baru yang Anda gunakan. Tugas Anda adalah menanggapi setiap komentar dengan sabar dan jelas.
+Kuncinya adalah untuk tetap tenang dan profesional. Ingat, reviewer juga manusia. Mereka mungkin sedang mengalami hari yang buruk, atau mungkin mereka memang tidak sepenuhnya paham dengan metode baru yang Anda gunakan. Tugas Anda adalah menanggapi setiap komentar dengan sabar dan jelas.
 
-Terkadang, Anda mungkin mendapatkan reviewer yang tampaknya "hostile". Mereka mengkritik hampir setiap aspek dari pekerjaan Anda. Dalam situasi seperti ini, tetap fokus pada substansi kritik mereka, bukan pada nada tulisannya. Jika Anda merasa kritik tersebut benar-benar tidak adil, Anda bisa mengkomunikasikannya dengan editor secara sopan.
+Terkadang, Anda mungkin mendapatkan reviewer yang tampaknya *"hostile"*. Mereka mengkritik hampir setiap aspek dari pekerjaan Anda. Dalam situasi seperti ini, tetap fokus pada substansi kritik mereka, bukan pada nada tulisannya. Jika Anda merasa kritik tersebut benar-benar tidak adil, Anda bisa mengkomunikasikannya dengan editor secara sopan.
 
-Tantangan lain adalah waktu. Proses peer-review bisa memakan waktu berbulan-bulan. Ini bisa sangat frustrasi, terutama jika Anda sedang mengejar tenggat waktu tertentu (misalnya untuk keperluan promosi atau aplikasi grant). Sayangnya, tidak banyak yang bisa Anda lakukan selain menunggu dengan sabar.
+Tantangan lain adalah waktu. Proses peer-review bisa cepat, atau memakan waktu berbulan-bulan. Ini bisa sangat frustrasi, terutama jika Anda sedang mengejar tenggat waktu tertentu (misalnya untuk keperluan promosi atau aplikasi grant). Sayangnya, tidak banyak yang bisa Anda lakukan selain menunggu dengan sabar.
 
 ## 4. Strategi untuk Meningkatkan Peluang Penerimaan
 
@@ -140,11 +144,13 @@ Baiklah, sekarang kita sudah membahas tantangan-tantangannya. Tapi jangan khawat
 
 Ini mungkin terdengar seperti hal sepele, tapi percayalah, banyak artikel yang ditolak hanya karena penulis tidak mengikuti panduan jurnal dengan teliti. Setiap jurnal punya gaya dan preferensi sendiri. Ada yang suka referensi dalam format Harvard, ada yang lebih suka APA. Ada yang membatasi jumlah kata, ada yang lebih fleksibel.
 
-Jadi, sebelum Anda mulai menulis, download dan baca baik-baik panduan untuk penulis dari jurnal yang Anda targetkan. Anggap saja ini seperti resep masakan. Anda mungkin koki handal, tapi jika Anda tidak mengikuti resepnya dengan tepat, hasilnya mungkin tidak sesuai harapan.
+Jadi, sebelum Anda mulai menulis, download dan baca baik-baik panduan untuk penulis dari jurnal yang Anda targetkan. Anggap saja ini seperti resep masakan. Anda mungkin koki handal, tapi jika Anda tidak mengikuti resepnya dengan tepat, hasilnya mungkin tidak sesuai harapan. Ya kan lucu kalau salah masakan.
 
 Perhatikan juga struktur artikel yang diinginkan jurnal. Beberapa jurnal mungkin menginginkan metode ditulis sebelum hasil, sementara yang lain mungkin sebaliknya. Ikuti struktur ini dengan cermat.
 
 Dan jangan lupa soal formatting! Jenis font, ukuran margin, bahkan cara penomoran gambar dan tabel bisa jadi penting. Ya, ini mungkin terasa membosankan dan tidak penting. Tapi percayalah, editor akan menghargai usaha Anda untuk mematuhi aturan mereka.
+
+>Biasanya setiap website jurnal melampirkan file template artikel mereka. Download template itu dan sesuaikan saja formatnya.
 
 ### 4.2 Memilih Kata Kunci yang Tepat
 
@@ -172,6 +178,8 @@ Saat merevisi, tangani setiap komentar satu per satu. Jangan skip satu pun! Bahk
 
 Yang paling penting, jangan lupa untuk berterima kasih pada reviewer dalam surat pengantar revisi Anda. Mereka telah meluangkan waktu untuk membaca dan mengkritisi pekerjaan Anda. Sebuah ucapan terima kasih yang tulus bisa membuat perbedaan besar dalam cara mereka melihat revisi Anda.
 
+Tapi ingat, AApedia disini siap membantu Anda mempermudah segala proses publikasi jurnal :)
+
 ## 5. Dampak Publikasi Jurnal terhadap Karir Akademis
 
 Sekarang Anda mungkin bertanya-tanya, "Setelah melalui semua kerja keras ini, apa yang saya dapatkan?" Well, jawabannya bisa jadi cukup menggembirakan. Publikasi jurnal bisa memiliki dampak signifikan terhadap karir akademis Anda.
@@ -182,15 +190,13 @@ Publikasi di jurnal terkemuka itu seperti mendapatkan medali emas di Olimpiade a
 
 Setiap publikasi adalah batu bata yang membangun reputasi Anda. Semakin banyak dan semakin berkualitas publikasi Anda, semakin solid "bangunan" reputasi Anda. Ini bisa membuka pintu untuk berbagai kesempatan: undangan sebagai pembicara di konferensi, tawaran kolaborasi dari peneliti lain, bahkan posisi editorial di jurnal-jurnal terkemuka.
 
-Tapi ingat, kualitas lebih penting daripada kuantitas. Satu artikel yang sangat baik di jurnal top bisa lebih berdampak daripada lima artikel mediocre di jurnal-jurnal kurang terkenal. Jadi, jangan terburu-buru untuk mempublikasikan. Pastikan setiap karya Anda adalah yang terbaik yang bisa Anda hasilkan.
-
 ### 5.2 Peluang Kerja dan Pendanaan
 
 Di dunia akademis, publikasi adalah mata uang. Saat Anda melamar posisi akademis atau dana penelitian, daftar publikasi Anda akan diperiksa dengan seksama. Ini seperti CV Anda dalam dunia penelitian.
 
-Publikasi yang kuat bisa membedakan Anda dari kandidat lain saat melamar pekerjaan. Bayangkan dua kandidat dengan kualifikasi yang hampir sama, tapi yang satu memiliki beberapa publikasi di jurnal terkemuka. Siapa yang menurut Anda akan dipilih?
+Publikasi yang kuat bisa membedakan Anda dari kandidat lain saat melamar pekerjaan. Bayangkan dua kandidat dengan kualifikasi yang hampir sama, tapi yang satu memiliki beberapa publikasi di jurnal yang berkualitas. Siapa yang menurut Anda akan dipilih?
 
-Dalam hal pendanaan, banyak badan pemberi dana melihat track record publikasi sebagai indikator potensi keberhasilan proyek. Mereka berpikir, "Jika peneliti ini bisa menghasilkan karya yang diterima di jurnal-jurnal top, kemungkinan besar mereka akan menggunakan dana kami dengan baik."
+Dalam hal pendanaan, banyak badan pemberi dana melihat track record publikasi sebagai indikator potensi keberhasilan proyek. Mereka berpikir, "Jika peneliti ini bisa menghasilkan karya yang diterima di jurnal-jurnal top, kemungkinan besar mereka akan menggunakan dana mereka dengan baik."
 
 Tapi bukan hanya jumlah publikasi yang penting. Konsistensi juga krusial. Publikasi yang teratur menunjukkan bahwa Anda adalah peneliti yang produktif dan dapat diandalkan. Ini bisa menjadi poin plus besar dalam aplikasi kerja atau pendanaan Anda.
 
@@ -224,11 +230,11 @@ Whew! Kita telah melakukan ~~pengetikan~~	perjalanan panjang melalui seluk-beluk
 
 Ingatlah, publikasi bukan hanya tentang menambah entri pada CV Anda. Ini adalah tentang berkontribusi pada kemajuan pengetahuan manusia. Setiap artikel yang Anda publikasikan adalah batu kecil yang membantu membangun perpustakaan besar ilmu pengetahuan.
 
-Jadi, jangan pernah menyerah! Ya, prosesnya bisa jadi panjang dan kadang frustrasi. Tapi bayangkan perasaan puas ketika Anda akhirnya melihat nama Anda tercetak di jurnal terkemuka. Atau lebih baik lagi, bayangkan saat peneliti lain mengutip pekerjaan Anda, menunjukkan bahwa Anda telah memberikan kontribusi yang berarti pada bidang Anda. Berkontribusi pada dunia!
+Jadi, jangan pernah menyerah! Ya, prosesnya bisa jadi panjang dan kadang frustrasi. Tapi bayangkan perasaan puas ketika Anda akhirnya melihat nama Anda tercetak di jurnal nasional yang berkualitas. Atau lebih baik lagi, di jurnal bereputasi yang terindeks Scopus. Bayangkan saat peneliti lain mengutip pekerjaan Anda, menunjukkan bahwa Anda telah memberikan kontribusi yang berarti pada bidang Anda.
 
 Untuk para peneliti muda yang baru memulai perjalanan publikasi mereka, ingatlah bahwa setiap peneliti hebat pernah berada di posisi Anda. Mereka juga pernah mengalami penolakan, revisi yang sepertinya tak ada habisnya, dan momen-momen keraguan. Tapi mereka bertahan, dan Anda juga bisa.
 
-Jadi, mulailah menulis. Mulailah meneliti. Mulailah berkontribusi. Dunia menanti ide-ide brilian Anda. Siapa tahu, mungkin artikel berikutnya yang mengubah paradigma dalam bidang Anda akan datang dari Anda.
+Jadi, mulailah menulis. Mulailah meneliti. Mulailah berkontribusi. Mulailah dari publikasi di jurnal nasional yang berkualitas. Dunia menanti ide-ide brilian Anda. Siapa tahu, mungkin artikel berikutnya yang mengubah paradigma dalam bidang Anda akan datang dari Anda.
 
 Selamat berkarya, dan semoga sukses dalam perjalanan publikasi Anda!
 
