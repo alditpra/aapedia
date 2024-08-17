@@ -48,7 +48,6 @@ Publikasi artikel jurnal bisa terasa seperti memecahkan teka-teki besar, penuh d
     - Berapa Lama Waktu yang Dibutuhkan untuk Proses Publikasi?
     - Apa Itu Jurnal Predator dan Bagaimana Menghindarinya?
     - Apa Saja Alat yang Membantu Proses Penulisan dan Pengajuan Artikel?
-7. **[Kesimpulan](#kesimpulan)**
 
 ---
 
@@ -196,22 +195,5 @@ Publikasi artikel jurnal bukanlah proses yang mudah, tetapi dengan perencanaan y
 Jika Anda tekun dan terus berusaha, artikel Anda pada akhirnya akan diterima dan dipublikasikan, membuka pintu menuju pengakuan yang lebih luas dalam komunitas ilmiah.
 
 ---
-
-## **FAQ tentang Publikasi Artikel Jurnal**
-
-1. **Apa yang Harus Dilakukan Jika Artikel Ditolak?**
-   - Jika artikel Anda ditolak, revisi berdasarkan umpan balik yang diberikan dan pertimbangkan untuk mengirimkan ke jurnal lain.
-
-2. **Bagaimana Cara Memilih Jurnal yang Tepat?**
-   - Pilih jurnal yang relevan dengan penelitian Anda dan memiliki reputasi baik serta *impact factor* yang sesuai.
-
-3. **Berapa Lama Waktu yang Dibutuhkan untuk Proses Publikasi?**
-   - Proses ini bisa memakan waktu 3-6 bulan atau lebih, tergantung pada kecepatan review dan revisi.
-
-4. **Apa Itu Jurnal Predator dan Bagaimana Menghindarinya?**
-   - Jurnal predator mengenakan biaya tinggi tanpa layanan review memadai; hindari dengan memeriksa reputasi jurnal.
-
-5. **Apa Saja Alat yang Membantu Proses Penulisan dan Pengajuan Artikel?**
-   - Gunakan alat manajemen referensi seperti Mendeley, perangkat lunak deteksi plagiarisme, dan platform seperti ORCID untuk membantu proses Anda.
 
 
