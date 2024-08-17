@@ -82,7 +82,7 @@ Tapi tenang, ada jurnal AApedia disini. Kami memiliki izin resmi dan dikelola se
 
 Nah, ini dia bagian yang sering membuat para peneliti muda (dan terkadang yang sudah berpengalaman juga) menggigit jari. Menulis artikel ilmiah itu bukan perkara gampang. Ini bukan seperti menulis status di media sosial yang bisa asal jeplak saja.
 
-Pertama, struktur adalah kunci. Mulailah dengan abstrak yang padat dan jelas. Ini adalah "trailer" dari artikel Anda. Buatlah pembaca penasaran tapi juga berikan informasi cukup agar mereka tahu apa yang akan mereka dapatkan.
+Pertama, struktur adalah kunci. Mulailah dengan abstrak yang padat dan jelas. Ini adalah *"trailer"* dari artikel Anda. Buatlah pembaca penasaran tapi juga berikan informasi cukup agar mereka tahu apa yang akan mereka dapatkan.
 
 Pendahuluan harus menarik dan relevan. Jangan terlalu bertele-tele, tapi juga jangan terlalu singkat. Bayangkan Anda sedang bercerita pada teman yang pintar tapi tidak tahu apa-apa tentang topik Anda. Bagaimana Anda akan memulainya?
 
