@@ -46,7 +46,7 @@ Publikasi artikel jurnal adalah langkah penting dalam dunia akademik. Mengapa? K
 
 ## 1. Pendahuluan
 
-Pernahkah Anda membayangkan bagaimana rasanya menjadi seorang ilmuwan yang namanya terukir dalam sejarah? Yah, mungkin tidak semua dari kita bercita-cita setinggi itu. Tapi, bukankah kita semua ingin meninggalkan jejak dalam bidang yang kita tekuni? Nah, di sinilah publikasi artikel jurnal masuk ke dalam cerita.
+Pernahkah Anda membayangkan bagaimana rasanya menjadi seorang ilmuwan yang namanya terukir dalam sejarah? Yah, mungkin tidak semua dari kita bercita-cita seperti itu. Tapi, bukankah membanggakan jika kita meninggalkan jejak pengetahuan di dunia ini dalam bidang yang kita tekuni? Nah, di sinilah publikasi artikel jurnal memainkan peran penting.
 
 ### 1.1 Definisi Publikasi Artikel Jurnal
 
