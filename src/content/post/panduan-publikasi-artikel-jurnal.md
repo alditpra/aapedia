@@ -15,7 +15,6 @@ metadata:
 ---
 
 
-## Pendahuluan
 Publikasi artikel jurnal adalah langkah penting dalam dunia akademik. Mengapa? Karena ini adalah cara utama untuk berbagi pengetahuan dan temuan penelitian dengan komunitas ilmiah. Bayangkan Anda menemukan sesuatu yang revolusioner, tetapi tidak ada yang tahu karena Anda tidak mempublikasikannya. Publikasi artikel jurnal memastikan bahwa penemuan Anda diakui dan dihargai.
 
 Selain itu, publikasi artikel jurnal juga berfungsi sebagai bukti kontribusi Anda terhadap bidang ilmu tertentu. Ini bisa menjadi penentu dalam karier akademik Anda, membantu Anda mendapatkan pengakuan, pendanaan, dan peluang kolaborasi. Jadi, mari kita telusuri lebih dalam bagaimana proses ini berjalan dan bagaimana Anda bisa sukses dalam publikasi artikel jurnal.
@@ -23,35 +22,32 @@ Selain itu, publikasi artikel jurnal juga berfungsi sebagai bukti kontribusi And
 ---
 **Daftar Isi**
 
-- [Pendahuluan](#pendahuluan)
-- [Alur Publikasi Artikel Jurnal](#alur-publikasi-artikel-jurnal)
-  - [Menulis Artikel Ilmiah](#menulis-artikel-ilmiah)
-  - [Mempresentasikan Artikel](#mempresentasikan-artikel)
-  - [Memilih Jurnal yang Tepat](#memilih-jurnal-yang-tepat)
-  - [Mengirim (Submit) Artikel Ilmiah](#mengirim-submit-artikel-ilmiah)
-  - [Proses Review](#proses-review)
-  - [Proses Penerbitan](#proses-penerbitan)
-- [Tips Menulis Artikel Ilmiah yang Baik](#tips-menulis-artikel-ilmiah-yang-baik)
-  - [Struktur Artikel Ilmiah](#struktur-artikel-ilmiah)
-  - [Gaya Penulisan yang Jelas dan Padat](#gaya-penulisan-yang-jelas-dan-padat)
-  - [Penggunaan Referensi yang Tepat](#penggunaan-referensi-yang-tepat)
-- [Memilih Jurnal yang Tepat](#memilih-jurnal-yang-tepat-1)
-  - [Kriteria Jurnal Bereputasi](#kriteria-jurnal-bereputasi)
-  - [Perbedaan Jurnal Nasional dan Internasional](#perbedaan-jurnal-nasional-dan-internasional)
-  - [Indeksasi Jurnal (Sinta, Scopus, dll.)](#indeksasi-jurnal-sinta-scopus-dll)
-- [Proses Review dan Revisi](#proses-review-dan-revisi)
-  - [Tahapan Proses Review](#tahapan-proses-review)
-  - [Jenis-jenis Review (Single-blind, Double-blind, dll.)](#jenis-jenis-review-single-blind-double-blind-dll)
-  - [Cara Menghadapi Kritik dan Saran Reviewer](#cara-menghadapi-kritik-dan-saran-reviewer)
-- [Proses Penerbitan dan Distribusi](#proses-penerbitan-dan-distribusi)
-  - [Tahapan Penerbitan](#tahapan-penerbitan)
-  - [Distribusi Artikel Jurnal](#distribusi-artikel-jurnal)
-- [Tantangan dan Solusi dalam Publikasi Artikel Jurnal](#tantangan-dan-solusi-dalam-publikasi-artikel-jurnal)
-  - [Tantangan Umum dalam Publikasi](#tantangan-umum-dalam-publikasi)
-  - [Solusi untuk Mengatasi Tantangan](#solusi-untuk-mengatasi-tantangan)
-- [FAQ](#faq)
-- [Kesimpulan](#kesimpulan)
-
+1. [Menulis Artikel Ilmiah](#menulis-artikel-ilmiah)
+2. [Mempresentasikan Artikel](#mempresentasikan-artikel)
+3. [Memilih Jurnal yang Tepat](#memilih-jurnal-yang-tepat)
+4. [Mengirim (Submit) Artikel Ilmiah](#mengirim-submit-artikel-ilmiah)
+5. [Proses Review](#proses-review)
+6. [Proses Penerbitan](#proses-penerbitan)
+7. [Tips Menulis Artikel Ilmiah yang Baik](#tips-menulis-artikel-ilmiah-yang-baik)
+   - [Struktur Artikel Ilmiah](#struktur-artikel-ilmiah)
+   - [Gaya Penulisan yang Jelas dan Padat](#gaya-penulisan-yang-jelas-dan-padat)
+   - [Penggunaan Referensi yang Tepat](#penggunaan-referensi-yang-tepat)
+8. [Memilih Jurnal yang Tepat](#memilih-jurnal-yang-tepat-1)
+   - [Kriteria Jurnal Bereputasi](#kriteria-jurnal-bereputasi)
+   - [Perbedaan Jurnal Nasional dan Internasional](#perbedaan-jurnal-nasional-dan-internasional)
+   - [Indeksasi Jurnal (Sinta, Scopus, dll.)](#indeksasi-jurnal-sinta-scopus-dll)
+9. [Proses Review dan Revisi](#proses-review-dan-revisi)
+   - [Tahapan Proses Review](#tahapan-proses-review)
+   - [Jenis-jenis Review (Single-blind, Double-blind, dll.)](#jenis-jenis-review-single-blind-double-blind-dll)
+   - [Cara Menghadapi Kritik dan Saran Reviewer](#cara-menghadapi-kritik-dan-saran-reviewer)
+10. [Proses Penerbitan dan Distribusi](#proses-penerbitan-dan-distribusi)
+    - [Tahapan Penerbitan](#tahapan-penerbitan)
+    - [Distribusi Artikel Jurnal](#distribusi-artikel-jurnal)
+11. [Tantangan dan Solusi dalam Publikasi Artikel Jurnal](#tantangan-dan-solusi-dalam-publikasi-artikel-jurnal)
+    - [Tantangan Umum dalam Publikasi](#tantangan-umum-dalam-publikasi)
+    - [Solusi untuk Mengatasi Tantangan](#solusi-untuk-mengatasi-tantangan)
+12. [FAQ](#faq)
+13. [Kesimpulan](#kesimpulan)
 
 ---
 
@@ -104,7 +100,7 @@ Setelah artikel Anda disetujui, proses penerbitan dimulai.
 
 - **Distribusi Artikel Jurnal**: Jurnal akan mendistribusikan artikel Anda ke komunitas ilmiah melalui berbagai platform. Artikel Anda akan tersedia di database jurnal, situs web jurnal, dan mungkin juga diindeks di database ilmiah seperti Scopus atau Sinta. Beberapa jurnal juga mempromosikan artikel melalui media sosial dan buletin email.
 
-#### Tantangan dan Solusi dalam Publikasi Artikel Jurnal
+## Tantangan dan Solusi dalam Publikasi Artikel Jurnal
 Publikasi artikel jurnal tidak selalu mudah. Berikut beberapa tantangan umum dan solusinya:
 
 - **Tantangan Umum dalam Publikasi**: Penolakan artikel, proses review yang lama, dan biaya publikasi. Penolakan artikel bisa menjadi pengalaman yang mengecewakan, tetapi jangan biarkan hal itu menghentikan Anda. Proses review yang lama bisa membuat Anda merasa frustrasi, terutama jika Anda menunggu berbulan-bulan untuk mendapatkan tanggapan. Biaya publikasi juga bisa menjadi kendala, terutama jika Anda tidak memiliki dana yang cukup.
@@ -142,7 +138,7 @@ Publikasi artikel jurnal tidak selalu mudah. Berikut beberapa tantangan umum dan
 10. **Bagaimana Cara Mempromosikan Artikel Saya Setelah Diterbitkan?**
    Bagikan artikel Anda di media sosial, blog, dan platform akademik seperti ResearchGate. Anda juga bisa menghubungi rekan sejawat dan meminta mereka untuk membaca dan mengutip artikel Anda.
 
-### Kesimpulan
+## Kesimpulan
 Publikasi artikel jurnal adalah proses yang menantang tetapi sangat penting dalam dunia akademik. Dengan memahami alur publikasi, menulis artikel yang baik, dan memilih jurnal yang tepat, Anda bisa memastikan bahwa penelitian Anda diakui dan dihargai. Jangan takut menghadapi tantangan, karena setiap langkah adalah bagian dari perjalanan menuju kesuksesan akademik.
 
 
