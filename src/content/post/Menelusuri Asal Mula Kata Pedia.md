@@ -1,7 +1,7 @@
 ---
 publishDate: 2024-08-14T00:00:00Z
 author: alditpra
-title: 'Dari Paideía ke Pedia: Warisan Yunani dalam Era Digital'
+title: 'Asal Mula Kata Pedia: Warisan Yunani dalam Era Digital'
 excerpt: Telusuri asal-usul akhiran '-pedia' dan pengaruhnya dalam branding modern. Eksplorasi makna dari Wikipedia hingga Tokopedia dalam konteks sejarah linguistik.
 image: "~/assets/images/katapedia/1.webp"
 category: Umum
@@ -26,11 +26,13 @@ Paideía adalah jiwa dari peradaban Yunani kuno dimana proses pembentukan manusi
 
 Bagaimana bisa kata yang begitu mendalam ini berubah menjadi akhiran '-pedia' yang kita kenal sekarang? Ceritanya menjadi semakin menarik saat kata ini melakukan perjalanan lintas budaya.
 
-Seperti seorang petualang yang beradaptasi dengan lingkungan baru, 'paideía' pun berubah. Memasuki dunia Latin, ia bertransformasi menjadi 'pædia'. Meskipun masih mempertahankan esensinya, kata ini mulai mengambil bentuk yang lebih formal dan terstruktur.
+Seiring waktu, kata 'paideía' mengalami transformasi saat memasuki bahasa Latin. Dalam Latin, kata ini berevolusi menjadi 'pædia', mempertahankan banyak nuansa makna aslinya tetapi juga mengalami pergeseran subtle. Penggunaan 'pædia' dalam literatur klasik Latin sering kali merujuk pada konsep pendidikan yang lebih terstruktur dan formal dibandingkan dengan konsep Yunani yang lebih holistik.
+
+Penulis dan pemikir Romawi seperti Cicero dan Quintilian sering menggunakan istilah ini dalam tulisan mereka tentang retorika dan pendidikan. Evolusi kata ini dalam bahasa Latin mencerminkan perubahan dalam sistem pendidikan dan pemahaman tentang pengetahuan yang terjadi selama transisi dari dunia Yunani ke Romawi.
 
 ### Proses Penyederhanaan Fonologis
 
-Lalu, bagaimana 'paideia' akhirnya menjadi 'pedia'? Bayangkan kata ini sebagai batu yang mengalami erosi selama ribuan tahun. Perlahan tapi pasti, bentuknya berubah. Diftong 'αι' disederhanakan menjadi 'ae', lalu akhirnya menjadi 'e' sederhana. Voila! Kita pun mendapatkan 'pedia' yang kita kenal sekarang.
+Lalu, bagaimana 'paideia' akhirnya menjadi 'pedia'? Umpamakan saja kata ini sebagai batu yang mengalami erosi selama ribuan tahun. Perlahan tapi pasti, bentuknya berubah. Diftong 'αι' disederhanakan menjadi 'ae', lalu akhirnya menjadi 'e' sederhana. Voila! Kita pun mendapatkan 'pedia' yang kita kenal sekarang.
 
 ## 'Pedia' di Era Digital: Metamorfosis Makna
 ![perkembangan kata pedia](~/assets/images/katapedia/2.webp)

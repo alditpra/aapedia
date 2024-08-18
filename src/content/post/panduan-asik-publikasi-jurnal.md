@@ -10,6 +10,7 @@ tags:
   - Jurnal
   - Penulisan
   - Publikasi
+  - Artikel
 metadata:
   canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
