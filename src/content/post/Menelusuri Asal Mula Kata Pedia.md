@@ -33,7 +33,7 @@ Seperti seorang petualang yang beradaptasi dengan lingkungan baru, 'paideía' pu
 Lalu, bagaimana 'paideia' akhirnya menjadi 'pedia'? Bayangkan kata ini sebagai batu yang mengalami erosi selama ribuan tahun. Perlahan tapi pasti, bentuknya berubah. Diftong 'αι' disederhanakan menjadi 'ae', lalu akhirnya menjadi 'e' sederhana. Voila! Kita pun mendapatkan 'pedia' yang kita kenal sekarang.
 
 ## 'Pedia' di Era Digital: Metamorfosis Makna
-![perkembangan kata pedia](~/assets/images/pkatapedia/2.webp)
+![perkembangan kata pedia](~/assets/images/katapedia/2.webp)
 
 ### Wikipedia: Revolusi Akses Pengetahuan
 
