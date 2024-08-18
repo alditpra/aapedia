@@ -1,6 +1,6 @@
 ---
 publishDate: 2024-08-17T00:00:00Z
-author: Editor Team
+author: Editorial Team
 title: 'Publikasi Jurnal: Panduan Asik untuk Peneliti Muda'
 excerpt: Temukan langkah-langkah penting dalam publikasi jurnal ilmiah, mulai dari penulisan artikel hingga proses peer-review, serta strategi untuk meningkatkan peluang penerimaan naskah.
 
