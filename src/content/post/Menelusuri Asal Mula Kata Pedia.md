@@ -85,3 +85,15 @@ Banyak perusahaan yang menggunakan kata ini untuk menunjukkan bahwa mereka menye
 
 Perjalanan kata ‘pedia’ dari masa ke masa menjadi bukti betapa dinamisnya bahasa. Kata ini telah berhasil beradaptasi dengan perubahan zaman dan teknologi, menunjukkan fleksibilitas bahasa dalam merespons kebutuhan manusia. Di masa depan, kita dapat menantikan inovasi lebih lanjut dalam penggunaan ‘pedia’ yang semakin kreatif dan beragam.
 
+### Referensi
+
+- [pediatric (adj.)](https://www.etymonline.com/word/pediatric) 
+- [What is the etymology of the suffix -pedia of the word encyclopedia? : Etymo](https://www.reddit.com/r/Etymo/comments/17q6rm3/what_is_the_etymology_of_the_suffix_pedia_of_the/) 
+- [Paediatrics: the etymology of a name - PubMed](https://pubmed.ncbi.nlm.nih.gov/21646328/) 
+- [pediatrics (n.)](https://www.etymonline.com/word/pediatrics) 
+- [Pedia Definition](https://www.yourdictionary.com/pedia) 
+- [Pedia - Wikipedia](https://en.wikipedia.org/wiki/Pedia) 
+- [O-Pedia or A-Pedia? | Fandom](https://community.fandom.com/f/p/2779003878375426324) 
+- [Definition of PEDIA](https://www.merriam-webster.com/dictionary/pedia) 
+- ['pedia](https://www.thefreedictionary.com/%27pedia)
+
