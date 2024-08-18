@@ -1,8 +1,8 @@
 ---
 publishDate: 2024-08-14T00:00:00Z
 author: alditpra
-title: Menelusuri asal mula kata 'pedia', dari bahasa Yunani hingga nama brand populer
-excerpt: Artikel ini bertujuan untuk menelusuri jejak etimologi kata 'pedia' dari akar bahasa Yunani hingga penggunaannya dalam nama-nama brand populer saat ini.
+title: 'Dari Paideía ke Pedia: Warisan Yunani dalam Era Digital'
+excerpt: Telusuri asal-usul akhiran '-pedia' dan pengaruhnya dalam branding modern. Eksplorasi makna dari Wikipedia hingga Tokopedia dalam konteks sejarah linguistik.
 image: "~/assets/images/katapedia/1.webp"
 category: Umum
 tags:

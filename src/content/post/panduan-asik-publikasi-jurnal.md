@@ -169,8 +169,6 @@ Dan jangan lupa untuk memeriksa tren kata kunci di bidang Anda. Ada banyak tools
 
 Sekarang, Anda sudah mengirimkan artikel dan mendapatkan feedback dari reviewer. Mungkin ada yang meminta revisi minor, mungkin ada yang meminta revisi major. Jangan panik!
 
-Baiklah, mari kita lanjutkan pembahasan kita tentang menggunakan feedback dari reviewer. Ini adalah bagian yang sangat krusial dalam proses publikasi artikel jurnal.
-
 Bayangkan feedback dari reviewer sebagai peta harta karun. Mungkin awalnya terlihat rumit dan membingungkan, tapi jika Anda bisa memecahkan kodenya, Anda akan menemukan emas di ujung perjalanan. Kuncinya adalah untuk melihat kritik sebagai kesempatan untuk memperbaiki, bukan sebagai serangan personal.
 
 Pertama, baca semua komentar dengan pikiran terbuka. Jangan langsung bereaksi atau membela diri. Biarkan komentar-komentar itu "mengendap" sejenak dalam pikiran Anda. Kadang, kritik yang awalnya terasa pedas bisa menjadi insight berharga setelah Anda merenungkannya.
@@ -239,7 +237,7 @@ Jadi, jangan pernah menyerah! Ya, prosesnya bisa jadi panjang dan bisa bikin fru
 
 Untuk para peneliti muda yang baru memulai perjalanan publikasi mereka, ingatlah bahwa setiap peneliti hebat pernah berada di posisi Anda. Mereka juga pernah mengalami penolakan, revisi yang sepertinya tak ada habisnya, dan momen-momen keraguan. Tapi mereka bertahan, dan Anda juga bisa.
 
-Jadi, mulailah menulis. Mulailah meneliti. Mulailah berkontribusi. Mulailah dari publikasi di jurnal nasional yang berkualitas. Dunia menanti ide-ide brilian Anda. Siapa tahu, mungkin artikel berikutnya yang mengubah paradigma dalam bidang Anda akan datang dari Anda.
+Ayo, mulailah menulis. Mulailah meneliti. Mulailah berkontribusi. Mulailah dari publikasi di jurnal nasional yang berkualitas. Dunia menanti ide-ide brilian Anda. Siapa tahu, mungkin artikel berikutnya yang mengubah paradigma dalam bidang Anda akan datang dari Anda.
 
 Selamat berkarya, dan semoga sukses dalam perjalanan publikasi Anda!
 
