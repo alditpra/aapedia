@@ -14,20 +14,8 @@ export const headerData = {
           href: getPermalink('/jurnal'),
         },
         {
-          text: 'Webinar dan Pelatihan',
-          href: getPermalink('webinar', 'category'),
-        },
-        {
           text: 'Jasa 1 2 3 4 5 (belum)',
           href: getPermalink('/'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
         },
       ],
     },
@@ -39,12 +27,16 @@ export const headerData = {
           href: getBlogPermalink(),
         },
         {
-          text: 'Kategori 1',
-          href: getPermalink('tutorials', 'category'),
+          text: 'Panduan',
+          href: getPermalink('panduan', 'category'),
         },
-          {
-          text: 'Kategori 2',
-          href: getPermalink('documentation', 'category'),
+        {
+          text: 'Umum',
+          href: getPermalink('umum', 'category'),
+        },
+		{
+          text: 'Webinar dan Pelatihan',
+          href: getPermalink('webinar', 'category'),
         },
       ],
     },
@@ -68,7 +60,7 @@ export const footerData = {
       links: [
         { text: 'Daftar Jurnal', href: getPermalink('/jurnal#daftarjurnal') },
         { text: 'Alur Publikasi', href: getPermalink('/jurnal#alurpublikasi') },
-        { text: 'Fiture Utama', href: getPermalink('/jurnal#fiturutama') },
+        { text: 'Fitur Utama', href: getPermalink('/jurnal#fiturutama') },
         { text: 'Biaya Publikasi', href: getPermalink('/jurnal#biayapublikasi') },
         { text: 'FAQ', href: getPermalink('/jurnal#faq') },
       ],
