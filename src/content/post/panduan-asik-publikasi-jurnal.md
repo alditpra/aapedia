@@ -109,14 +109,14 @@ Ah, peer-review. Ini adalah jantung dari proses publikasi ilmiah. Bayangkan Anda
 
 Editor akan mengirimkan artikel Anda ke beberapa ahli di bidang yang relevan. Mereka akan membaca dengan teliti, mencari kekuatan dan kelemahan. Mereka akan mempertanyakan metode Anda, menantang interpretasi Anda, dan mungkin meminta klarifikasi atau analisis tambahan.
 
-Proses ini bisa memakan waktu beberapa minggu hingga beberapa bulan. Ya, memang lama. Tapi ingat, para reviewer ini melakukan pekerjaan mereka secara sukarela, di samping pekerjaan utama mereka. Jadi, bersabarlah.
+Proses ini bisa memakan waktu beberapa hari, minggu, bahkan hingga beberapa bulan. Ya, memang lama. Bisa jadi karena menumpuknya antrian artikel yang masuk dan keterbatasan tim reviewer, atau hal teknis lainya. Jadi, bersabarlah.
 
 Ketika hasilnya kembali, Anda mungkin akan mendapatkan salah satu dari empat hasil: diterima (ini jarang terjadi pada submit pertama), revisi (minor atau major), ditolak, atau diabaikan lama karena si penerbit jurnal tidak profesional. Jika Anda diminta untuk merevisi, jangan patah semangat! Ini sebenarnya kabar baik. Artinya reviewer melihat potensi dalam pekerjaan Anda.
 
 ## Tantangan dalam Publikasi Artikel Jurnal
 ![tantangan publlikasi artikel jurnal](~/assets/images/panduan-asik/3.webp)
 
-Jika Anda pikir menulis artikel dan mengirimkannya adalah bagian tersulit, hmm, saya punya berita untuk Anda. Ada beberapa tantangan lain yang mungkin akan Anda hadapi dalam perjalanan publikasi Anda.
+Jika Anda pikir menulis artikel dan mengirimkannya adalah bagian tersulit, tenang dulu. Ada beberapa tantangan lain yang mungkin akan Anda hadapi dalam perjalanan publikasi Anda.
 
 ### Masalah Etika dalam Publikasi
 
@@ -136,7 +136,7 @@ Kuncinya adalah untuk tetap tenang dan profesional. Ingat, reviewer juga manusia
 
 Terkadang, Anda mungkin mendapatkan reviewer yang tampaknya *"hostile"*. Mereka mengkritik hampir setiap aspek dari pekerjaan Anda. Dalam situasi seperti ini, tetap fokus pada substansi kritik mereka, bukan pada nada tulisannya. Jika Anda merasa kritik tersebut benar-benar tidak adil, Anda bisa mengkomunikasikannya dengan editor secara sopan.
 
-Tantangan lain adalah waktu. Proses peer-review bisa cepat, atau memakan waktu berbulan-bulan. Ini bisa sangat frustrasi, terutama jika Anda sedang mengejar tenggat waktu tertentu (misalnya untuk keperluan promosi atau aplikasi grant). Sayangnya, tidak banyak yang bisa Anda lakukan selain menunggu dengan sabar.
+Tantangan lain adalah waktu. Proses peer-review bisa cepat, atau memakan waktu berbulan-bulan. Ini bisa membuat frustrasi, terutama jika Anda sedang mengejar tenggat waktu tertentu (misalnya untuk keperluan promosi atau syarat kelulusan kuliah). Sayangnya, tidak banyak yang bisa Anda lakukan selain menunggu dengan sabar.
 
 ## Strategi untuk Meningkatkan Peluang Penerimaan
 ![strategi meningkatkan peluang publikasi jurnal](~/assets/images/panduan-asik/1.webp)
@@ -235,7 +235,7 @@ Whew! Kita telah melakukan ~~pengetikan~~ perjalanan panjang melalui seluk-beluk
 
 Ingatlah, publikasi bukan hanya tentang menambah entri pada CV Anda. Ini adalah tentang berkontribusi pada kemajuan pengetahuan manusia. Setiap artikel yang Anda publikasikan adalah batu kecil yang membantu membangun perpustakaan besar ilmu pengetahuan.
 
-Jadi, jangan pernah menyerah! Ya, prosesnya bisa jadi panjang dan kadang frustrasi. Tapi bayangkan perasaan puas ketika Anda akhirnya melihat nama Anda tercetak di jurnal nasional yang berkualitas. Atau lebih baik lagi, di jurnal bereputasi yang terindeks Scopus. Bayangkan saat peneliti lain mengutip pekerjaan Anda, menunjukkan bahwa Anda telah memberikan kontribusi yang berarti pada bidang Anda.
+Jadi, jangan pernah menyerah! Ya, prosesnya bisa jadi panjang dan bisa bikin frustrasi. Tapi bayangkan perasaan puas ketika Anda akhirnya melihat nama Anda tercetak di jurnal nasional yang berkualitas. Atau lebih baik lagi, di jurnal bereputasi yang terindeks Scopus. Bayangkan saat peneliti lain mengutip pekerjaan Anda, menunjukkan bahwa Anda telah memberikan kontribusi yang berarti pada bidang Anda.
 
 Untuk para peneliti muda yang baru memulai perjalanan publikasi mereka, ingatlah bahwa setiap peneliti hebat pernah berada di posisi Anda. Mereka juga pernah mengalami penolakan, revisi yang sepertinya tak ada habisnya, dan momen-momen keraguan. Tapi mereka bertahan, dan Anda juga bisa.
 
