@@ -57,9 +57,9 @@ Tapi mengapa begitu penting? Hmm, coba pikirkan. Dalam dunia yang dibanjiri info
 
 ### Sejarah dan Perkembangan Publikasi Jurnal
 
-Mari kita putar balik waktu sejenak. Dulu, sebelum ada internet (seperti zaman batu tapi, lebih modern), para ilmuwan bertukar ide melalui surat-menyurat. Bayangkan betapa lambatnya proses itu! Tapi kemudian, pada abad ke-17, muncullah jurnal ilmiah pertama. Ini seperti revolusi dalam dunia ilmu pengetahuan. Tiba-tiba, ide-ide brilian bisa tersebar lebih cepat dari yang pernah dibayangkan sebelumnya.
+Mari kita putar balik waktu sejenak. Dulu, ~~di zaman batu~~ sebelum ada internet, para ilmuwan bertukar ide melalui surat-menyurat. Bisa dibayangkan betapa lambatnya proses macam ini? Tapi kemudian, sekitar abad ke-17, muncullah jurnal ilmiah pertama<sup>[(1)](#referensi)</sup>. Ini seperti revolusi dalam dunia ilmu pengetahuan. Tiba-tiba, ide-ide brilian bisa tersebar lebih cepat dari yang pernah dibayangkan sebelumnya.
 
-Dari surat kabar sederhana, publikasi jurnal telah berevolusi menjadi industri yang sangat canggih. Sekarang, dengan adanya jurnal online, seorang peneliti di ujung dunia bisa membaca temuan terbaru dari rekannya di belahan bumi lain dalam hitungan detik. Bukankah itu menakjubkan?
+Dari surat kabar sederhana, publikasi jurnal telah berevolusi menjadi industri yang sangat canggih. Sekarang, dengan adanya jurnal online, seorang peneliti di ujung dunia bisa membaca temuan terbaru dari rekannya di belahan bumi lain dalam hitungan detik.
 
 Namun, dengan kemudahan ini datang tantangan baru. Bagaimana kita memastikan kualitas tetap terjaga di tengah zaman banjir informasi? Inilah yang membuat proses publikasi jurnal modern menjadi semakin kompleks dan menarik untuk didalami.
 
@@ -72,11 +72,11 @@ Saatnya memulai proses publikasi. Ini bisa jadi perjalanan yang mendebarkan, mel
 
 Memilih jurnal yang tepat itu seperti mencari pasangan hidup. Anda harus teliti, sabar, dan kadang-kadang, sedikit beruntung. Pertama-tama, lihat cermin dan tanyakan pada diri sendiri: "Siapa yang ingin kubuat terkesan dengan penelitianku ini?" Apakah itu komunitas ahli di bidang spesifik, atau audiens yang lebih luas?
 
-Selanjutnya, lakukan riset. Baca jurnal-jurnal yang Anda minati. Apakah gaya penulisan mereka cocok dengan Anda? Apakah topik-topik yang mereka bahas sejalan dengan penelitian Anda? Jangan lupa cek faktor dampak jurnal juga. Ini seperti nilai "keren" dalam dunia akademis. Semakin tinggi, semakin prestise.
+Selanjutnya, lakukan riset. Baca jurnal-jurnal yang Anda minati. Apakah gaya penulisan mereka cocok dengan Anda? Apakah topik-topik yang mereka bahas sejalan dengan penelitian Anda? Jangan lupa cek *impact factor* juga. Ini seperti nilai "keren" dalam dunia akademis. Semakin tinggi, semakin prestise.
 
-Tapi ingat, jangan terlalu ambisius. Mengirim artikel ke jurnal top memang menggoda, tapi jika penelitian Anda belum sekaliber itu, Anda hanya akan membuang-buang waktu. Lebih baik pilih jurnal yang realistis tapi tetap berkualitas.
+>Tapi ingat, jangan terlalu ambisius. Mengirim artikel ke jurnal top memang menggoda, tapi jika penelitian Anda belum sekaliber itu, Anda hanya akan membuang-buang waktu. Lebih baik pilih jurnal yang realistis tapi tetap berkualitas.
 
-Anda juga harus waspada terhadap jurnal predator yang menawarkan publikasi cepat dengan biaya mahal tetapi tidak dikelola dengan profesional. Mereka biasanya hanya mempublikasi artikel anda apa adanya ke jurnal mereka, artikel anda yang sudah publish bisa hilang kapan saja. Publikasi di jurnal predator juga mungkin dapat memberikan dampak negatif terhadap reputasi Anda.
+Anda juga harus hati-hati dengan jurnal predator yang menawarkan publikasi cepat dengan biaya tinggi. Biasanya, jurnal-jurnal ini tidak dikelola dengan baik dan hanya mempublikasikan artikel Anda tanpa proses review yang memadai. Publikasi di jurnal predator juga mungkin bisa merusak reputasi Anda.
 
 Tapi tenang, ada jurnal AApedia disini. Kami memiliki izin resmi dan dikelola secara profesional, termasuk jurnal berkualitas loh :)
 
@@ -210,27 +210,27 @@ Dunia publikasi jurnal, seperti banyak aspek lain dalam hidup kita, terus berevo
 
 ### Open Access dan Dampaknya
 
-Anda pernah frustrasi karena tidak bisa mengakses artikel yang Anda butuhkan karena paywall? Well, Anda tidak sendiri. Inilah mengapa gerakan Open Access menjadi semakin populer.
+Anda pernah kecewa karena tidak bisa mengakses artikel yang Anda butuhkan karena paywall alias harus bayar dulu? Kalau saya pernah! Inilah mengapa gerakan Open Access menjadi semakin populer.
 
-Open Access adalah model publikasi di mana artikel-artikel ilmiah tersedia secara gratis untuk dibaca oleh siapa saja. Ini seperti perpustakaan raksasa yang terbuka 24/7 dan bisa diakses dari mana saja di dunia. Keren, kan?
+Open Access adalah model publikasi di mana artikel-artikel ilmiah tersedia secara gratis untuk dibaca oleh siapa saja. Ini seperti perpustakaan raksasa yang terbuka 24/7 dan bisa diakses dari mana saja di dunia tanpa harus bayar tiket masuk.
 
 Dampaknya? Luar biasa. Penelitian menunjukkan bahwa artikel Open Access cenderung lebih banyak dibaca dan dikutip. Ini masuk akal, kan? Semakin banyak orang yang bisa membaca artikel Anda, semakin besar kemungkinan mereka akan menggunakannya dalam penelitian mereka sendiri.
 
-Tapi tentu saja, ada trade-off. Banyak jurnal Open Access membebankan biaya publikasi kepada penulis. Ini bisa jadi tantangan, terutama bagi peneliti muda atau dari negara berkembang. Namun, banyak institusi dan badan pendanaan sekarang menyediakan dana khusus untuk biaya publikasi Open Access.
+Tapi tentu saja, ada *trade-off*. Banyak jurnal Open Access membebankan biaya publikasi kepada penulis. Ini bisa jadi tantangan, terutama bagi peneliti muda atau dari negara berkembang. Namun, banyak institusi dan badan pendanaan sekarang menyediakan dana khusus untuk biaya publikasi Open Access.
 
 ### Teknologi dan Inovasi dalam Publikasi
 
-Teknologi telah mengubah cara kita melakukan hampir segalanya, dan publikasi jurnal tidak terkecuali. Dari proses submit yang sepenuhnya online hingga penggunaan AI dalam peer-review, inovasi terus bermunculan.
+Teknologi telah mengubah cara kita melakukan hampir segalanya, dan publikasi jurnal tidak terkecuali. Dari proses submit yang sepenuhnya online hingga penggunaan AI, inovasi terus bermunculan.
 
 Salah satu tren menarik adalah penggunaan altmetrics. Ini adalah cara baru untuk mengukur dampak artikel, tidak hanya berdasarkan sitasi tradisional, tapi juga berdasarkan seberapa banyak artikel itu dibicarakan di media sosial, blog, atau outlet berita. Ini membuka dimensi baru dalam cara kita menilai pengaruh sebuah penelitian.
 
 Blockchain juga mulai digunakan dalam publikasi ilmiah. Teknologi ini bisa membantu dalam verifikasi integritas data, melacak kontribusi penulis, dan bahkan dalam proses peer-review. Bayangkan sebuah sistem di mana setiap langkah dalam proses penelitian dan publikasi tercatat secara permanen dan transparan. Menarik, bukan?
 
-Virtual dan Augmented Reality juga mulai memasuki arena publikasi ilmiah. Beberapa jurnal sekarang memungkinkan penulis untuk menyertakan model 3D interaktif atau simulasi VR sebagai suplemen artikel mereka. Ini bisa sangat berguna, terutama untuk topik-topik yang sulit dijelaskan hanya dengan teks dan gambar 2D.
+Virtual dan Augmented Reality juga mulai memasuki arena publikasi ilmiah. Beberapa jurnal sekarang memungkinkan penulis untuk menyertakan model 3D interaktif atau simulasi VR sebagai suplemen artikel mereka. Ini bisa sangat berguna, terutama untuk topik-topik yang sulit dijelaskan hanya dengan teks dan gambar 2D saja.
 
 ## Kesimpulan
 
-Whew! Kita telah melakukan ~~pengetikan~~ perjalanan panjang melalui seluk-beluk publikasi artikel jurnal. Dari memilih jurnal yang tepat, menulis artikel yang memikat, hingga menavigasi proses peer-review yang menantang, kita telah menjelajahi berbagai aspek dari dunia publikasi ilmiah.
+Whew! Kita telah melakukan ~~pengetikan~~ perjalanan panjang melalui seluk-beluk publikasi artikel jurnal. Dari sejarah, kemudian memilih jurnal yang tepat, menulis artikel yang memikat, hingga menavigasi proses peer-review yang menantang, kita telah menjelajahi berbagai aspek dari dunia publikasi ilmiah.
 
 Ingatlah, publikasi bukan hanya tentang menambah entri pada CV Anda. Ini adalah tentang berkontribusi pada kemajuan pengetahuan manusia. Setiap artikel yang Anda publikasikan adalah batu kecil yang membantu membangun perpustakaan besar ilmu pengetahuan.
 
@@ -242,4 +242,6 @@ Ayo, mulailah menulis. Mulailah meneliti. Mulailah berkontribusi. Mulailah dari 
 
 Selamat berkarya, dan semoga sukses dalam perjalanan publikasi Anda!
 
-
+### Referensi
+- History of Science - The Royal Society
+  https://www.royalsociety.org/about-us/history/
