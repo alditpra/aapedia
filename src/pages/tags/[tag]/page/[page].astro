@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/blog/PostCard.astro';
+import Pagination from '@components/common/Pagination.astro';
+import { getPagination } from '@utils/pagination';
+import { siteConfig } from '@config/site';
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await getCollection('posts', ({ data }) => {
+    return !data.draft;
+  });
+  
+  // Get all unique tags
+  const tags = [...new Set(posts.flatMap(post => post.data.tags || []))];
+  
+  // Create paths for each tag and its pages
+  return tags.flatMap(tag => {
+    // Filter posts by tag
+    const tagPosts = posts.filter(post => 
+      post.data.tags && post.data.tags.includes(tag)
+    ).sort((a, b) => {
+      return new Date(b.data.date || 0).getTime() - new Date(a.data.date || 0).getTime();
+    });
+    
+    // Generate pages for this tag
+    const totalPages = Math.ceil(tagPosts.length / siteConfig.postsPerPage);
+    
+    return Array.from({ length: totalPages }).map((_, i) => {
+      const page = i + 1;
+      // Skip page 1 as it's handled by the index.astro
+      if (page === 1) return null;
+      
+      return {
+        params: { 
+          tag: tag.toLowerCase(),
+          page: page.toString()
+        },
+        props: { 
+          tag,
+          posts: tagPosts,
+          page,
+          count: tagPosts.length
+        }
+      };
+    }).filter(Boolean); // Remove null entries
+  });
+}
+
+const { tag, posts, page, count } = Astro.props;
+const currentPage = parseInt(page);
+const basePath = `/tags/${tag.toLowerCase()}`;
+
+// Get pagination data
+const { startIndex, endIndex, prevUrl, nextUrl, totalPages } = getPagination({ 
+  page: currentPage, 
+  totalPosts: count, 
+  basePath 
+});
+
+// Get posts for the current page
+const paginatedPosts = posts.slice(startIndex, endIndex);
+
+// Set noindex based on site config
+const noindex = siteConfig.noindex.tags;
+
+// Format the tag name for display
+const formattedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+---
+
+<Layout 
+  title={`Posts tagged with ${formattedTag} - Page ${currentPage} - ${siteConfig.name}`}
+  description={`Browse posts tagged with ${formattedTag} - Page ${currentPage}`}
+  noindex={noindex}
+>
+  <div class="w-full py-8">
+    <header class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Tag: #{formattedTag}
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        Page {currentPage} of {totalPages} - {count} {count === 1 ? 'post' : 'posts'} with this tag
+      </p>
+    </header>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {paginatedPosts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+    
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      prevUrl={prevUrl}
+      nextUrl={nextUrl}
+      basePath={basePath}
+    />
+  </div>
+</Layout>

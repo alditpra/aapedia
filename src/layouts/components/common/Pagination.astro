@@ -1,0 +1,132 @@
+---
+// Props for the pagination component
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  prevUrl: string | null;
+  nextUrl: string | null;
+  basePath: string;
+}
+
+const { currentPage, totalPages, prevUrl, nextUrl, basePath } = Astro.props;
+
+// Generate page numbers to display
+const pageNumbers = () => {
+  const pages = [];
+  const maxPagesToShow = 5;
+  
+  // Always show first page
+  pages.push(1);
+  
+  // Calculate range of pages to show around current page
+  let startPage = Math.max(2, currentPage - Math.floor(maxPagesToShow / 2));
+  let endPage = Math.min(totalPages - 1, startPage + maxPagesToShow - 2);
+  
+  // Adjust if we're near the beginning
+  if (startPage > 2) {
+    pages.push('...');
+  }
+  
+  // Add middle pages
+  for (let i = startPage; i <= endPage; i++) {
+    pages.push(i);
+  }
+  
+  // Adjust if we're near the end
+  if (endPage < totalPages - 1) {
+    pages.push('...');
+  }
+  
+  // Always show last page if there's more than one page
+  if (totalPages > 1) {
+    pages.push(totalPages);
+  }
+  
+  return pages;
+};
+
+// Generate the URL for a specific page
+const getPageUrl = (pageNum: number) => {
+  if (pageNum === 1) {
+    return basePath;
+  }
+  return `${basePath}${basePath.endsWith('/') ? '' : '/'}page/${pageNum}/`;
+};
+---
+
+{totalPages > 1 && (
+  <nav aria-label="Pagination" class="my-8">
+    <ul class="flex justify-center items-center space-x-2">
+      <!-- Previous page button -->
+      <li>
+        {prevUrl ? (
+          <a 
+            href={prevUrl} 
+            class="flex items-center justify-center px-3 py-2 rounded-md border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Go to previous page"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </a>
+        ) : (
+          <span 
+            class="flex items-center justify-center px-3 py-2 rounded-md border border-gray-200 dark:border-gray-800 text-gray-400 dark:text-gray-600 cursor-not-allowed"
+            aria-disabled="true"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        )}
+      </li>
+      
+      <!-- Page numbers -->
+      {pageNumbers().map((pageNum) => (
+        <li>
+          {pageNum === '...' ? (
+            <span class="px-3 py-2 text-gray-500 dark:text-gray-400">...</span>
+          ) : (
+            <a 
+              href={getPageUrl(pageNum as number)} 
+              class={`px-3 py-2 rounded-md ${currentPage === pageNum 
+                ? 'bg-blue-600 text-white dark:bg-blue-700 font-medium' 
+                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-700'} transition-colors`}
+              aria-current={currentPage === pageNum ? 'page' : undefined}
+            >
+              {pageNum}
+            </a>
+          )}
+        </li>
+      ))}
+      
+      <!-- Next page button -->
+      <li>
+        {nextUrl ? (
+          <a 
+            href={nextUrl} 
+            class="flex items-center justify-center px-3 py-2 rounded-md border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Go to next page"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </a>
+        ) : (
+          <span 
+            class="flex items-center justify-center px-3 py-2 rounded-md border border-gray-200 dark:border-gray-800 text-gray-400 dark:text-gray-600 cursor-not-allowed"
+            aria-disabled="true"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        )}
+      </li>
+    </ul>
+  </nav>
+)}

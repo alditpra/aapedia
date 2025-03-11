@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/blog/PostCard.astro';
+import Pagination from '@components/common/Pagination.astro';
+import { getPagination } from '@utils/pagination';
+import { siteConfig } from '@config/site';
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await getCollection('posts', ({ data }) => {
+    return !data.draft;
+  });
+  
+  // Get all unique authors
+  const authors = [...new Set(posts.flatMap(post => post.data.authors || []))];
+  
+  // Create paths for each author and its pages
+  return authors.flatMap(author => {
+    // Filter posts by author
+    const authorPosts = posts.filter(post => 
+      post.data.authors && post.data.authors.includes(author)
+    ).sort((a, b) => {
+      return new Date(b.data.date || 0).getTime() - new Date(a.data.date || 0).getTime();
+    });
+    
+    // Generate pages for this author
+    const totalPages = Math.ceil(authorPosts.length / siteConfig.postsPerPage);
+    
+    return Array.from({ length: totalPages }).map((_, i) => {
+      const page = i + 1;
+      // Skip page 1 as it's handled by the index.astro
+      if (page === 1) return null;
+      
+      return {
+        params: { 
+          author: author.toLowerCase(),
+          page: page.toString()
+        },
+        props: { 
+          author,
+          posts: authorPosts,
+          page,
+          count: authorPosts.length
+        }
+      };
+    }).filter(Boolean); // Remove null entries
+  });
+}
+
+const { author, posts, page, count } = Astro.props;
+const currentPage = parseInt(page);
+const basePath = `/authors/${author.toLowerCase()}`;
+
+// Get pagination data
+const { startIndex, endIndex, prevUrl, nextUrl, totalPages } = getPagination({ 
+  page: currentPage, 
+  totalPosts: count, 
+  basePath 
+});
+
+// Get posts for the current page
+const paginatedPosts = posts.slice(startIndex, endIndex);
+
+// Set noindex based on site config
+const noindex = siteConfig.noindex.authors;
+
+// Format the author name for display
+const formattedAuthor = author.split(' ').map(word => 
+  word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+).join(' ');
+---
+
+<Layout 
+  title={`Posts by ${formattedAuthor} - Page ${currentPage} - ${siteConfig.name}`}
+  description={`Browse posts written by ${formattedAuthor} - Page ${currentPage}`}
+  noindex={noindex}
+>
+  <div class="w-full py-8">
+    <header class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Author: {formattedAuthor}
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        Page {currentPage} of {totalPages} - {count} {count === 1 ? 'post' : 'posts'} by this author
+      </p>
+    </header>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {paginatedPosts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+    
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      prevUrl={prevUrl}
+      nextUrl={nextUrl}
+      basePath={basePath}
+    />
+  </div>
+</Layout>

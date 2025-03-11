@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f0f9ff" />
+  
+  <!-- Brain circuit background -->
+  <g fill="none" stroke="#93c5fd" stroke-width="1.5" opacity="0.6">
+    <!-- Circuit lines -->
+    <path d="M100,100 L700,100 L700,500 L100,500 Z" />
+    <path d="M200,100 L200,500" />
+    <path d="M300,100 L300,500" />
+    <path d="M400,100 L400,500" />
+    <path d="M500,100 L500,500" />
+    <path d="M600,100 L600,500" />
+    <path d="M100,200 L700,200" />
+    <path d="M100,300 L700,300" />
+    <path d="M100,400 L700,400" />
+    
+    <!-- Circuit nodes -->
+    <circle cx="200" cy="200" r="5" />
+    <circle cx="300" cy="200" r="5" />
+    <circle cx="400" cy="200" r="5" />
+    <circle cx="500" cy="200" r="5" />
+    <circle cx="600" cy="200" r="5" />
+    <circle cx="200" cy="300" r="5" />
+    <circle cx="300" cy="300" r="5" />
+    <circle cx="400" cy="300" r="5" />
+    <circle cx="500" cy="300" r="5" />
+    <circle cx="600" cy="300" r="5" />
+    <circle cx="200" cy="400" r="5" />
+    <circle cx="300" cy="400" r="5" />
+    <circle cx="400" cy="400" r="5" />
+    <circle cx="500" cy="400" r="5" />
+    <circle cx="600" cy="400" r="5" />
+  </g>
+  
+  <!-- Brain outline -->
+  <path d="M400,150 C500,150 550,200 550,300 C550,400 500,450 400,450 C300,450 250,400 250,300 C250,200 300,150 400,150 Z" fill="#dbeafe" stroke="#3b82f6" stroke-width="3" />
+  
+  <!-- Brain connections -->
+  <g fill="none" stroke="#3b82f6" stroke-width="2">
+    <path d="M320,250 C350,230 380,230 400,250" />
+    <path d="M400,250 C420,230 450,230 480,250" />
+    <path d="M320,300 C350,280 380,280 400,300" />
+    <path d="M400,300 C420,280 450,280 480,300" />
+    <path d="M320,350 C350,330 380,330 400,350" />
+    <path d="M400,350 C420,330 450,330 480,350" />
+    
+    <!-- Vertical connections -->
+    <path d="M350,250 L350,350" />
+    <path d="M400,250 L400,350" />
+    <path d="M450,250 L450,350" />
+  </g>
+  
+  <!-- Neural network nodes -->
+  <g fill="#3b82f6">
+    <circle cx="320" cy="250" r="6" />
+    <circle cx="350" cy="250" r="6" />
+    <circle cx="400" cy="250" r="6" />
+    <circle cx="450" cy="250" r="6" />
+    <circle cx="480" cy="250" r="6" />
+    
+    <circle cx="320" cy="300" r="6" />
+    <circle cx="350" cy="300" r="6" />
+    <circle cx="400" cy="300" r="6" />
+    <circle cx="450" cy="300" r="6" />
+    <circle cx="480" cy="300" r="6" />
+    
+    <circle cx="320" cy="350" r="6" />
+    <circle cx="350" cy="350" r="6" />
+    <circle cx="400" cy="350" r="6" />
+    <circle cx="450" cy="350" r="6" />
+    <circle cx="480" cy="350" r="6" />
+  </g>
+  
+  <!-- Glowing nodes -->
+  <g fill="#60a5fa">
+    <circle cx="350" cy="250" r="8" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="300" r="8" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="400" cy="350" r="8" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- AI text -->
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e40af">Artificial Intelligence</text>
+</svg>

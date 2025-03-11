@@ -1,0 +1,121 @@
+---
+import type { MarkdownHeading } from "astro";
+import type { Heading } from "./TOCHeading.astro";
+import TOCHeading from "./TOCHeading.astro";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+function buildToc(headings: MarkdownHeading[]) {
+  const toc: Heading[] = [];
+  const parentHeadings = new Map();
+  headings
+    .filter((h) => h.depth <= 3)
+    .forEach((h) => {
+      const heading = { ...h, subheadings: [] };
+      parentHeadings.set(heading.depth, heading);
+      if (heading.depth === 2) {
+        toc.push(heading);
+      } else {
+        parentHeadings.get(heading.depth - 1).subheadings.push(heading);
+      }
+    });
+  return toc;
+}
+
+const { headings } = Astro.props;
+
+const tableOfContents = buildToc(headings);
+---
+
+<div class="toc-container relative bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-100 dark:border-gray-700">
+  <div class="flex justify-between items-center mb-3">
+    <h2 class="text-lg font-bold text-gray-800 dark:text-gray-500">Table of Contents</h2>
+    <button id="toc-toggle" aria-label="Toggle table of contents" aria-expanded="true" class="text-gray-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  </div>
+  <div id="toc-content" class="toc-content overflow-y-auto pr-2 transition-all duration-300 ease-in-out">
+    <ul class="text-sm [&_li]:pt-2 list-disc underline underline-offset-4 decoration-gray-300 dark:decoration-gray-500">
+      {
+        tableOfContents.map((heading) => (
+          <li class="hover:text-blue-500 dark:hover:text-blue-100">
+            <a href={"#" + heading.slug} class="text-gray-600 dark:text-gray-400 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{heading.text}</a>
+            {heading.subheadings.length > 0 && (
+              <ul class="pl-5 list-disc">
+                {heading.subheadings.map((heading) => (
+                  <TOCHeading heading={heading} />
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  // Simple toggle functionality for table of contents
+  document.addEventListener('DOMContentLoaded', () => {
+    const tocToggle = document.getElementById('toc-toggle');
+    const tocContent = document.getElementById('toc-content');
+    
+    if (tocToggle && tocContent) {
+      // Set initial state
+      tocContent.classList.add('toc-expanded');
+      
+      tocToggle.addEventListener('click', () => {
+        // Toggle the class instead of manipulating styles directly
+        tocContent.classList.toggle('toc-collapsed');
+        tocContent.classList.toggle('toc-expanded');
+        
+        // Update the aria-expanded attribute for accessibility
+        const isExpanded = tocContent.classList.contains('toc-expanded');
+        tocToggle.setAttribute('aria-expanded', isExpanded.toString());
+      });
+    }
+  });
+</script>
+
+<style>
+  .toc-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+    max-height: 500px;
+  }
+  
+  .toc-content.toc-collapsed {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .toc-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .toc-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .toc-content::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5);
+    border-radius: 20px;
+  }
+  
+  .dark .toc-content::-webkit-scrollbar-thumb {
+    background-color: rgba(209, 213, 219, 0.5);
+  }
+  
+  /* Rotate the chevron when collapsed */
+  #toc-toggle[aria-expanded="false"] svg {
+    transform: rotate(-90deg);
+  }
+  
+  #toc-toggle svg {
+    transition: transform 0.3s ease;
+  }
+</style>

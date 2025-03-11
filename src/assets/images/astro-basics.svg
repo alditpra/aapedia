@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f9fafb" />
+  
+  <!-- Astro Logo -->
+  <g transform="translate(350, 200) scale(1.5)">
+    <!-- Main shape -->
+    <path d="M39.4,0c0,0-4.3,42.6-38.4,42.6c-0.5,0-1-0.1-1-0.1l-0.1,0.1C0,42.6,0,42.6,0,42.6c0.2,0.2,0.5,0.3,0.7,0.5
+      c5.8,3.6,12.5,5.4,19.2,5.4c20.3,0,36.8-16.5,36.8-36.8c0-3.9-0.6-7.8-1.9-11.5L39.4,0z" fill="#ff5d01"/>
+    <!-- Stars -->
+    <path d="M39.4,0l-0.1,0.1c0,0-4.3,42.5-38.3,42.5c-0.5,0-1-0.1-1-0.1l-0.1,0.1c0,0,0,0,0,0c0.2,0.2,0.5,0.3,0.7,0.5
+      c5.8,3.6,12.5,5.4,19.2,5.4c20.3,0,36.8-16.5,36.8-36.8c0-3.9-0.6-7.8-1.9-11.5L39.4,0z" fill="#ff5d01"/>
+  </g>
+  
+  <!-- Code Editor -->
+  <rect x="200" y="300" width="400" height="200" rx="10" fill="#1e293b" />
+  
+  <!-- Code Lines -->
+  <rect x="220" y="320" width="200" height="10" rx="5" fill="#64748b" />
+  <rect x="220" y="340" width="150" height="10" rx="5" fill="#64748b" />
+  <rect x="220" y="360" width="180" height="10" rx="5" fill="#64748b" />
+  <rect x="220" y="380" width="120" height="10" rx="5" fill="#64748b" />
+  <rect x="220" y="400" width="160" height="10" rx="5" fill="#64748b" />
+  <rect x="220" y="420" width="140" height="10" rx="5" fill="#64748b" />
+  <rect x="220" y="440" width="190" height="10" rx="5" fill="#64748b" />
+  <rect x="220" y="460" width="170" height="10" rx="5" fill="#64748b" />
+  
+  <!-- Title -->
+  <text x="400" y="150" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#0f172a">Getting Started with Astro</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="190" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#475569">Introduction and Setup</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="150" r="30" fill="#ff5d01" opacity="0.2" />
+  <circle cx="650" cy="450" r="40" fill="#ff5d01" opacity="0.2" />
+  <circle cx="200" cy="500" r="20" fill="#ff5d01" opacity="0.2" />
+  <circle cx="600" cy="200" r="25" fill="#ff5d01" opacity="0.2" />
+</svg>

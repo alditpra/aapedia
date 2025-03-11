@@ -1,0 +1,86 @@
+---
+// This is the parent Tabs component that manages the tab state
+---
+
+<div class="tabs-container">
+  <div class="tab-list flex flex-wrap border-b border-gray-200 dark:border-gray-700" role="tablist">
+    <!-- Tab buttons will be injected here by client-side script -->
+  </div>
+  <div class="tab-panels mt-4">
+    <slot />
+  </div>
+</div>
+
+<script>
+  function initTabs() {
+    document.querySelectorAll('.tabs-container').forEach(container => {
+      const tabList = container.querySelector('.tab-list');
+      const tabPanels = Array.from(container.querySelectorAll('.tab-panel'));
+      
+      if (!tabList || tabPanels.length === 0) return;
+      
+      // Clear existing tabs (in case of re-initialization)
+      tabList.innerHTML = '';
+      
+      // Create tab buttons for each panel
+      tabPanels.forEach((panel, index) => {
+        const tabName = panel.getAttribute('data-name');
+        const tabId = `tab-${tabName.toLowerCase().replace(/\s+/g, '-')}-${Math.random().toString(36).substring(2, 9)}`;
+        panel.id = `${tabId}-panel`;
+        
+        const button = document.createElement('button');
+        button.id = tabId;
+        button.className = 'tab-button px-4 py-2 font-medium text-sm focus:outline-none';
+        button.setAttribute('role', 'tab');
+        button.setAttribute('aria-controls', `${tabId}-panel`);
+        button.textContent = tabName;
+        
+        // Set first tab as active by default
+        if (index === 0) {
+          button.classList.add('active', 'border-b-2', 'border-blue-600', 'text-blue-600', 'dark:text-blue-500', 'dark:border-blue-500');
+          button.setAttribute('aria-selected', 'true');
+          panel.classList.remove('hidden');
+        } else {
+          button.classList.add('text-gray-500', 'hover:text-gray-700', 'dark:text-gray-400', 'dark:hover:text-gray-300');
+          button.setAttribute('aria-selected', 'false');
+          panel.classList.add('hidden');
+        }
+        
+        button.addEventListener('click', () => {
+          // Update tab buttons
+          tabList.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active', 'border-b-2', 'border-blue-600', 'text-blue-600', 'dark:text-blue-500', 'dark:border-blue-500');
+            btn.classList.add('text-gray-500', 'hover:text-gray-700', 'dark:text-gray-400', 'dark:hover:text-gray-300');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          
+          button.classList.remove('text-gray-500', 'hover:text-gray-700', 'dark:text-gray-400', 'dark:hover:text-gray-300');
+          button.classList.add('active', 'border-b-2', 'border-blue-600', 'text-blue-600', 'dark:text-blue-500', 'dark:border-blue-500');
+          button.setAttribute('aria-selected', 'true');
+          
+          // Update tab panels
+          tabPanels.forEach(p => p.classList.add('hidden'));
+          panel.classList.remove('hidden');
+        });
+        
+        tabList.appendChild(button);
+      });
+    });
+  }
+  
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initTabs);
+  
+  // Support for dynamically added tabs
+  document.addEventListener('astro:after-swap', initTabs);
+</script>
+
+<style>
+  .tab-button {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .tab-button.active {
+    font-weight: 600;
+  }
+</style>

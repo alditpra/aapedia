@@ -1,0 +1,239 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Search - BitDoze" description="Search for articles and tutorials on BitDoze" noindex={true}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-center">Search</h1>
+    
+    <div class="mb-8">
+      <div class="relative">
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search for articles..." 
+          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+          autocomplete="off"
+        />
+        <div class="absolute right-3 top-3 text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <div id="search-info" class="text-center mb-6 text-gray-600 dark:text-gray-400 text-lg"></div>
+    
+    <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Results will be populated by JavaScript -->
+    </div>
+    
+    <div id="no-results" class="hidden text-center py-8">
+      <p class="text-lg text-gray-600 dark:text-gray-400">No results found. Try a different search term.</p>
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+  // Loading spinner HTML
+  const SPINNER = `<div class="flex justify-center py-10">
+    <svg class="animate-spin h-10 w-10 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+  </div>`;
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    // DOM elements
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const noResults = document.getElementById('no-results');
+    const searchInfo = document.getElementById('search-info');
+    
+    // Initialize variables
+    let searchData = null;
+    let fuse = null;
+    
+    // Check for URL search parameters
+    const searchParams = new URLSearchParams(window.location.search);
+    const searchQuery = searchParams.get('q');
+    
+    // Function to fetch search data
+    async function fetchSearchData() {
+      if (searchData !== null) return;
+      
+      try {
+        searchResults.innerHTML = SPINNER;
+        const response = await fetch('/search.json');
+        if (!response.ok) {
+          throw new Error('Failed to fetch search data');
+        }
+        
+        searchData = await response.json();
+        
+        // Initialize Fuse.js
+        fuse = new Fuse(searchData, {
+          keys: [
+            'title',
+            'description',
+            'tags',
+            'categories',
+            'content'
+          ],
+          includeMatches: true,
+          minMatchCharLength: 2,
+          threshold: 0.5
+        });
+        
+        // If there's a search query in the URL, perform search
+        if (searchQuery) {
+          searchInput.value = searchQuery;
+          performSearch(searchQuery);
+        } else {
+          searchResults.innerHTML = '';
+        }
+      } catch (error) {
+        console.error('Error fetching search data:', error);
+        searchResults.innerHTML = `<div class="text-center py-8 text-red-500">Error loading search data. Please try again later.</div>`;
+      }
+    }
+    
+    // Function to display search results
+    function displayResults(results) {
+      searchResults.innerHTML = '';
+      
+      if (results.length === 0) {
+        searchResults.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        searchInfo.textContent = `No results found for '${searchInput.value}'`;
+        return;
+      }
+      
+      searchResults.classList.remove('hidden');
+      noResults.classList.add('hidden');
+      searchInfo.textContent = `Found ${results.length} result${results.length === 1 ? '' : 's'} for '${searchInput.value}'`;
+      
+      results.forEach(result => {
+        const post = result.item;
+        const article = document.createElement('article');
+        article.className = 'bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300';
+        
+        let imageHtml = '';
+        if (post.image && post.image.src) {
+          // Handle both relative and absolute image paths
+          const imgSrc = post.image.src.startsWith('/') ? post.image.src : `/${post.image.src}`;
+          imageHtml = `
+            <div class="aspect-video overflow-hidden">
+              <img 
+                src="${imgSrc}" 
+                alt="${post.title}" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                width="${post.image.width || 400}"
+                height="${post.image.height || 225}"
+                loading="lazy"
+              />
+            </div>
+          `;
+        }
+        
+        let categoriesHtml = '';
+        if (post.categories && post.categories.length > 0) {
+          categoriesHtml = `
+            <div class="flex items-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+              </svg>
+              <span>${post.categories.join(', ')}</span>
+            </div>
+          `;
+        }
+        
+        let tagsHtml = '';
+        if (post.tags && post.tags.length > 0) {
+          tagsHtml = `
+            <div class="flex flex-wrap gap-2 mt-3">
+              ${post.tags.slice(0, 3).map(tag => `
+                <a href="/tags/${tag.toLowerCase()}/" class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors duration-300">
+                  #${tag}
+                </a>
+              `).join('')}
+            </div>
+          `;
+        }
+        
+        article.innerHTML = `
+          <a href="/${post.slug}/" class="block">
+            ${imageHtml}
+            <div class="p-4">
+              <div class="flex flex-wrap items-center text-xs text-gray-500 dark:text-gray-400 mb-3">
+                <div class="flex items-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>${post.date}</span>
+                </div>
+                ${categoriesHtml}
+              </div>
+              
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                ${post.title}
+              </h3>
+              
+              ${post.description ? `
+                <p class="text-sm text-gray-600 dark:text-gray-300 mb-3 line-clamp-2">
+                  ${post.description}
+                </p>
+              ` : ''}
+              
+              ${tagsHtml}
+            </div>
+          </a>
+        `;
+        
+        searchResults.appendChild(article);
+      });
+    }
+    
+    // Function to perform search
+    function performSearch(query) {
+      if (!fuse || !query || query.trim() === '') {
+        searchResults.innerHTML = '';
+        searchResults.classList.add('hidden');
+        noResults.classList.add('hidden');
+        searchInfo.textContent = '';
+        return;
+      }
+      
+      // Update URL with search query
+      const searchParams = new URLSearchParams(window.location.search);
+      searchParams.set('q', query);
+      const newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+      history.pushState(null, '', newRelativePathQuery);
+      
+      // Perform search
+      const results = fuse.search(query);
+      displayResults(results);
+    }
+    
+    // Handle search input
+    let debounceTimer;
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        const query = e.target.value.trim();
+        performSearch(query);
+      }, 300); // Debounce for better performance
+    });
+    
+    // Focus search input on page load
+    searchInput.focus();
+    
+    // Fetch search data on page load
+    fetchSearchData();
+  });
+</script>
+
+<!-- Import Fuse.js from CDN -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>

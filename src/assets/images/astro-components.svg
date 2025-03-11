@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f9fafb" />
+  
+  <!-- Astro Logo -->
+  <g transform="translate(150, 150) scale(1.2)">
+    <!-- Main shape -->
+    <path d="M39.4,0c0,0-4.3,42.6-38.4,42.6c-0.5,0-1-0.1-1-0.1l-0.1,0.1C0,42.6,0,42.6,0,42.6c0.2,0.2,0.5,0.3,0.7,0.5
+      c5.8,3.6,12.5,5.4,19.2,5.4c20.3,0,36.8-16.5,36.8-36.8c0-3.9-0.6-7.8-1.9-11.5L39.4,0z" fill="#ff5d01"/>
+  </g>
+  
+  <!-- Component Visualization -->
+  <g transform="translate(400, 300)">
+    <!-- Main Component -->
+    <rect x="-150" y="-100" width="300" height="200" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+    
+    <!-- Component Header -->
+    <rect x="-150" y="-100" width="300" height="40" rx="10" fill="#94a3b8" />
+    <text x="-130" y="-75" font-family="Arial, sans-serif" font-size="16" fill="white">Component.astro</text>
+    
+    <!-- Sub Components -->
+    <rect x="-120" y="-40" width="100" height="60" rx="5" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+    <text x="-70" y="-10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#334155">Header</text>
+    
+    <rect x="20" y="-40" width="100" height="60" rx="5" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+    <text x="70" y="-10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#334155">Content</text>
+    
+    <rect x="-120" y="40" width="240" height="40" rx="5" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+    <text x="0" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#334155">Footer</text>
+    
+    <!-- Connection Lines -->
+    <line x1="-70" y1="20" x2="-70" y2="40" stroke="#64748b" stroke-width="2" />
+    <line x1="70" y1="20" x2="70" y2="40" stroke="#64748b" stroke-width="2" />
+    <line x1="-70" y1="40" x2="70" y2="40" stroke="#64748b" stroke-width="2" />
+  </g>
+  
+  <!-- Content Icons -->
+  <g transform="translate(600, 150)">
+    <!-- Markdown File Icon -->
+    <rect x="-40" y="-50" width="80" height="100" fill="#f1f5f9" stroke="#64748b" stroke-width="2" />
+    <line x1="-20" y1="-20" x2="20" y2="-20" stroke="#64748b" stroke-width="2" />
+    <line x1="-20" y1="0" x2="30" y2="0" stroke="#64748b" stroke-width="2" />
+    <line x1="-20" y1="20" x2="10" y2="20" stroke="#64748b" stroke-width="2" />
+    <text x="0" y="-30" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">MD</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#0f172a">Getting Started with Astro</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#475569">Components and Content</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="450" r="30" fill="#ff5d01" opacity="0.2" />
+  <circle cx="650" cy="450" r="40" fill="#ff5d01" opacity="0.2" />
+  <circle cx="700" cy="200" r="20" fill="#ff5d01" opacity="0.2" />
+  <circle cx="200" cy="200" r="25" fill="#ff5d01" opacity="0.2" />
+</svg>

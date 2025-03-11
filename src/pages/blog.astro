@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/blog/PostCard.astro';
+import Pagination from '@components/common/Pagination.astro';
+import { getPagination } from '@utils/pagination';
+import { siteConfig } from '@config/site';
+
+// Get all blog posts and sort by date (newest first)
+const posts = await getCollection('posts', ({ data }) => {
+  return !data.draft;
+});
+
+// Sort posts by date (newest first)
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.date || 0).getTime() - new Date(a.data.date || 0).getTime();
+});
+
+// Get pagination data for first page
+const { postsPerPage } = getPagination({ 
+  page: 1, 
+  totalPosts: sortedPosts.length, 
+  basePath: '/blog' 
+});
+
+// Get posts for the first page
+const paginatedPosts = sortedPosts.slice(0, postsPerPage);
+---
+
+<Layout
+  title={`Blog - ${siteConfig.name}`}
+  description="Explore our latest articles, tutorials, and insights"
+>
+  <main class="w-full py-8">
+    <header class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        Explore our latest articles, tutorials, and insights
+      </p>
+    </header>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {paginatedPosts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+    
+    <Pagination
+      currentPage={1}
+      totalPages={Math.ceil(sortedPosts.length / postsPerPage)}
+      prevUrl={null}
+      nextUrl={sortedPosts.length > postsPerPage ? `/blog/page/2/` : null}
+      basePath="/blog"
+    />
+  </main>
+</Layout>

@@ -1,0 +1,135 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+import Breadcrumb from '@layouts/components/common/Breadcrumb.astro';
+
+// Get all posts
+const allPosts = await getCollection('posts', ({ data }) => {
+  return !data.draft;
+});
+
+// Extract series information
+const seriesMap = new Map();
+
+allPosts.forEach(post => {
+  if (post.data.series && Array.isArray(post.data.series) && post.data.series.length === 2) {
+    const seriesName = post.data.series[0];
+    const seriesPosition = post.data.series[1];
+    
+    if (!seriesMap.has(seriesName)) {
+      seriesMap.set(seriesName, []);
+    }
+    
+    seriesMap.get(seriesName).push({
+      title: post.data.title,
+      slug: post.slug,
+      position: seriesPosition,
+      date: post.data.date,
+      description: post.data.description,
+      image: post.data.image
+    });
+  }
+});
+
+// Sort each series by position
+for (const [seriesName, posts] of seriesMap.entries()) {
+  posts.sort((a: any, b: any) => {
+    // First try to sort by position (if they're numbers)
+    const posA = parseInt(a.position);
+    const posB = parseInt(b.position);
+    
+    if (!isNaN(posA) && !isNaN(posB)) {
+      return posA - posB;
+    }
+    
+    // Fall back to string comparison of position
+    if (a.position !== b.position) {
+      return a.position.localeCompare(b.position);
+    }
+    
+    // If positions are equal or not comparable, sort by date
+    return new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime();
+  });
+}
+
+// Convert map to array for easier template rendering
+const seriesList = Array.from(seriesMap.entries()).map(([name, posts]) => ({
+  name,
+  posts,
+  count: posts.length
+}));
+
+// Sort series by name
+seriesList.sort((a, b) => a.name.localeCompare(b.name));
+
+// Breadcrumbs for SEO
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Series', url: '/series/' }
+];
+---
+
+<Layout 
+  title="Article Series | BitDoze"
+  description="Browse our collection of article series on various topics"
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Breadcrumb Navigation -->
+    <Breadcrumb items={breadcrumbs} className="mb-6" />
+    
+    <header class="mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Article Series
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        Browse our collection of multi-part article series on various topics
+      </p>
+    </header>
+
+    {seriesList.length === 0 ? (
+      <div class="text-center py-12">
+        <p class="text-gray-600 dark:text-gray-400">No series available yet. Check back soon!</p>
+      </div>
+    ) : (
+      <div class="space-y-12">
+        {seriesList.map(series => (
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Icon name="mdi:book-open-variant" class="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+              {series.name}
+              <span class="ml-3 text-sm font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">
+                {series.count} {series.count === 1 ? 'part' : 'parts'}
+              </span>
+            </h2>
+            
+            <div class="mt-6">
+              <ol class="relative border-l border-gray-300 dark:border-gray-700 ml-3">
+                {series.posts.map((post: any, index: number) => (
+                  <li class="mb-6 ml-6">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full -left-4 ring-4 ring-white dark:ring-gray-800 text-blue-600 dark:text-blue-400">
+                      {post.position}
+                    </span>
+                    <a 
+                      href={`/${post.slug}/`}
+                      class="group"
+                    >
+                      <h3 class="flex items-center text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                        {post.title}
+                      </h3>
+                      {post.description && (
+                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                          {post.description}
+                        </p>
+                      )}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</Layout>

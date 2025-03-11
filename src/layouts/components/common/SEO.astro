@@ -1,0 +1,236 @@
+---
+import { siteConfig } from '@config/site';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+  noindex?: boolean;
+  canonical?: string;
+  publishDate?: Date;
+  modifiedDate?: Date;
+  author?: {
+    name: string;
+    url?: string;
+  };
+  tags?: string[];
+  categories?: string[];
+  // For breadcrumbs
+  breadcrumbs?: Array<{name: string; url: string}>;
+  // For video content
+  video?: {
+    src: string;
+    name?: string;
+    description?: string;
+    thumbnailUrl?: string;
+    uploadDate?: Date;
+    duration?: string; // ISO 8601 format
+  };
+}
+
+const {
+  title = siteConfig.name,
+  description = siteConfig.description,
+  image = siteConfig.defaultImage,
+  article = false,
+  noindex = false,
+  canonical = Astro.url.pathname,
+  publishDate,
+  modifiedDate,
+  author,
+  tags,
+  categories
+} = Astro.props;
+
+// Determine if we should add noindex based on site config and page type
+let shouldNoindex = noindex;
+
+// Check if this is a tag, category, or search page that should be noindexed
+const isTags = Astro.url.pathname.includes('/tags/');
+const isCategories = Astro.url.pathname.includes('/categories/');
+const isSearch = Astro.url.pathname.includes('/search');
+const isPagination = Astro.url.pathname.includes('/page/');
+
+if (
+  (isTags && siteConfig.noindex.tags) ||
+  (isCategories && siteConfig.noindex.categories) ||
+  isSearch ||
+  isPagination
+) {
+  shouldNoindex = true;
+}
+
+// Format dates for schema
+const publishISODate = publishDate ? new Date(publishDate).toISOString() : null;
+const modifiedISODate = modifiedDate ? new Date(modifiedDate).toISOString() : publishISODate;
+
+// Prepare schema.org JSON-LD
+let schema = null;
+
+// Safe URL creation function
+const safeUrl = (path, base) => {
+  try {
+    return new URL(path, base).toString();
+  } catch (e) {
+    // Fallback to concatenating the URL
+    const baseUrl = base || siteConfig.url || '';
+    return `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+  }
+};
+
+// Website schema
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteConfig.name,
+  "url": siteConfig.url,
+  "description": siteConfig.description,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteConfig.url}/search?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+// BreadcrumbList schema
+const breadcrumbsSchema = Astro.props.breadcrumbs ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": Astro.props.breadcrumbs.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": safeUrl(item.url, Astro.site || siteConfig.url)
+  }))
+} : null;
+
+// VideoObject schema for pages with embedded videos
+const videoSchema = Astro.props.video ? {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": Astro.props.video.name || title,
+  "description": Astro.props.video.description || description,
+  "thumbnailUrl": Astro.props.video.thumbnailUrl || image,
+  "uploadDate": Astro.props.video.uploadDate ? new Date(Astro.props.video.uploadDate).toISOString() : publishISODate,
+  "duration": Astro.props.video.duration || "PT0M0S",
+  "contentUrl": Astro.props.video.src,
+  "embedUrl": Astro.props.video.src
+} : null;
+
+// Article schema (for blog posts)
+if (article && publishISODate) {
+  schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "image": safeUrl(image, Astro.site || siteConfig.url),
+    "datePublished": publishISODate,
+    "dateModified": modifiedISODate || publishISODate,
+    "author": author ? {
+      "@type": "Person",
+      "name": author.name,
+      "url": author.url
+    } : null,
+    "publisher": {
+      "@type": "Organization",
+      "name": siteConfig.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": safeUrl("/favicon.svg", Astro.site || siteConfig.url)
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": safeUrl(canonical, Astro.site || siteConfig.url)
+    },
+    "keywords": tags?.join(", ") || ""
+  };
+} else if (Astro.props.video) {
+  schema = videoSchema;
+} else {
+  schema = websiteSchema;
+}
+
+// Ensure canonical URL is absolute - safely create URL
+let canonicalURL;
+try {
+  canonicalURL = new URL(canonical, Astro.site || siteConfig.url).toString();
+} catch (e) {
+  // Fallback to a simple concatenation if URL constructor fails
+  const baseUrl = (Astro.site || siteConfig.url || '').replace(/\/$/, '');
+  canonicalURL = `${baseUrl}/${canonical.replace(/^\//, '')}`;
+}
+---
+
+<!-- SEO Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={article ? "article" : "website"} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={(() => {
+  try {
+    return new URL(image, Astro.site || siteConfig.url).toString();
+  } catch (e) {
+    const baseUrl = (Astro.site || siteConfig.url || '').replace(/\/$/, '');
+    return `${baseUrl}/${image.replace(/^\//, '')}`;
+  }
+})()} />
+
+{article && publishISODate && (
+  <meta property="article:published_time" content={publishISODate} />
+)}
+
+{article && modifiedISODate && (
+  <meta property="article:modified_time" content={modifiedISODate} />
+)}
+
+{article && tags && tags.map((tag) => (
+  <meta property="article:tag" content={tag} />
+))}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={(() => {
+  try {
+    return new URL(image, Astro.site || siteConfig.url).toString();
+  } catch (e) {
+    const baseUrl = (Astro.site || siteConfig.url || 'https://bitdoze.com').replace(/\/$/, '');
+    return `${baseUrl}/${image.replace(/^\//, '')}`;
+  }
+})()} />
+
+<!-- Robots Meta -->
+{shouldNoindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow" />
+)}
+
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href="/rss.xml" />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<!-- BreadcrumbList Schema (if breadcrumbs are provided) -->
+{breadcrumbsSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbsSchema)} />
+)}
+
+<!-- VideoObject Schema (if video is provided) -->
+{videoSchema && article && (
+  <script type="application/ld+json" set:html={JSON.stringify(videoSchema)} />
+)}

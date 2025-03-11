@@ -1,0 +1,141 @@
+---
+export interface Props {
+  label: string;
+  group: string;
+  expanded?: string;
+}
+
+const { label, group, expanded = "false" } = Astro.props;
+const isExpanded = expanded === "true";
+const accordionId = `accordion-${label.replace(/\s+/g, '-').toLowerCase()}-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+<div class="accordion-item mb-4 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+  <h3>
+    <button
+      id={`${accordionId}-header`}
+      class="accordion-header flex justify-between items-center w-full p-4 text-left bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+      aria-expanded={isExpanded}
+      aria-controls={`${accordionId}-panel`}
+      data-accordion-target={`#${accordionId}-panel`}
+      data-group={group}
+    >
+      <span class="font-medium text-gray-900 dark:text-white">{label}</span>
+      <svg 
+        class="w-5 h-5 transition-transform duration-200 text-gray-500 dark:text-gray-400" 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+      >
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </h3>
+  <div
+    id={`${accordionId}-panel`}
+    class="accordion-panel overflow-hidden transition-all duration-300 max-h-0"
+    aria-labelledby={`${accordionId}-header`}
+    role="region"
+  >
+    <div class="p-4 bg-white dark:bg-gray-900 prose dark:prose-invert max-w-none">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  // Initialize accordions
+  function initAccordions() {
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      const panelId = header.getAttribute('data-accordion-target');
+      const panel = document.querySelector(panelId);
+      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+      
+      // Set initial state
+      if (isExpanded && panel) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        header.querySelector('svg').classList.add('rotate-180');
+      }
+      
+      // Remove existing event listener to prevent duplicates
+      header.removeEventListener('click', toggleAccordion);
+      
+      // Add click event listener
+      header.addEventListener('click', toggleAccordion);
+    });
+    
+    // Handle content changes that might affect height
+    window.addEventListener('resize', updateExpandedPanels);
+  }
+  
+  // Function to toggle accordion state
+  function toggleAccordion() {
+    const header = this;
+    const isCurrentlyExpanded = header.getAttribute('aria-expanded') === 'true';
+    const group = header.getAttribute('data-group');
+    const panelId = header.getAttribute('data-accordion-target');
+    const currentPanel = document.querySelector(panelId);
+    
+    // Close other accordions in the same group
+    if (group && !isCurrentlyExpanded) {
+      document.querySelectorAll(`.accordion-header[data-group="${group}"]`).forEach(groupHeader => {
+        if (groupHeader !== header && groupHeader.getAttribute('aria-expanded') === 'true') {
+          const groupPanelId = groupHeader.getAttribute('data-accordion-target');
+          const groupPanel = document.querySelector(groupPanelId);
+          groupHeader.setAttribute('aria-expanded', 'false');
+          groupHeader.querySelector('svg').classList.remove('rotate-180');
+          if (groupPanel) groupPanel.style.maxHeight = '0px';
+        }
+      });
+    }
+    
+    // Toggle current accordion
+    header.setAttribute('aria-expanded', !isCurrentlyExpanded);
+    header.querySelector('svg').classList.toggle('rotate-180');
+    
+    if (currentPanel) {
+      if (isCurrentlyExpanded) {
+        currentPanel.style.maxHeight = '0px';
+      } else {
+        currentPanel.style.maxHeight = currentPanel.scrollHeight + 'px';
+      }
+    }
+  }
+  
+  // Function to update heights of expanded panels
+  function updateExpandedPanels() {
+    document.querySelectorAll('.accordion-header[aria-expanded="true"]').forEach(header => {
+      const panelId = header.getAttribute('data-accordion-target');
+      const panel = document.querySelector(panelId);
+      if (panel) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  }
+  
+  // Run on page load
+  document.addEventListener('DOMContentLoaded', initAccordions);
+  
+  // Support for dynamically added accordions
+  document.addEventListener('astro:after-swap', initAccordions);
+  
+  // Additional event for MDX content
+  document.addEventListener('astro:page-load', initAccordions);
+  
+  // Initialize immediately for faster response
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(initAccordions, 1);
+  }
+</script>
+
+<style>
+  .accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+</style>

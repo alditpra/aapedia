@@ -1,0 +1,153 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/blog/PostCard.astro';
+import Pagination from '@components/common/Pagination.astro';
+import { getPagination } from '@utils/pagination';
+import { siteConfig } from '@config/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => {
+    return !data.draft;
+  });
+  
+  // Get all author content
+  const authorEntries = await getCollection('authors');
+  
+  // Get all unique authors
+  const authors = [...new Set(posts.flatMap(post => post.data.authors || []))];
+  
+  return authors.map(author => {
+    // Filter posts by author
+    const authorPosts = posts.filter(post => 
+      post.data.authors && post.data.authors.includes(author)
+    ).sort((a, b) => {
+      return new Date(b.data.date || 0).getTime() - new Date(a.data.date || 0).getTime();
+    });
+    
+    // Find author details if available
+    const authorDetails = authorEntries.find(entry => 
+      entry.data.title.toLowerCase() === author.toLowerCase()
+    );
+    
+    return {
+      params: { author: author.toLowerCase() },
+      props: { 
+        author,
+        authorDetails: authorDetails || null,
+        posts: authorPosts,
+        count: authorPosts.length
+      }
+    };
+  });
+}
+
+const { author, authorDetails, posts, count } = Astro.props;
+const basePath = `/authors/${author.toLowerCase()}`;
+
+// Get pagination data for first page
+const { postsPerPage } = getPagination({ 
+  page: 1, 
+  totalPosts: count, 
+  basePath 
+});
+
+// Get posts for the first page
+const paginatedPosts = posts.slice(0, postsPerPage);
+
+// Set noindex based on site config
+const noindex = siteConfig.noindex.authors;
+
+// Format the author name for display
+const formattedAuthor = author.split(' ').map(word => 
+  word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+).join(' ');
+---
+
+<Layout 
+  title={`Posts by ${formattedAuthor} - ${siteConfig.name}`}
+  description={`Browse all posts written by ${formattedAuthor}`}
+  noindex={noindex}
+>
+  <div class="w-full py-8">
+    <header class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Author: {formattedAuthor}
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        {count} {count === 1 ? 'post' : 'posts'} by this author
+      </p>
+    </header>
+    
+    {authorDetails && (
+      <div class="mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden border border-gray-100 dark:border-gray-700">
+        <div class="p-6 md:p-8">
+          <div class="flex flex-col md:flex-row gap-8">
+            {authorDetails.data.image && (
+              <div class="flex-shrink-0">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-lg">
+                  <img 
+                    src={authorDetails.data.image} 
+                    alt={authorDetails.data.title} 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {authorDetails.data.social && (
+                  <div class="mt-4 flex justify-center gap-3">
+                    {authorDetails.data.social.twitter && (
+                      <a href={authorDetails.data.social.twitter} target="_blank" rel="noopener noreferrer" 
+                         class="text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                        <Icon name="mdi:twitter" class="w-6 h-6" />
+                      </a>
+                    )}
+                    {authorDetails.data.social.facebook && (
+                      <a href={authorDetails.data.social.facebook} target="_blank" rel="noopener noreferrer" 
+                         class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                        <Icon name="mdi:facebook" class="w-6 h-6" />
+                      </a>
+                    )}
+                    {authorDetails.data.social.instagram && (
+                      <a href={authorDetails.data.social.instagram} target="_blank" rel="noopener noreferrer" 
+                         class="text-gray-500 hover:text-pink-600 dark:text-gray-400 dark:hover:text-pink-400 transition-colors">
+                        <Icon name="mdi:instagram" class="w-6 h-6" />
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+            
+            <div class="flex-grow">
+              <div class="prose prose-lg dark:prose-invert max-w-none">
+                <Fragment set:html={authorDetails.body} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+    
+    {count > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {paginatedPosts.map((post) => (
+          <PostCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <p class="text-gray-600 dark:text-gray-400">No posts found by this author.</p>
+      </div>
+    )}
+    
+    <Pagination
+      currentPage={1}
+      totalPages={Math.ceil(count / postsPerPage)}
+      prevUrl={null}
+      nextUrl={count > postsPerPage ? `${basePath}/page/2/` : null}
+      basePath={basePath}
+    />
+  </div>
+</Layout>

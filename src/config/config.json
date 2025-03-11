@@ -1,0 +1,35 @@
+{
+  "site": {
+    "title": "Bit Doze Astro Blog Theme",
+    "base_url": "https://example.com",
+    "base_path": "/",
+    "trailing_slash": true,
+    "favicon": "/favicon.ico",
+    "logo": "/logo.svg",
+    "logo_width": "200",
+    "logo_height": "30",
+    "logo_text": "Bit Doze Astro Blog Theme"
+  },
+
+  "settings": {
+    "pagination": 11,
+    "summary_length": 100
+  },
+
+  "metadata": {
+    "meta_author": "Your Name",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "A modern, responsive blog theme for Astro with support for tags, categories, and series."
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Copyright © 2025"
+  },
+
+  "contactinfo": {
+    "address": "Your Address",
+    "email": "your.email@example.com",
+    "phone": "+1 234 567 8900"
+  }
+}

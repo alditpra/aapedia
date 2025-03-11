@@ -1,0 +1,19 @@
+---
+// This component exports all widget components to be used in MDX files
+// It will be imported in the MDX layout to make all components available without explicit imports
+
+// Import all widget components
+import Accordion from './widgets/Accordion.astro';
+import Button from './widgets/Button.astro';
+import ListCheck from './widgets/ListCheck.astro';
+import Notice from './widgets/Notice.astro';
+import Tab from './widgets/Tab.astro';
+import Tabs from './widgets/Tabs.astro';
+import YouTubeEmbed from './widgets/YouTubeEmbed.astro';
+import SeriesWidget from './widgets/SeriesWidget.astro';
+
+// Export all components to make them available in MDX
+export { Accordion, Button, ListCheck, Notice, Tab, Tabs, YouTubeEmbed, SeriesWidget };
+---
+
+<!-- This component doesn't render anything, it's just for exporting components -->

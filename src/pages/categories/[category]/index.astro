@@ -1,0 +1,91 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/blog/PostCard.astro';
+import Pagination from '@components/common/Pagination.astro';
+import { getPagination } from '@utils/pagination';
+import { siteConfig } from '@config/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => {
+    return !data.draft;
+  });
+  
+  // Get all unique categories
+  const categories = [...new Set(posts.flatMap(post => post.data.categories || []))];
+  
+  return categories.map(category => {
+    // Filter posts by category
+    const categoryPosts = posts.filter(post => 
+      post.data.categories && post.data.categories.includes(category)
+    ).sort((a, b) => {
+      return new Date(b.data.date || 0).getTime() - new Date(a.data.date || 0).getTime();
+    });
+    
+    return {
+      params: { category: category.toLowerCase() },
+      props: { 
+        category,
+        posts: categoryPosts,
+        count: categoryPosts.length
+      }
+    };
+  });
+}
+
+const { category, posts, count } = Astro.props;
+const basePath = `/categories/${category.toLowerCase()}`;
+
+// Get pagination data for first page
+const { postsPerPage } = getPagination({ 
+  page: 1, 
+  totalPosts: count, 
+  basePath 
+});
+
+// Get posts for the first page
+const paginatedPosts = posts.slice(0, postsPerPage);
+
+// Set noindex based on site config
+const noindex = siteConfig.noindex.categories;
+
+// Format the category name for display
+const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+---
+
+<Layout 
+  title={`${formattedCategory} - ${siteConfig.name}`}
+  description={`Browse all posts in the ${formattedCategory} category`}
+  noindex={noindex}
+>
+  <div class="w-full py-8">
+    <header class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Category: {formattedCategory}
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        {count} {count === 1 ? 'post' : 'posts'} in this category
+      </p>
+    </header>
+    
+    {count > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {paginatedPosts.map((post) => (
+          <PostCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <p class="text-gray-600 dark:text-gray-400">No posts found in this category.</p>
+      </div>
+    )}
+    
+    <Pagination
+      currentPage={1}
+      totalPages={Math.ceil(count / postsPerPage)}
+      prevUrl={null}
+      nextUrl={count > postsPerPage ? `${basePath}/page/2/` : null}
+      basePath={basePath}
+    />
+  </div>
+</Layout>

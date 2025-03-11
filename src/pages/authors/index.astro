@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+import { siteConfig } from '@config/site';
+
+// Get all blog posts
+const posts = await getCollection('posts', ({ data }) => {
+  return !data.draft;
+});
+
+// Get all unique authors and count posts for each
+const authors = [...new Set(posts.flatMap(post => post.data.authors || []))];
+const authorCounts = authors.map(author => {
+  const count = posts.filter(post => 
+    post.data.authors && post.data.authors.includes(author)
+  ).length;
+  
+  return {
+    name: author,
+    count,
+    slug: author.toLowerCase()
+  };
+}).sort((a, b) => b.count - a.count); // Sort by post count (descending)
+
+// Format author names for display
+const formatAuthorName = (name) => {
+  return name.split(' ').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  ).join(' ');
+};
+---
+
+<Layout 
+  title={`Authors - ${siteConfig.name}`}
+  description="Meet our authors and browse their posts"
+>
+  <div class="w-full py-8">
+    <header class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Authors
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        Meet our content creators and browse their posts
+      </p>
+    </header>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {authorCounts.map(({ name, count, slug }) => (
+        <a 
+          href={`/authors/${slug}/`}
+          class="flex items-center justify-between p-5 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700"
+        >
+          <div class="flex items-center">
+            <Icon name="mdi:account" class="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" />
+            <span class="font-medium text-gray-900 dark:text-white">
+              {formatAuthorName(name)}
+            </span>
+          </div>
+          <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-0.5 rounded-full">
+            {count} {count === 1 ? 'post' : 'posts'}
+          </span>
+        </a>
+      ))}
+    </div>
+    
+    {authorCounts.length === 0 && (
+      <div class="text-center py-12">
+        <p class="text-gray-600 dark:text-gray-400">No authors found.</p>
+      </div>
+    )}
+  </div>
+</Layout>

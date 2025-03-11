@@ -1,0 +1,39 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+// Import all widget components for MDX files
+import * as MarkdownComponents from '@layouts/components/MarkdownComponents.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map(page => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+const { title, description, image } = page.data;
+
+// Make all components available to MDX content
+const components = MarkdownComponents;
+---
+
+<Layout
+  title={title}
+  description={description}
+  image={image}
+>
+  <section class="py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">{title}</h1>
+        
+        <div class="prose prose-lg dark:prose-invert max-w-none">
+          <Content components={components} />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

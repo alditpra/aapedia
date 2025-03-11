@@ -1,0 +1,16 @@
+---
+import SeriesNav from './SeriesNav.astro';
+
+const { currentSlug, seriesName, seriesPosition } = Astro.props;
+
+// Check if we have all required props
+const hasSeries = seriesName && seriesPosition && currentSlug;
+---
+
+{hasSeries && (
+  <SeriesNav 
+    currentSlug={currentSlug} 
+    seriesName={seriesName} 
+    seriesPosition={seriesPosition} 
+  />
+)}

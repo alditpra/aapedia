@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f9fafb" />
+  
+  <!-- Astro Logo -->
+  <g transform="translate(150, 150) scale(1.2)">
+    <!-- Main shape -->
+    <path d="M39.4,0c0,0-4.3,42.6-38.4,42.6c-0.5,0-1-0.1-1-0.1l-0.1,0.1C0,42.6,0,42.6,0,42.6c0.2,0.2,0.5,0.3,0.7,0.5
+      c5.8,3.6,12.5,5.4,19.2,5.4c20.3,0,36.8-16.5,36.8-36.8c0-3.9-0.6-7.8-1.9-11.5L39.4,0z" fill="#ff5d01"/>
+  </g>
+  
+  <!-- Cloud Platform Visualization -->
+  <g transform="translate(400, 300)">
+    <!-- Cloud Shape -->
+    <path d="M-150,-20 C-150,-60 -120,-90 -80,-90 C-60,-120 -10,-120 10,-90 C40,-110 80,-100 100,-70 C130,-70 150,-50 150,-20 C150,20 120,50 80,50 C60,50 -60,50 -80,50 C-120,50 -150,20 -150,-20 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+    
+    <!-- Server Icons -->
+    <rect x="-100" y="-40" width="60" height="80" rx="5" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+    <rect x="-90" y="-30" width="40" height="5" rx="2" fill="#64748b" />
+    <rect x="-90" y="-20" width="40" height="5" rx="2" fill="#64748b" />
+    <rect x="-90" y="-10" width="40" height="5" rx="2" fill="#64748b" />
+    
+    <rect x="20" y="-40" width="60" height="80" rx="5" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+    <rect x="30" y="-30" width="40" height="5" rx="2" fill="#64748b" />
+    <rect x="30" y="-20" width="40" height="5" rx="2" fill="#64748b" />
+    <rect x="30" y="-10" width="40" height="5" rx="2" fill="#64748b" />
+    
+    <!-- Connection Lines -->
+    <line x1="-40" y1="0" x2="20" y2="0" stroke="#64748b" stroke-width="2" stroke-dasharray="5,5" />
+  </g>
+  
+  <!-- Deployment Icons -->
+  <g transform="translate(600, 150)">
+    <!-- Rocket Icon -->
+    <path d="M0,-50 L-15,-20 L-10,-15 L-20,10 L0,0 L20,10 L10,-15 L15,-20 Z" fill="#94a3b8" stroke="#64748b" stroke-width="2" />
+    <circle cx="0" cy="-30" r="5" fill="#f1f5f9" />
+  </g>
+  
+  <!-- Code and Terminal -->
+  <g transform="translate(200, 400)">
+    <!-- Terminal Window -->
+    <rect x="-80" y="-50" width="160" height="100" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="2" />
+    <rect x="-80" y="-50" width="160" height="20" rx="5" fill="#475569" />
+    
+    <!-- Terminal Text -->
+    <text x="-70" y="-10" font-family="monospace" font-size="10" fill="#22c55e">$ npm run build</text>
+    <text x="-70" y="5" font-family="monospace" font-size="10" fill="#22c55e">$ npm run deploy</text>
+    <text x="-70" y="20" font-family="monospace" font-size="10" fill="#22c55e">✓ Deployed!</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#0f172a">Getting Started with Astro</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#475569">Deployment and Advanced Features</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="450" r="30" fill="#ff5d01" opacity="0.2" />
+  <circle cx="650" cy="450" r="40" fill="#ff5d01" opacity="0.2" />
+  <circle cx="700" cy="200" r="20" fill="#ff5d01" opacity="0.2" />
+  <circle cx="200" cy="200" r="25" fill="#ff5d01" opacity="0.2" />
+</svg>
