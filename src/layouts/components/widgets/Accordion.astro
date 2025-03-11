@@ -17,7 +17,7 @@ const accordionId = `accordion-${label.replace(/\s+/g, '-').toLowerCase()}-${Mat
       class="accordion-header flex justify-between items-center w-full p-4 text-left bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
       aria-expanded={isExpanded}
       aria-controls={`${accordionId}-panel`}
-      data-accordion-target={`#${accordionId}-panel`}
+      data-accordion-target={`${accordionId}-panel`}
       data-group={group}
     >
       <span class="font-medium text-gray-900 dark:text-white">{label}</span>
@@ -51,14 +51,14 @@ const accordionId = `accordion-${label.replace(/\s+/g, '-').toLowerCase()}-${Mat
   // Initialize accordions
   function initAccordions() {
     document.querySelectorAll('.accordion-header').forEach(header => {
-      const panelId = header.getAttribute('data-accordion-target');
-      const panel = document.querySelector(panelId);
+      const targetId = header.getAttribute('data-accordion-target');
+      const panel = document.getElementById(targetId);
       const isExpanded = header.getAttribute('aria-expanded') === 'true';
       
       // Set initial state
       if (isExpanded && panel) {
         panel.style.maxHeight = panel.scrollHeight + 'px';
-        header.querySelector('svg').classList.add('rotate-180');
+        header.querySelector('svg')?.classList.add('rotate-180');
       }
       
       // Remove existing event listener to prevent duplicates
@@ -77,31 +77,31 @@ const accordionId = `accordion-${label.replace(/\s+/g, '-').toLowerCase()}-${Mat
     const header = this;
     const isCurrentlyExpanded = header.getAttribute('aria-expanded') === 'true';
     const group = header.getAttribute('data-group');
-    const panelId = header.getAttribute('data-accordion-target');
-    const currentPanel = document.querySelector(panelId);
+    const targetId = header.getAttribute('data-accordion-target');
+    const currentPanel = document.getElementById(targetId);
     
     // Close other accordions in the same group
     if (group && !isCurrentlyExpanded) {
       document.querySelectorAll(`.accordion-header[data-group="${group}"]`).forEach(groupHeader => {
         if (groupHeader !== header && groupHeader.getAttribute('aria-expanded') === 'true') {
           const groupPanelId = groupHeader.getAttribute('data-accordion-target');
-          const groupPanel = document.querySelector(groupPanelId);
+          const groupPanel = document.getElementById(groupPanelId);
           groupHeader.setAttribute('aria-expanded', 'false');
-          groupHeader.querySelector('svg').classList.remove('rotate-180');
+          groupHeader.querySelector('svg')?.classList.remove('rotate-180');
           if (groupPanel) groupPanel.style.maxHeight = '0px';
         }
       });
     }
     
     // Toggle current accordion
-    header.setAttribute('aria-expanded', !isCurrentlyExpanded);
-    header.querySelector('svg').classList.toggle('rotate-180');
+    header.setAttribute('aria-expanded', !isCurrentlyExpanded ? 'true' : 'false');
+    header.querySelector('svg')?.classList.toggle('rotate-180');
     
     if (currentPanel) {
       if (isCurrentlyExpanded) {
         currentPanel.style.maxHeight = '0px';
       } else {
-        currentPanel.style.maxHeight = currentPanel.scrollHeight + 'px';
+        currentPanel.style.maxHeight = `${currentPanel.scrollHeight}px`;
       }
     }
   }
@@ -109,27 +109,26 @@ const accordionId = `accordion-${label.replace(/\s+/g, '-').toLowerCase()}-${Mat
   // Function to update heights of expanded panels
   function updateExpandedPanels() {
     document.querySelectorAll('.accordion-header[aria-expanded="true"]').forEach(header => {
-      const panelId = header.getAttribute('data-accordion-target');
-      const panel = document.querySelector(panelId);
+      const targetId = header.getAttribute('data-accordion-target');
+      const panel = document.getElementById(targetId);
       if (panel) {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
       }
     });
   }
   
-  // Run on page load
+  // Run initialization functions at various lifecycle points
   document.addEventListener('DOMContentLoaded', initAccordions);
-  
-  // Support for dynamically added accordions
   document.addEventListener('astro:after-swap', initAccordions);
-  
-  // Additional event for MDX content
   document.addEventListener('astro:page-load', initAccordions);
   
-  // Initialize immediately for faster response
+  // Initialize immediately if the document is already interactive
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
     setTimeout(initAccordions, 1);
   }
+  
+  // Also add a window load event for good measure
+  window.addEventListener('load', initAccordions);
 </script>
 
 <style>
@@ -137,5 +136,9 @@ const accordionId = `accordion-${label.replace(/\s+/g, '-').toLowerCase()}-${Mat
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+  }
+  
+  .accordion-header svg.rotate-180 {
+    transform: rotate(180deg);
   }
 </style>

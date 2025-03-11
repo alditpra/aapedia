@@ -31,7 +31,6 @@ A modern, responsive blog theme for Astro with support for tags, categories, and
 │   └── utils/          # Utility functions
 ├── astro.config.mjs    # Astro configuration
 ├── package.json        # Dependencies and scripts
-└── tailwind.config.js  # Tailwind CSS configuration
 ```
 
 ### Key Directories and Files
