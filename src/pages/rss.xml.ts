@@ -12,9 +12,9 @@ export async function GET(context) {
   });
 
   return rss({
-    title: siteConfig.name,
+    title: siteConfig.title, // Updated from siteConfig.name
     description: siteConfig.description,
-    site: context.site || siteConfig.url,
+    site: context.site ? context.site.toString() : '', // Use context.site, fallback to empty if undefined
     items: sortedPosts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,

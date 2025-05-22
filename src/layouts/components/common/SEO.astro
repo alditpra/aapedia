@@ -30,9 +30,9 @@ export interface Props {
 }
 
 const {
-  title = siteConfig.name,
+  title = siteConfig.title, // Updated from siteConfig.name
   description = siteConfig.description,
-  image = siteConfig.defaultImage,
+  image = siteConfig.ogImage, // Updated from siteConfig.defaultImage
   article = false,
   noindex = false,
   canonical = Astro.url.pathname,
@@ -70,12 +70,14 @@ let schema = null;
 
 // Safe URL creation function
 const safeUrl = (path, base) => {
+  // Astro.site should be defined as per astro.config.mjs.
+  // If base is not provided, Astro.site will be used.
+  const baseToUse = base ? base.toString() : (Astro.site ? Astro.site.toString() : '');
   try {
-    return new URL(path, base).toString();
+    return new URL(path, baseToUse).toString();
   } catch (e) {
-    // Fallback to concatenating the URL
-    const baseUrl = base || siteConfig.url || '';
-    return `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+    // Fallback for cases where baseToUse might be empty or path is unusual.
+    return `${baseToUse.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
   }
 };
 
@@ -83,14 +85,15 @@ const safeUrl = (path, base) => {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": siteConfig.name,
-  "url": siteConfig.url,
+  "name": siteConfig.title, // Updated from siteConfig.name
+  "url": Astro.site ? Astro.site.toString() : '', // Use Astro.site, fallback to empty if undefined
   "description": siteConfig.description,
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": `${siteConfig.url}/search?q={search_term_string}`
+      // Use Astro.site for urlTemplate
+      "urlTemplate": `${Astro.site ? Astro.site.toString().replace(/\/$/, '') : ''}/search?q={search_term_string}`
     },
     "query-input": "required name=search_term_string"
   }
@@ -104,7 +107,7 @@ const breadcrumbsSchema = Astro.props.breadcrumbs ? {
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": safeUrl(item.url, Astro.site || siteConfig.url)
+    "item": safeUrl(item.url, Astro.site) // Use Astro.site
   }))
 } : null;
 
@@ -128,7 +131,7 @@ if (article && publishISODate) {
     "@type": "Article",
     "headline": title,
     "description": description,
-    "image": safeUrl(image, Astro.site || siteConfig.url),
+    "image": safeUrl(image, Astro.site), // Use Astro.site
     "datePublished": publishISODate,
     "dateModified": modifiedISODate || publishISODate,
     "author": author ? {
@@ -138,15 +141,15 @@ if (article && publishISODate) {
     } : null,
     "publisher": {
       "@type": "Organization",
-      "name": siteConfig.name,
+      "name": siteConfig.title, // Updated from siteConfig.name
       "logo": {
         "@type": "ImageObject",
-        "url": safeUrl("/favicon.svg", Astro.site || siteConfig.url)
+        "url": safeUrl("/favicon.svg", Astro.site) // Use Astro.site
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": safeUrl(canonical, Astro.site || siteConfig.url)
+      "@id": safeUrl(canonical, Astro.site) // Use Astro.site
     },
     "keywords": tags?.join(", ") || ""
   };
@@ -158,12 +161,13 @@ if (article && publishISODate) {
 
 // Ensure canonical URL is absolute - safely create URL
 let canonicalURL;
+// Astro.site should be defined.
+const baseSiteForCanonical = Astro.site ? Astro.site.toString() : '';
 try {
-  canonicalURL = new URL(canonical, Astro.site || siteConfig.url).toString();
+  canonicalURL = new URL(canonical, baseSiteForCanonical).toString();
 } catch (e) {
   // Fallback to a simple concatenation if URL constructor fails
-  const baseUrl = (Astro.site || siteConfig.url || '').replace(/\/$/, '');
-  canonicalURL = `${baseUrl}/${canonical.replace(/^\//, '')}`;
+  canonicalURL = `${baseSiteForCanonical.replace(/\/$/, '')}/${canonical.replace(/^\//, '')}`;
 }
 ---
 
@@ -178,11 +182,12 @@ try {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={(() => {
+  // Astro.site should be defined.
+  const baseSiteForOgImage = Astro.site ? Astro.site.toString() : '';
   try {
-    return new URL(image, Astro.site || siteConfig.url).toString();
+    return new URL(image, baseSiteForOgImage).toString();
   } catch (e) {
-    const baseUrl = (Astro.site || siteConfig.url || '').replace(/\/$/, '');
-    return `${baseUrl}/${image.replace(/^\//, '')}`;
+    return `${baseSiteForOgImage.replace(/\/$/, '')}/${image.replace(/^\//, '')}`;
   }
 })()} />
 
@@ -204,11 +209,12 @@ try {
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={(() => {
+  // Astro.site should be defined.
+  const baseSiteForTwitterImage = Astro.site ? Astro.site.toString() : '';
   try {
-    return new URL(image, Astro.site || siteConfig.url).toString();
+    return new URL(image, baseSiteForTwitterImage).toString();
   } catch (e) {
-    const baseUrl = (Astro.site || siteConfig.url || 'https://bitdoze.com').replace(/\/$/, '');
-    return `${baseUrl}/${image.replace(/^\//, '')}`;
+    return `${baseSiteForTwitterImage.replace(/\/$/, '')}/${image.replace(/^\//, '')}`;
   }
 })()} />
 
@@ -220,7 +226,7 @@ try {
 )}
 
 <!-- RSS Feed -->
-<link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS Feed`} href="/rss.xml" />
+<link rel="alternate" type="application/rss+xml" title={`${siteConfig.title} RSS Feed`} href="/rss.xml" /> 
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />
