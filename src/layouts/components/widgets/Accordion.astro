@@ -41,7 +41,7 @@ const accordionId = `accordion-${label.replace(/\s+/g, '-').toLowerCase()}-${Mat
     aria-labelledby={`${accordionId}-header`}
     role="region"
   >
-    <div class="p-4 bg-white dark:bg-gray-900 prose dark:prose-invert prose-lg max-w-none">
+    <div class="p-4 bg-white dark:bg-gray-900 prose dark:prose-invert prose-lg !max-w-none">
       <slot />
     </div>
   </div>
