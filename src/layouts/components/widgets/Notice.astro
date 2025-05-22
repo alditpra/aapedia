@@ -62,7 +62,7 @@ const icons = {
       <div class={`flex-shrink-0 mr-3 ${typeStyles[type].icon}`} set:html={icons[type]} />
     </div>
   )}
-  <div class={`prose dark:prose-invert ${typeStyles[type].content} ${title ? 'pl-7' : ''}`}>
+  <div class={`prose dark:prose-invert prose-lg !max-w-none ${typeStyles[type].content} ${title ? 'pl-7' : ''}`}>
     <slot />
   </div>
 </div>
