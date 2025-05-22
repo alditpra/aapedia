@@ -16,6 +16,7 @@ A modern, responsive blog theme for Astro with support for tags, categories, and
 - 🖋️ **MDX Support** - Use components in your markdown
 - 🔤 **Typography** - Beautiful typography with Tailwind CSS
 - 🌙 **Icons** - Easy icon usage with Astro Icon
+- 💡 **FOUC Prevention** - Inline scripts to minimize flash of unstyled content and theme inconsistencies on load.
 
 ## Project Structure
 
@@ -82,10 +83,37 @@ The theme includes several reusable components:
 
 ### Configuration
 
-1. Update site information in `src/config/config.json`
-2. Update site metadata in `src/config/site.ts`
-3. Update menu items in `src/config/menu.json`
-4. Update social links in `src/config/social.json`
+Tailor the theme to your needs by updating the following configuration files:
+
+1.  **Site URL**:
+    *   Set your production site URL in `astro.config.mjs`. Look for the `site` property:
+        ```javascript
+        // astro.config.mjs
+        export default defineConfig({
+          site: 'https://your-domain.com', 
+          // ...
+        });
+        ```
+2.  **Primary Site Metadata & Settings**:
+    *   Update `src/config/site.ts` for essential site details such as:
+        *   `title`: The main title of your site.
+        *   `description`: A brief description for SEO and metadata.
+        *   `author`: Default author name.
+        *   `logoText`: Text displayed next to the logo (if applicable).
+        *   `ogImage`: Path to your default OpenGraph image.
+        *   `postsPerPage`: Number of posts to display on paginated pages.
+        *   `summaryLength`: Default length for post summaries.
+        *   `copyright`: Copyright notice.
+3.  **Menus**:
+    *   Modify `src/config/menu.json` to define navigation links for the header and footer.
+4.  **Social Media Links**:
+    *   Update `src/config/social.json` with your social media profile URLs.
+5.  **Other Specific Configurations (`src/config/config.json`)**:
+    *   The `src/config/config.json` file holds some remaining specific parameters:
+        *   `site.favicon`: Path to your `.ico` favicon.
+        *   `site.trailing_slash`: Whether to use trailing slashes in URLs (Astro also handles this).
+        *   `params.contact_form_action`: URL endpoint for the contact form (if used).
+        *   `contactinfo`: Your address, email, and phone number for display.
 
 ### Creating Content
 
@@ -132,10 +160,21 @@ Author bio goes here...
 
 ### Styling
 
-This theme uses Tailwind CSS for styling. You can customize the design by:
+This theme uses **Tailwind CSS v4** for styling, which emphasizes a CSS-first, minimal-configuration approach.
 
-1. Modifying `tailwind.config.js` to change colors, fonts, etc.
-2. Adding custom CSS in `src/styles/global.css`
+**Key Styling Files:**
+
+*   **`src/styles/global.css`**: This is the central file for Tailwind CSS setup and custom styles.
+    *   Tailwind's core styles (base, components, utilities) are imported via `@import "tailwindcss";`.
+    *   The `@tailwindcss/typography` plugin is included using `@plugin "@tailwindcss/typography";`.
+    *   You can customize the theme by modifying the CSS variables defined in this file, which control colors, fonts, and other aspects.
+    *   You can also add your own custom CSS rules here.
+
+*   **`astro.config.mjs`**: The `@tailwindcss/vite` plugin is integrated here, but typically requires no direct configuration for v4 unless you have very specific needs.
+
+**Advanced Customization (Optional):**
+
+While most styling can be managed through `src/styles/global.css`, if you need to make advanced Tailwind customizations (e.g., adding complex custom themes, other specific Tailwind plugins that require JS configuration, or modifying Tailwind's default settings extensively), you can create a `tailwind.config.js` file in the project root. The `@tailwindcss/vite` plugin should automatically detect and use this file. Refer to the [official Tailwind CSS documentation](https://tailwindcss.com/docs) for details on `tailwind.config.js` options.
 
 ### Adding New Pages
 

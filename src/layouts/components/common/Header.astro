@@ -2,6 +2,7 @@
 import ThemeToggle from "./ThemeToggle.astro";
 import { Image } from "astro:assets";
 import menu from "@config/menu.json";
+import { siteConfig } from "@config/site"; // Import siteConfig
 import logoSVG from "@assets/favicons/bitdoze_logo_better.svg";
 
 // Extract main menu items
@@ -16,7 +17,7 @@ const mainMenu = menu.main;
         <a href="/" class="flex items-center">
           <Image 
             src={logoSVG} 
-            alt="BitDoze Logo" 
+            alt={siteConfig.title + ' Logo'} 
             width={140} 
             height={140} 
             class="mr-2"

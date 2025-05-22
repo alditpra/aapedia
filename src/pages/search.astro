@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
+import { siteConfig } from '@config/site'; // Import siteConfig
 ---
 
-<Layout title="Search - BitDoze" description="Search for articles and tutorials on BitDoze" noindex={true}>
+<Layout title={`Search - ${siteConfig.title}`} description={`Search for articles and tutorials on ${siteConfig.title}`} noindex={true}>
   <div class="max-w-4xl mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold mb-8 text-center">Search</h1>
     

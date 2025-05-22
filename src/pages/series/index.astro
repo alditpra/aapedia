@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
 import Breadcrumb from '@layouts/components/common/Breadcrumb.astro';
+import { siteConfig } from '@config/site'; // Import siteConfig
 
 // Get all posts
 const allPosts = await getCollection('posts', ({ data }) => {
@@ -71,7 +72,7 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title="Article Series | BitDoze"
+  title={`Article Series | ${siteConfig.title}`}
   description="Browse our collection of article series on various topics"
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">

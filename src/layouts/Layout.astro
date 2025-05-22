@@ -3,7 +3,8 @@ import "@styles/global.css";
 import Header from "@components/common/Header.astro";
 import Footer from "@components/common/Footer.astro";
 import SEO from "@components/common/SEO.astro";
-import faviconSVG from "@assets/favicons/favicon.svg";
+// import faviconSVG from "@assets/favicons/favicon.svg"; // Removed import
+import { siteConfig } from '@config/site';
 // Import favicon from public directory instead of assets
 
 interface Props {
@@ -25,9 +26,9 @@ interface Props {
 }
 
 const { 
-  title = "BitDoze - Web Development Tutorials and Resources",
-  description = "Explore web development tutorials, tools, and resources at BitDoze.",
-  image = "/images/default-og.jpg",
+  title = siteConfig.title,
+  description = siteConfig.description,
+  image = siteConfig.ogImage,
   noindex = false,
   wideContent = false,
   article = false,
@@ -58,8 +59,9 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={faviconSVG.src} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> {/* Updated path */}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Added apple-touch-icon */}
    
     <meta name="generator" content={Astro.generator} />
     
