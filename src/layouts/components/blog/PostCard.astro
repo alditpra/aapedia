@@ -22,7 +22,8 @@ const isPartOfSeries = series && Array.isArray(series) && series.length === 2;
     <a href={`/${slug}/`} class="block overflow-hidden aspect-video">
       <Image 
         src={image} 
-        alt={title} 
+        alt=""
+        aria-hidden="true"
         class="w-full h-full object-cover transition-transform duration-400hover:scale-105"
         width={640}
         height={360}
