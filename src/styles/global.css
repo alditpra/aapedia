@@ -156,7 +156,7 @@ body {
   border-radius: 3px;
 }
 
-/* Apply Tailwind utility classes based on our CSS variables */
+/*** Apply Tailwind utility classes based on our CSS variables 
 .bg-white { background-color: var(--color-bg-base); }
 .dark .bg-gray-900 { background-color: var(--color-bg-base); }
 .text-gray-900 { color: var(--color-text-base); }
@@ -168,3 +168,4 @@ body {
 .hover\:bg-gray-100:hover { background-color: var(--color-bg-subtle); }
 .dark .hover\:bg-gray-700:hover { background-color: var(--color-bg-subtle); }
 
+**/

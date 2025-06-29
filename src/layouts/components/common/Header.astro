@@ -9,8 +9,10 @@ const mainMenu = menu.main;
 const isHome = Astro.url.pathname === "/";
 ---
 
-<header id="main-header" class="sticky top-0 z-50 bg-white dark:bg-gray-900 w-full transition-opacity">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<header
+  id="main-header"
+  class="sticky top-0 z-50 bg-white/70 dark:bg-[#030620b3] backdrop-blur-md w-full transition-all"
+>  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <a href="/" class="flex items-center">

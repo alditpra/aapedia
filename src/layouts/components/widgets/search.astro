@@ -27,7 +27,7 @@ import { siteConfig } from '@config/site';
 <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
 
 <div id="no-results" class="hidden text-center py-8">
-  <p class="text-lg text-gray-600 dark:text-gray-400">No results found. Try a different search term.</p>
+  <p class="text-lg text-gray-600 dark:text-gray-400">Tidak menemukan apapun</p>
 </div>
 
 <script is:inline>
@@ -73,7 +73,7 @@ import { siteConfig } from '@config/site';
 
       spinnerTimeout = setTimeout(() => {
         searchResults.innerHTML = SPINNER;
-      }, 150); // tunda spinner
+      }, 150);
 
       try {
         await loadFuseScript();
@@ -130,13 +130,13 @@ import { siteConfig } from '@config/site';
       if (results.length === 0) {
         searchResults.classList.add('hidden');
         noResults.classList.remove('hidden');
-        searchInfo.textContent = `No results found for '${searchInput.value}'`;
+        searchInfo.textContent = `Tidak menemukan '${searchInput.value}'`;
         return;
       }
 
       searchResults.classList.remove('hidden');
       noResults.classList.add('hidden');
-      searchInfo.textContent = `Found ${results.length} result${results.length > 1 ? 's' : ''} for '${searchInput.value}'`;
+      searchInfo.textContent = `Ada ${results.length} ${results.length > 1 ? 's' : ''} hasil dari '${searchInput.value}'`;
 
       results.forEach(result => {
         const post = result.item;
@@ -208,17 +208,16 @@ import { siteConfig } from '@config/site';
       });
     }
 
-    // Lazy load search engine only on user interaction
-    ['focus', 'click'].forEach(evt =>
-      searchInput.addEventListener(evt, initSearch, { once: true })
-    );
-
     let debounceTimer;
-    searchInput.addEventListener('input', (e) => {
+    searchInput.addEventListener('input', async (e) => {
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => {
-        if (fuse) performSearch(e.target.value.trim());
+      const query = e.target.value.trim();
+
+      debounceTimer = setTimeout(async () => {
+        if (!initialized) await initSearch();
+        if (fuse) performSearch(query);
       }, 300);
     });
   });
 </script>
+
