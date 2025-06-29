@@ -2,309 +2,228 @@
 import ThemeToggle from "./ThemeToggle.astro";
 import { Image } from "astro:assets";
 import menu from "@config/menu.json";
-import { siteConfig } from "@config/site"; // Import siteConfig
+import { siteConfig } from "@config/site";
 import logoSVG from "@assets/favicons/bitdoze_logo_better.svg";
 
-// Extract main menu items
 const mainMenu = menu.main;
+const isHome = Astro.url.pathname === "/";
 ---
 
-<header class="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-sm w-full">
+<header id="main-header" class="sticky top-0 z-50 bg-white dark:bg-gray-900 w-full transition-opacity">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <div class="flex-shrink-0 flex items-center">
-        <a href="/" class="flex items-center">
-          <Image 
-            src={logoSVG} 
-            alt={siteConfig.title + ' Logo'} 
-            width={140} 
-            height={140} 
-            class="mr-2"
-          />
-        </a>
-      </div>
+      <a href="/" class="flex items-center">
+        <span class="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-500 whitespace-nowrap">
+          AApedia.com
+        </span>
+      </a>
 
       <!-- Mobile menu button -->
       <div class="flex md:hidden">
-        <button 
-          type="button" 
-          id="mobile-menu-button"
+        <button
+          id="menu-toggle"
           class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white p-2 rounded-md"
-          aria-controls="mobile-menu" 
+          aria-controls="mobile-menu"
           aria-expanded="false"
         >
-          <span class="sr-only">Open main menu</span>
-          <!-- Icon when menu is closed -->
-          <svg 
-            id="menu-closed-icon"
-            class="block h-6 w-6" 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor" 
-            aria-hidden="true"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <span class="sr-only">Toggle Menu</span>
+          <svg class="menu-bars h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
-          <!-- Icon when menu is open -->
-          <svg 
-            id="menu-open-icon"
-            class="hidden h-6 w-6" 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor" 
-            aria-hidden="true"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <svg class="menu-close h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
         </button>
       </div>
 
-      <!-- Desktop menu -->
-      <nav class="hidden md:flex space-x-4 items-center">
-        {
-          mainMenu.map((item) => (
-            <>
-              {item.hasChildren ? (
-                <div class="relative dropdown">
-                  <button 
-                    class="flex items-center text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium dropdown-toggle"
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                  >
-                    {item.name}
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      class="ml-1 h-4 w-4 transition-transform duration-200 dropdown-icon" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hidden dropdown-menu transition-all duration-300 opacity-0 z-10">
-                    <div class="py-1 rounded-md">
-                      {item.children.map((child) => (
-                        <a
-                          href={child.url}
-                          class="block px-4 py-2 text-sm text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700"
-                        >
-                          {child.name}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <a
-                  href={item.url}
-                  class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  {item.name}
-                </a>
-              )}
-            </>
-          ))
-        }
-        <!-- Search Icon -->
-        <a href="/search/" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 p-2 rounded-md transition-colors duration-200" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+ <!-- Desktop menu -->
+<nav class="hidden md:flex space-x-4 items-center">
+  {mainMenu.map((item) => (
+    item.hasChildren && item.children ? (
+      <div class="relative group">
+        <button
+          class="flex items-center gap-1 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {item.name}
+          <svg
+            class="h-4 w-4 transition-transform duration-300 group-hover:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
           </svg>
-        </a>
-        <ThemeToggle id="themeToggle-desktop" />
-      </nav>
-    </div>
-  </div>
-
-  <!-- Mobile menu, show/hide based on menu state -->
-  <div class="hidden md:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-      {
-        mainMenu.map((item) => (
-          <>
-            {item.hasChildren ? (
-              <div class="mobile-dropdown">
-                <button class="mobile-dropdown-button w-full text-left flex justify-between items-center text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium">
-                  {item.name}
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    class="mobile-dropdown-icon h-4 w-4 transition-transform duration-200" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <div class="mobile-dropdown-content hidden pl-4 py-2 space-y-1">
-                  {item.children.map((child) => (
-                    <a
-                      href={child.url}
-                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    >
-                      {child.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ) : (
+        </button>
+        <div
+          class="absolute left-0 mt-2 w-48 rounded-xl shadow-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10"
+        >
+          <div class="py-2">
+            {item.children.map((child) => (
               <a
-                href={item.url}
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+                href={child.url}
+                class="block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                {item.name}
+                {child.name}
               </a>
-            )}
-          </>
-        ))
-      }
-      <div class="px-3 py-3 flex justify-center gap-4">
-        <!-- Search Icon (Mobile) -->
-        <a href="/search/" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 p-2 rounded-md transition-colors duration-200" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </a>
-        <ThemeToggle id="themeToggle-mobile" />
+            ))}
+          </div>
+        </div>
       </div>
+    ) : (
+      <a
+        href={item.url}
+        class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+      >
+        {item.name}
+      </a>
+    )
+  ))}
+
+  {!isHome && (
+    <a
+      href="/search/"
+      aria-label="Search"
+      class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 p-2 rounded-md transition-colors"
+    >
+      <svg
+        class="h-5 w-5"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </a>
+  )}
+  <ThemeToggle id="themeToggle-desktop" />
+</nav>
+
     </div>
   </div>
-</header>
 
-<script>
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuClosedIcon = document.getElementById('menu-closed-icon');
-  const menuOpenIcon = document.getElementById('menu-open-icon');
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 space-y-2">
+    {mainMenu.map((item) => (
+      item.hasChildren && item.children ? (
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-button w-full flex justify-between items-center text-left text-gray-500 dark:text-gray-400 px-3 py-2 rounded-md text-base font-medium">
+            {item.name}
+            <svg class="mobile-dropdown-icon h-4 w-4 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </button>
+          <div class="mobile-dropdown-content hidden pl-4 pt-2 space-y-1">
+            {item.children.map((child) => (
+              <a
+                href={child.url}
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
+                {child.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <a
+          href={item.url}
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+        >
+          {item.name}
+        </a>
+      )
+    ))}
 
-  if (mobileMenuButton && mobileMenu && menuClosedIcon && menuOpenIcon) {
-    mobileMenuButton.addEventListener('click', () => {
-      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-      mobileMenuButton.setAttribute('aria-expanded', !expanded);
-      mobileMenu.classList.toggle('hidden');
-      menuClosedIcon.classList.toggle('hidden');
-      menuOpenIcon.classList.toggle('hidden');
+    <div class="flex justify-center gap-4 pt-3">
+      {!isHome && (
+        <a href="/search/" class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 p-2 rounded-md" aria-label="Search">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+          </svg>
+        </a>
+      )}
+      <ThemeToggle id="themeToggle-mobile" />
+    </div>
+  </div>
+
+ <script is:inline>
+  function initHeaderInteractivity() {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const menuBars = toggleBtn?.querySelector(".menu-bars");
+    const menuClose = toggleBtn?.querySelector(".menu-close");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggleBtn?.addEventListener("click", () => {
+      const isOpen = toggleBtn.getAttribute("aria-expanded") === "true";
+      toggleBtn.setAttribute("aria-expanded", String(!isOpen));
+      mobileMenu?.classList.toggle("hidden");
+      menuBars?.classList.toggle("hidden");
+      menuClose?.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll(".mobile-dropdown-button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector(".mobile-dropdown-icon");
+        content?.classList.toggle("hidden");
+        icon?.classList.toggle("rotate-180");
+      });
+    });
+
+    document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const menu = btn.parentElement?.querySelector(".dropdown-menu");
+        const icon = btn.querySelector(".dropdown-icon");
+        const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+        document.querySelectorAll(".dropdown-menu").forEach((m) => {
+          m.classList.add("hidden", "opacity-0");
+        });
+        document.querySelectorAll(".dropdown-toggle").forEach((t) => {
+          t.setAttribute("aria-expanded", "false");
+          t.querySelector(".dropdown-icon")?.classList.remove("rotate-180");
+        });
+
+        if (!isExpanded && menu) {
+          btn.setAttribute("aria-expanded", "true");
+          menu.classList.remove("hidden", "opacity-0");
+          menu.classList.add("opacity-100");
+          icon?.classList.add("rotate-180");
+        }
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown-menu").forEach((m) => {
+          m.classList.add("hidden", "opacity-0");
+        });
+        document.querySelectorAll(".dropdown-toggle").forEach((t) => {
+          t.setAttribute("aria-expanded", "false");
+          t.querySelector(".dropdown-icon")?.classList.remove("rotate-180");
+        });
+      }
     });
   }
 
-  // Mobile dropdowns
-  const mobileDropdownButtons = document.querySelectorAll('.mobile-dropdown-button');
-  
-  mobileDropdownButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector('.mobile-dropdown-icon');
-      
-      if (content) {
-        content.classList.toggle('hidden');
-      }
-      if (icon) {
-        icon.classList.toggle('rotate-180');
-      }
-    });
-  });
-
-  // Desktop dropdowns
-  document.addEventListener('DOMContentLoaded', () => {
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    
-    // Function to close all dropdowns
-    const closeAllDropdowns = () => {
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.classList.add('hidden');
-        menu.classList.remove('opacity-100');
-        menu.classList.add('opacity-0');
-      });
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.setAttribute('aria-expanded', 'false');
-        const icon = toggle.querySelector('.dropdown-icon');
-        if (icon) {
-          icon.classList.remove('rotate-180');
-        }
-      });
-    };
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', (e) => {
-      if (e.target && !e.target.closest('.dropdown')) {
-        closeAllDropdowns();
-      }
-    });
-
-    // Handle dropdown toggle clicks
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const dropdown = toggle.closest('.dropdown');
-        if (!dropdown) return;
-        
-        const menu = dropdown.querySelector('.dropdown-menu');
-        const icon = toggle.querySelector('.dropdown-icon');
-        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-
-        // Close all other dropdowns
-        document.querySelectorAll('.dropdown-toggle').forEach(otherToggle => {
-          if (otherToggle !== toggle) {
-            otherToggle.setAttribute('aria-expanded', 'false');
-            const otherIcon = otherToggle.querySelector('.dropdown-icon');
-            if (otherIcon) {
-              otherIcon.classList.remove('rotate-180');
-            }
-            const otherDropdown = otherToggle.closest('.dropdown');
-            if (otherDropdown) {
-              const otherMenu = otherDropdown.querySelector('.dropdown-menu');
-              if (otherMenu) {
-                otherMenu.classList.add('hidden');
-                otherMenu.classList.remove('opacity-100');
-                otherMenu.classList.add('opacity-0');
-              }
-            }
-          }
-        });
-
-        // Toggle current dropdown
-        if (isExpanded) {
-          toggle.setAttribute('aria-expanded', 'false');
-          if (menu) {
-            menu.classList.add('hidden');
-            menu.classList.remove('opacity-100');
-            menu.classList.add('opacity-0');
-          }
-          if (icon) {
-            icon.classList.remove('rotate-180');
-          }
-        } else {
-          toggle.setAttribute('aria-expanded', 'true');
-          if (menu) {
-            menu.classList.remove('hidden');
-            // Small delay to allow the display change to take effect before animating opacity
-            setTimeout(() => {
-              if (menu) {
-                menu.classList.remove('opacity-0');
-                menu.classList.add('opacity-100');
-              }
-            }, 10);
-          }
-          if (icon) {
-            icon.classList.add('rotate-180');
-          }
-        }
-      });
-
-      // Handle keyboard navigation
-      toggle.addEventListener('keydown', (e) => {
-        if ((e instanceof KeyboardEvent) && (e.key === 'Enter' || e.key === ' ')) {
-          e.preventDefault();
-          toggle.click();
-        } else if ((e instanceof KeyboardEvent) && e.key === 'Escape') {
-          closeAllDropdowns();
-        }
-      });
-    });
-  });
+  // Delay to ensure DOM is rendered (solves dropdown bug)
+  setTimeout(() => {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initHeaderInteractivity);
+    } else {
+      initHeaderInteractivity();
+    }
+  }, 0);
 </script>
+ 
+</header>

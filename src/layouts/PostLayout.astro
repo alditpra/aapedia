@@ -114,15 +114,16 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       
       <!-- Featured Image -->
       {image && (
-        <div class="rounded-lg overflow-hidden mb-8 aspect-video">
-          <Image 
-            src={image} 
-            alt={title} 
-            class="w-full h-full object-cover"
-            width={1280}
-            height={720}
-          />
-        </div>
+  <figure class="mb-8 rounded-lg overflow-hidden aspect-video relative">
+    <Image
+      src={image}
+      alt={title}
+      width={1280}
+      height={720}
+      loading="eager"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+  </figure>
       )}
       
       <!-- Tags -->
@@ -150,7 +151,7 @@ breadcrumbs.push({ name: title, url: canonicalURL });
     )}
     
     <!-- Table of Contents -->
-    <div class="mb-8 p-4 bg-gray-50 rounded-lg">
+    <div class="mb-8 p-4 rounded-lg">
       <PostHeadings headings={headings} />
     </div>
     

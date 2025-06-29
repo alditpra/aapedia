@@ -9,16 +9,27 @@ export type Heading = {
 interface Props {
   heading: Heading;
 }
+
 const { heading } = Astro.props;
 ---
 
-<li class="hover:text-blue-500 dark:hover:text-blue-100">
-  <a href={"#" + heading.slug} class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+<li class={`pl-${heading.depth === 3 ? "6" : "0"} mb-1`}>
+<a
+  href={"#" + heading.slug}
+  class="grid grid-cols-[auto_1fr] items-center gap-2 text-sm text-gray-700 dark:text-gray-200 no-underline hover:text-blue-600 dark:hover:text-blue-400 w-full"
+>
+  <span class="relative z-10 bg-white dark:bg-gray-800 pr-1">
     {heading.text}
-  </a>
+  </span>
+  <span
+    class="border-b border-dotted border-gray-300 dark:border-gray-600 w-full h-0 translate-y-[0.5em]"
+    aria-hidden="true"
+  ></span>
+</a>
+
   {
     heading.subheadings.length > 0 && (
-      <ul class="pl-5">
+      <ul class="mt-1">
         {heading.subheadings.map((subheading) => (
           <Astro.self heading={subheading} />
         ))}

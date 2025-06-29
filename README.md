@@ -1,23 +1,3 @@
-# Bitdoze Astro Blog Theme
-
-A modern, responsive blog theme for Astro with support for tags, categories, and series. This theme is designed to be fast, SEO-friendly, and easy to customize.
-
-## Features
-
-- 🚀 **Built with Astro** - Benefit from Astro's speed and flexibility
-- 📱 **Fully Responsive** - Looks great on all devices
-- 🎨 **Customizable** - Easy to adapt to your brand
-- 🔍 **SEO Optimized** - Meta tags, Open Graph, and JSON-LD
-- 📝 **Blog Ready** - Support for posts, categories, tags, and series
-- 🔎 **Search Functionality** - Client-side search with Fuse.js
-- 📊 **Pagination** - For blog posts, categories, tags, and authors
-- 📰 **RSS Feed** - Automatically generated RSS feed
-- 🗺️ **Sitemap** - Automatically generated sitemap
-- 🖋️ **MDX Support** - Use components in your markdown
-- 🔤 **Typography** - Beautiful typography with Tailwind CSS
-- 🌙 **Icons** - Easy icon usage with Astro Icon
-- 💡 **FOUC Prevention** - Inline scripts to minimize flash of unstyled content and theme inconsistencies on load.
-
 ## Project Structure
 
 ```
@@ -54,66 +34,39 @@ The theme includes several reusable components:
 - **Post Card**: Display post previews in lists
 - **Tag/Category Cloud**: Display and filter by tags or categories
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js (version 16.12.0 or higher)
-- npm, yarn, or pnpm
-
-### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone git@github.com:bitdoze/bitdoze-astro-theme.git my-blog
-   cd my-blog
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open your browser and visit `http://localhost:4321`
-
 ### Configuration
 
 Tailor the theme to your needs by updating the following configuration files:
 
-1.  **Site URL**:
-    *   Set your production site URL in `astro.config.mjs`. Look for the `site` property:
-        ```javascript
-        // astro.config.mjs
-        export default defineConfig({
-          site: 'https://your-domain.com', 
-          // ...
-        });
-        ```
-2.  **Primary Site Metadata & Settings**:
-    *   Update `src/config/site.ts` for essential site details such as:
-        *   `title`: The main title of your site.
-        *   `description`: A brief description for SEO and metadata.
-        *   `author`: Default author name.
-        *   `logoText`: Text displayed next to the logo (if applicable).
-        *   `ogImage`: Path to your default OpenGraph image.
-        *   `postsPerPage`: Number of posts to display on paginated pages.
-        *   `summaryLength`: Default length for post summaries.
-        *   `copyright`: Copyright notice.
-3.  **Menus**:
-    *   Modify `src/config/menu.json` to define navigation links for the header and footer.
-4.  **Social Media Links**:
-    *   Update `src/config/social.json` with your social media profile URLs.
-5.  **Other Specific Configurations (`src/config/config.json`)**:
-    *   The `src/config/config.json` file holds some remaining specific parameters:
-        *   `site.favicon`: Path to your `.ico` favicon.
-        *   `site.trailing_slash`: Whether to use trailing slashes in URLs (Astro also handles this).
-        *   `params.contact_form_action`: URL endpoint for the contact form (if used).
-        *   `contactinfo`: Your address, email, and phone number for display.
+1. **Site URL**:
+   * Set your production site URL in `astro.config.mjs`. Look for the `site` property:
+     ```javascript
+     // astro.config.mjs
+     export default defineConfig({
+       site: 'https://your-domain.com', 
+       // ...
+     });
+     ```
+2. **Primary Site Metadata & Settings**:
+   * Update `src/config/site.ts` for essential site details such as:
+     * `title`: The main title of your site.
+     * `description`: A brief description for SEO and metadata.
+     * `author`: Default author name.
+     * `logoText`: Text displayed next to the logo (if applicable).
+     * `ogImage`: Path to your default OpenGraph image.
+     * `postsPerPage`: Number of posts to display on paginated pages.
+     * `summaryLength`: Default length for post summaries.
+     * `copyright`: Copyright notice.
+3. **Menus**:
+   * Modify `src/config/menu.json` to define navigation links for the header and footer.
+4. **Social Media Links**:
+   * Update `src/config/social.json` with your social media profile URLs.
+5. **Other Specific Configurations (`src/config/config.json`)**:
+   * The `src/config/config.json` file holds some remaining specific parameters:
+     * `site.favicon`: Path to your `.ico` favicon.
+     * `site.trailing_slash`: Whether to use trailing slashes in URLs (Astro also handles this).
+     * `params.contact_form_action`: URL endpoint for the contact form (if used).
+     * `contactinfo`: Your address, email, and phone number for display.
 
 ### Creating Content
 
@@ -164,13 +117,13 @@ This theme uses **Tailwind CSS v4** for styling, which emphasizes a CSS-first, m
 
 **Key Styling Files:**
 
-*   **`src/styles/global.css`**: This is the central file for Tailwind CSS setup and custom styles.
-    *   Tailwind's core styles (base, components, utilities) are imported via `@import "tailwindcss";`.
-    *   The `@tailwindcss/typography` plugin is included using `@plugin "@tailwindcss/typography";`.
-    *   You can customize the theme by modifying the CSS variables defined in this file, which control colors, fonts, and other aspects.
-    *   You can also add your own custom CSS rules here.
+* **`src/styles/global.css`**: This is the central file for Tailwind CSS setup and custom styles.
 
-*   **`astro.config.mjs`**: The `@tailwindcss/vite` plugin is integrated here, but typically requires no direct configuration for v4 unless you have very specific needs.
+  * Tailwind's core styles (base, components, utilities) are imported via `@import "tailwindcss";`.
+  * The `@tailwindcss/typography` plugin is included using `@plugin "@tailwindcss/typography";`.
+  * You can customize the theme by modifying the CSS variables defined in this file, which control colors, fonts, and other aspects.
+  * You can also add your own custom CSS rules here.
+* **`astro.config.mjs`**: The `@tailwindcss/vite` plugin is integrated here, but typically requires no direct configuration for v4 unless you have very specific needs.
 
 **Advanced Customization (Optional):**
 

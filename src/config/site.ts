@@ -1,7 +1,7 @@
 // Site configuration
 export const siteConfig = {
   // Site details from config.json:site
-  title: "Bit Doze Astro Blog Theme", // from config.json:site.title
+  title: "AApedia", // from config.json:site.title
   // description is used from existing site.ts, will be updated by config.json:metadata.meta_description
   // url is removed, Astro.site will be used
 

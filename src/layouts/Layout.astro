@@ -56,14 +56,33 @@ const {
       }
     })();
   </script>
+  
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> {/* Updated path */}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Added apple-touch-icon */}
-   
     <meta name="generator" content={Astro.generator} />
+
+<style>
+  @view-transition {
+    navigation: auto; /* enabled! */
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
     
     <!-- Critical CSS to prevent FOUC -->
     <style is:inline>
@@ -103,7 +122,7 @@ const {
         background-color: #1f2937;
       }
       .dark body {
-        background-color: #111827;
+        background-color: #030620;
         color: #fff;
       }
       main {
