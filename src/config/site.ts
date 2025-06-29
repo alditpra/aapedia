@@ -9,7 +9,7 @@ export const siteConfig = {
   logo: "/logo.svg",
   logoWidth: "200",
   logoHeight: "30",
-  logoText: "Bit Doze Astro Blog Theme",
+  logoText: "AApedia Indonesia",
 
   // SEO metadata from config.json:metadata
   author: "Your Name", // from config.json:metadata.meta_author
