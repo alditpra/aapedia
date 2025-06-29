@@ -95,13 +95,15 @@ const recentPosts = allPosts
                   <div class="flex-shrink-0 w-16">
                     <Image
                       src={post.data.image}
-                      alt={post.data.title}
+        alt=""
+        aria-hidden="true"
                       width={64}
                       height={36}
                       class="rounded w-full aspect-[16/9] object-cover"
                     />
                   </div>
                 )}
+    <span class="sr-only">Selengkapnya tentang {post.data.title}</span>
               </a>
             ))
           }
