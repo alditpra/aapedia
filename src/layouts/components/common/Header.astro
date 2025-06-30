@@ -115,8 +115,6 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
 
 <script is:inline>
   function initializeHeaderInteractivity() {
-    
-    // LOGIKA UNTUK TOMBOL TOGGLE MENU MOBILE UTAMA
     const menuToggleButton = document.getElementById('menu-toggle');
     if (menuToggleButton && !menuToggleButton.dataset.listenerAttached) {
       const mobileMenu = document.getElementById('mobile-menu');
@@ -134,9 +132,7 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
       }
     }
 
-    // LOGIKA UNTUK DROPDOWN DI DALAM MENU MOBILE
-    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown-button');
-    mobileDropdowns.forEach(button => {
+    document.querySelectorAll('.mobile-dropdown-button').forEach(button => {
       if (!button.dataset.listenerAttached) {
         const content = button.nextElementSibling;
         const icon = button.querySelector('.mobile-dropdown-icon');
@@ -152,23 +148,17 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
       }
     });
 
-    // LOGIKA UNTUK DROPDOWN DESKTOP (HOVER + KLIK)
-    const desktopDropdownToggles = document.querySelectorAll('.desktop-dropdown-toggle');
-    desktopDropdownToggles.forEach(toggle => {
+    document.querySelectorAll('.desktop-dropdown-toggle').forEach(toggle => {
       if (!toggle.dataset.listenerAttached) {
         const group = toggle.closest('.group');
         if (!group) return;
-
         toggle.addEventListener('click', (event) => {
           event.stopPropagation();
           const currentlyOpen = group.classList.contains('is-open');
-          
-          // Tutup semua dropdown lain dan reset ARIA-nya
           document.querySelectorAll('.group.is-open').forEach(g => {
             g.classList.remove('is-open');
             g.querySelector('.desktop-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
           });
-          
           if (!currentlyOpen) {
             group.classList.add('is-open');
             toggle.setAttribute('aria-expanded', 'true');
@@ -178,14 +168,12 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
       }
     });
 
-    // LOGIKA UNTUK THEME TOGGLE
-    const themeToggleButtons = document.querySelectorAll('.theme-toggle-button');
-    themeToggleButtons.forEach(button => {
+    document.querySelectorAll('.theme-toggle-button').forEach(button => {
         if (!button.dataset.listenerAttached) {
             button.addEventListener('click', (event) => {
                 event.preventDefault();
-                const isDark = document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
             });
             button.dataset.listenerAttached = 'true';
         }
@@ -194,17 +182,16 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
   
   // LOGIKA UNTUK MENUTUP DROPDOWN DESKTOP SAAT KLIK DI LUAR
   function initializeClickOutsideListener() {
-    // PERBAIKAN: Gunakan document.documentElement, bukan document
-    if (!document.documentElement.dataset.clickOutsideListener) {
+    // PERBAIKAN "BULLETPROOF": Gunakan flag di `window` object, yang paling aman.
+    if (!window.clickOutsideListenerAdded) {
       document.addEventListener('click', () => {
         document.querySelectorAll('.group.is-open').forEach(g => {
           g.classList.remove('is-open');
-          // PENINGKATAN: Reset ARIA saat dropdown ditutup
           g.querySelector('.desktop-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
         });
       });
-      // PERBAIKAN: Pasang flag pada document.documentElement
-      document.documentElement.dataset.clickOutsideListener = 'true';
+      // Set flag di window object
+      window.clickOutsideListenerAdded = true;
     }
   }
 
@@ -218,5 +205,5 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
     document.addEventListener('astro:page-load', runScripts);
     window.headerScriptsAdded = true;
   }
-  runScripts(); // Jalankan saat pertama kali halaman dimuat
+  runScripts();
 </script>
