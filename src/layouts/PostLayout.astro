@@ -34,6 +34,18 @@ if (categories && categories.length > 0) {
 breadcrumbs.push({ name: title, url: canonicalURL });
 ---
 
+<head>
+  {image?.src && (
+    <link
+      rel="preload"
+      as="image"
+      href={image.src}
+      type="image/webp"
+      fetchpriority="high"
+    />
+  )}
+</head>
+
 <Layout
   title={title}
   description={description}
@@ -114,7 +126,7 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       
       <!-- Featured Image -->
       {image && (
-  <figure class="mb-8 rounded-lg overflow-hidden aspect-video relative">
+  <figure class="mb-8 rounded-lg overflow-hidden aspect-video">
 <Image
   src={image}
   alt=""
