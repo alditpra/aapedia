@@ -8,9 +8,11 @@ authors: ["alditpra"]
 categories: ["Web Development"]
 tags: ["Astro", "Next.js", "Jamstack", "WordPress"]
 ---
-Memilih fondasi teknologi untuk proyek web di tahun 2025 bukan lagi perkara sederhana. Saya pribadi sudah sering dihadapkan pada dilema memilih antara berbagai framework dan pendekatan arsitektur, dari yang sederhana seperti WordPress dan Blogger, hingga pendekatan modern seperti Astro dan Next.js. By the way, ini adalah post pertama sejak situs ini dibuat.
+Memilih fondasi teknologi untuk proyek web di tahun 2025 bukan lagi perkara sederhana. Saya pribadi sudah sering dihadapkan pada dilema memilih antara berbagai framework dan pendekatan arsitektur, dari yang sederhana seperti WordPress dan Blogger, hingga pendekatan modern seperti Astro dan Next.js. 
 
 Tulisan ini saya buat sebagai rangkuman pengalaman pribadi dan opini teknis saya. Bukan bermaksud memberi jawaban pasti, tapi semoga bisa memberi sudut pandang tambahan bagi Anda yang sedang mempertimbangkan teknologi web.
+
+By the way, ini adalah post pertama sejak situs ini dibuat. Selagi masih fresh tentang apa yang ada dipikiran dalam menentukan arsitektur untuk website ini.
 
 ---
 
