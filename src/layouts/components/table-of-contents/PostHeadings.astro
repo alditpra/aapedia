@@ -40,9 +40,9 @@ const tableOfContents = buildToc(headings);
   <details id="toc-details" class="toc-container group" open>
     <!-- Header TOC sekarang adalah <summary>, yang secara native dapat diklik -->
     <summary id="toc-summary" class="toc-header-bar list-none cursor-pointer bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-100 dark:border-gray-700">
-      <!-- [PERBAIKAN] Wrapper baru untuk konten agar penataannya benar -->
+      <!-- Wrapper baru untuk konten agar penataannya benar -->
       <div class="toc-summary-content-wrapper flex items-center justify-between">
-        <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200 select-none">Daftar Isi</h2>
+        <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200 select-none">Table of Contents</h2>
         <div class="text-gray-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -71,30 +71,28 @@ const tableOfContents = buildToc(headings);
     if (document.body.classList.contains('toc-initialized')) return;
     document.body.classList.add('toc-initialized');
     
-    const tocDetails = document.getElementById('toc-details');
-    const tocSummary = document.getElementById('toc-summary');
-    const tocContent = document.getElementById('toc-content');
-    const tocWrapper = document.getElementById('toc-wrapper');
-    const tocPlaceholder = document.getElementById('toc-placeholder');
-    const headerElement = document.querySelector('body > header');
+    // [PERBAIKAN TYPESCRIPT] Menambahkan type casting yang benar
+    const tocDetails = document.getElementById('toc-details') as HTMLDetailsElement | null;
+    const tocSummary = document.getElementById('toc-summary') as HTMLElement | null;
+    const tocContent = document.getElementById('toc-content') as HTMLElement | null;
+    const tocWrapper = document.getElementById('toc-wrapper') as HTMLElement | null;
+    const tocPlaceholder = document.getElementById('toc-placeholder') as HTMLElement | null;
+    const headerElement = document.querySelector('body > header') as HTMLElement | null;
 
+    // Menambahkan null check untuk semua elemen
     if (!tocDetails || !tocSummary || !tocContent || !tocWrapper || !tocPlaceholder) {
       console.error("Elemen TOC yang dibutuhkan tidak ditemukan.");
       return;
     }
     
-    // [PERBAIKAN] Menambahkan event listener untuk memastikan <summary> dapat diklik,
-    // terutama saat dalam mode sticky.
     tocSummary.addEventListener('click', (event) => {
-      // Mencegah perilaku default untuk menghindari konflik atau klik ganda.
       event.preventDefault();
-      // Toggle status open/close dari elemen <details> secara manual.
       tocDetails.open = !tocDetails.open;
     });
 
-    // Menutup dropdown jika link di dalamnya diklik
     tocContent.addEventListener('click', (event) => {
-      if (event.target.closest('a')) {
+      // [PERBAIKAN TYPESCRIPT] Menambahkan type guard untuk event.target
+      if (event.target && (event.target as Element).closest('a')) {
         tocDetails.open = false;
       }
     });
@@ -179,7 +177,9 @@ const tableOfContents = buildToc(headings);
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid #e5e7eb;
+    /* [PERBAIKAN] Hanya terapkan border-top */
+    border: none;
+    border-top: 1px solid #e5e7eb; /* Light mode border */
     border-radius: 0;
     box-shadow: none;
     height: 3rem;
@@ -188,10 +188,10 @@ const tableOfContents = buildToc(headings);
   
   html.dark #toc-summary.is-sticky {
     background-color: rgba(3, 6, 32, 0.7);
-    border-bottom-color: #374151;
+    border-top-color: #374151; /* Dark mode border */
   }
 
-  /* [PERBAIKAN] Atur wrapper konten di dalam header sticky */
+  /* Atur wrapper konten di dalam header sticky */
   #toc-summary.is-sticky .toc-summary-content-wrapper {
     max-width: 80rem;
     margin: 0 auto;
@@ -214,10 +214,14 @@ const tableOfContents = buildToc(headings);
     margin-top: 0;
     border-top: none;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    background-color: white;
+    /* [PERUBAHAN] Menyesuaikan background dengan header */
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
   html.dark #toc-content.is-sticky-content {
-    background-color: #030620;
+    /* [PERUBAHAN] Menyesuaikan background dengan header */
+    background-color: rgba(3, 6, 32, 0.7);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   }
 
