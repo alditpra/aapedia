@@ -31,16 +31,11 @@ const { headings } = Astro.props;
 const tableOfContents = buildToc(headings);
 ---
 
-<!-- [OPTIMASI] Menggunakan elemen <details> yang semantik dan performan -->
-<div id="toc-wrapper" class="relative w-full">
-  <!-- Placeholder hanya untuk header saat sticky -->
+<div id="toc-wrapper" class="relative w-full mb-8">
   <div id="toc-placeholder" class="hidden"></div>
   
-  <!-- Kontainer utama sekarang adalah elemen <details> -->
   <details id="toc-details" class="toc-container group" open>
-    <!-- Header TOC sekarang adalah <summary>, yang secara native dapat diklik -->
     <summary id="toc-summary" class="toc-header-bar list-none cursor-pointer bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-100 dark:border-gray-700">
-      <!-- Wrapper baru untuk konten agar penataannya benar -->
       <div class="toc-summary-content-wrapper flex items-center justify-between">
         <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200 select-none">Daftar Isi</h2>
         <div class="text-gray-500 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
@@ -51,7 +46,6 @@ const tableOfContents = buildToc(headings);
       </div>
     </summary>
 
-    <!-- Konten TOC, sekarang menjadi panel dropdown dari <details> -->
     <div id="toc-content" class="toc-content-panel bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-100 dark:border-gray-700 mt-2">
       <div class="p-4 pr-2">
         <ul class="text-sm space-y-2 list-none">
@@ -71,7 +65,6 @@ const tableOfContents = buildToc(headings);
     if (document.body.classList.contains('toc-initialized')) return;
     document.body.classList.add('toc-initialized');
     
-    // [PERBAIKAN TYPESCRIPT] Menambahkan type casting yang benar
     const tocDetails = document.getElementById('toc-details') as HTMLDetailsElement | null;
     const tocSummary = document.getElementById('toc-summary') as HTMLElement | null;
     const tocContent = document.getElementById('toc-content') as HTMLElement | null;
@@ -79,7 +72,6 @@ const tableOfContents = buildToc(headings);
     const tocPlaceholder = document.getElementById('toc-placeholder') as HTMLElement | null;
     const headerElement = document.querySelector('body > header') as HTMLElement | null;
 
-    // Menambahkan null check untuk semua elemen
     if (!tocDetails || !tocSummary || !tocContent || !tocWrapper || !tocPlaceholder) {
       console.error("Elemen TOC yang dibutuhkan tidak ditemukan.");
       return;
@@ -91,7 +83,6 @@ const tableOfContents = buildToc(headings);
     });
 
     tocContent.addEventListener('click', (event) => {
-      // [PERBAIKAN TYPESCRIPT] Menambahkan type guard untuk event.target
       if (event.target && (event.target as Element).closest('a')) {
         tocDetails.open = false;
       }
@@ -102,37 +93,64 @@ const tableOfContents = buildToc(headings);
 
     const makeSticky = () => {
         if (tocSummary.classList.contains('is-sticky')) return;
-        tocPlaceholder.style.height = `${tocSummary.offsetHeight}px`;
+        
+        // 1. Atur tinggi placeholder ke tinggi penuh untuk mencegah lompatan awal
+        tocPlaceholder.style.height = `${tocWrapper.offsetHeight}px`;
         tocPlaceholder.style.display = 'block';
+        // Pastikan tidak ada transisi saat mengatur tinggi awal
+        tocPlaceholder.style.transition = 'none';
+        
+        // 2. Buat TOC menjadi sticky dan tutup
         tocSummary.classList.add('is-sticky');
         tocContent.classList.add('is-sticky-content');
-        tocDetails.open = false; // Otomatis tutup saat sticky
+        tocDetails.open = false; 
+
+        // 3. Atur tinggi akhir placeholder secara langsung tanpa animasi
+        requestAnimationFrame(() => {
+          const extraSpace = 150; 
+          tocPlaceholder.style.height = `${tocSummary.offsetHeight + extraSpace}px`;
+        });
     };
 
     const makeUnSticky = () => {
         if (!tocSummary.classList.contains('is-sticky')) return;
+
+        // Hapus transisi dari placeholder agar bisa menghilang dengan cepat
+        tocPlaceholder.style.transition = '';
+
         tocSummary.classList.remove('is-sticky');
         tocContent.classList.remove('is-sticky-content');
         tocDetails.open = true; // Otomatis buka saat kembali
         tocPlaceholder.style.display = 'none';
     };
     
-    const observer = new IntersectionObserver(([entry]) => {
-      const isStickyNow = tocSummary.classList.contains('is-sticky');
-      const topIsScrolledPastHeader = entry.boundingClientRect.top <= headerHeight;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isStickyNow = tocSummary.classList.contains('is-sticky');
+        const topIsScrolledPastHeader = entry.boundingClientRect.top <= headerHeight;
 
-      if (entry.intersectionRatio === 1) {
-          if (isStickyNow) makeUnSticky();
+        if (entry.intersectionRatio === 1) {
+          if (isStickyNow) {
+            makeUnSticky();
+          }
           return;
+        }
+
+        if (topIsScrolledPastHeader) {
+          if (!isStickyNow) {
+            makeSticky();
+          }
+        } 
+        else {
+          if (isStickyNow) {
+            makeUnSticky();
+          }
+        }
+      },
+      {
+        threshold: [0, 1.0],
       }
-      if (topIsScrolledPastHeader) {
-          if (!isStickyNow) makeSticky();
-      } else {
-          if (isStickyNow) makeUnSticky();
-      }
-    }, {
-      threshold: [0, 1.0],
-    });
+    );
 
     observer.observe(tocWrapper);
   }
@@ -147,12 +165,10 @@ const tableOfContents = buildToc(headings);
     scroll-behavior: smooth;
   }
 
-  /* Sembunyikan panah default dari <summary> */
   #toc-summary::-webkit-details-marker {
     display: none;
   }
 
-  /* Gaya dasar */
   .toc-header-bar { transition: all 0.3s ease-in-out; }
   .toc-content-panel { 
     transition: all 0.3s ease-in-out;
@@ -160,14 +176,10 @@ const tableOfContents = buildToc(headings);
     max-height: calc(100vh - 200px);
   }
 
-  /* Sembunyikan konten saat <details> tidak terbuka */
   #toc-details:not([open]) > #toc-content {
     display: none;
   }
   
-  /* -- Gaya saat STICKY -- */
-  
-  /* Gaya untuk <summary> saat menjadi sticky bar */
   #toc-summary.is-sticky {
     position: fixed;
     top: var(--header-height, 80px);
@@ -177,9 +189,8 @@ const tableOfContents = buildToc(headings);
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    /* [PERBAIKAN] Hanya terapkan border-top */
     border: none;
-    border-top: 1px solid #e5e7eb; /* Light mode border */
+    border-top: 1px solid #e5e7eb;
     border-radius: 0;
     box-shadow: none;
     height: 3rem;
@@ -188,10 +199,9 @@ const tableOfContents = buildToc(headings);
   
   html.dark #toc-summary.is-sticky {
     background-color: rgba(3, 6, 32, 0.7);
-    border-top-color: #374151; /* Dark mode border */
+    border-top-color: #374151;
   }
 
-  /* Atur wrapper konten di dalam header sticky */
   #toc-summary.is-sticky .toc-summary-content-wrapper {
     max-width: 80rem;
     margin: 0 auto;
@@ -203,7 +213,6 @@ const tableOfContents = buildToc(headings);
    @media (min-width: 640px) { #toc-summary.is-sticky .toc-summary-content-wrapper { padding: 0 1.5rem; } }
    @media (min-width: 1024px) { #toc-summary.is-sticky .toc-summary-content-wrapper { padding: 0 2rem; } }
 
-  /* Gaya untuk panel konten saat sticky (menjadi dropdown) */
   #toc-content.is-sticky-content {
     position: fixed;
     top: calc(var(--header-height, 80px) + 3rem);
@@ -214,18 +223,15 @@ const tableOfContents = buildToc(headings);
     margin-top: 0;
     border-top: none;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    /* [PERUBAHAN] Menyesuaikan background dengan header */
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
   html.dark #toc-content.is-sticky-content {
-    /* [PERUBAHAN] Menyesuaikan background dengan header */
     background-color: rgba(3, 6, 32, 0.7);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   }
 
-  /* Logika Buka/Tutup saat Sticky (menggunakan [open]) */
   #toc-details[open] > #toc-summary.is-sticky ~ #toc-content.is-sticky-content {
     transform: translateY(0);
     opacity: 1;
@@ -237,7 +243,6 @@ const tableOfContents = buildToc(headings);
     visibility: hidden;
   }
   
-  /* Gaya link di dalam TOC */
   #toc-content ul > li > ul {
     margin-top: 0.5rem;
   }
