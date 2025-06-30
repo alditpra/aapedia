@@ -34,18 +34,6 @@ if (categories && categories.length > 0) {
 breadcrumbs.push({ name: title, url: canonicalURL });
 ---
 
-<head>
-  {image?.src && (
-    <link
-      rel="preload"
-      as="image"
-      href={image.src}
-      type="image/webp"
-      fetchpriority="high"
-    />
-  )}
-</head>
-
 <Layout
   title={title}
   description={description}
