@@ -82,6 +82,15 @@ const tableOfContents = buildToc(headings);
       console.error("Elemen TOC yang dibutuhkan tidak ditemukan.");
       return;
     }
+    
+    // [PERBAIKAN] Menambahkan event listener untuk memastikan <summary> dapat diklik,
+    // terutama saat dalam mode sticky.
+    tocSummary.addEventListener('click', (event) => {
+      // Mencegah perilaku default untuk menghindari konflik atau klik ganda.
+      event.preventDefault();
+      // Toggle status open/close dari elemen <details> secara manual.
+      tocDetails.open = !tocDetails.open;
+    });
 
     // Menutup dropdown jika link di dalamnya diklik
     tocContent.addEventListener('click', (event) => {
@@ -194,4 +203,41 @@ const tableOfContents = buildToc(headings);
    @media (min-width: 640px) { #toc-summary.is-sticky .toc-summary-content-wrapper { padding: 0 1.5rem; } }
    @media (min-width: 1024px) { #toc-summary.is-sticky .toc-summary-content-wrapper { padding: 0 2rem; } }
 
-  /* Gaya untuk panel konten saat sticky (menjadi dropdown)
+  /* Gaya untuk panel konten saat sticky (menjadi dropdown) */
+  #toc-content.is-sticky-content {
+    position: fixed;
+    top: calc(var(--header-height, 80px) + 3rem);
+    left: 0;
+    width: 100%;
+    z-index: 39;
+    border-radius: 0;
+    margin-top: 0;
+    border-top: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+  html.dark #toc-content.is-sticky-content {
+    background-color: #030620;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+
+  /* Logika Buka/Tutup saat Sticky (menggunakan [open]) */
+  #toc-details[open] > #toc-summary.is-sticky ~ #toc-content.is-sticky-content {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+   #toc-details:not([open]) > #toc-summary.is-sticky ~ #toc-content.is-sticky-content {
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Gaya link di dalam TOC */
+  #toc-content ul > li > ul {
+    margin-top: 0.5rem;
+  }
+  #toc-content ul > li > ul > li {
+    padding-left: 1.25rem;
+  }
+</style>
