@@ -114,17 +114,16 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       
       <!-- Featured Image -->
       {image && (
-  <figure class="mb-8 rounded-lg overflow-hidden aspect-video">
-<Image
-  src={image}
-  alt=""
-  aria-hidden="true"
-  width={900}
-  height={600}
-  loading="eager"
-  fetchpriority="high"
-  class="w-full h-full object-cover"
-/>
+  <figure class="mb-8 rounded-lg overflow-hidden aspect-video relative">
+    <Image
+      src={image}
+      alt=""
+      aria-hidden="true"
+      width={900}
+      height={600}
+      loading="eager"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
   </figure>
       )}
       
@@ -153,7 +152,9 @@ breadcrumbs.push({ name: title, url: canonicalURL });
     )}
     
     <!-- Table of Contents -->
-  <PostHeadings headings={headings} />
+    <div class="mb-8 p-4 rounded-lg">
+      <PostHeadings headings={headings} />
+    </div>
     
     <!-- Post Content -->
     <div class="prose prose-lg dark:prose-invert prose-blue prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-lg w-full !max-w-none" style="min-height: 200px;">
