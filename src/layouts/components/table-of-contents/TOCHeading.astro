@@ -1,4 +1,6 @@
 ---
+// Mendefinisikan tipe data untuk setiap heading, termasuk subheadings rekursif.
+// Ini memastikan type safety di seluruh komponen.
 export type Heading = {
   subheadings: Heading[];
   depth: number;
@@ -6,27 +8,46 @@ export type Heading = {
   text: string;
 };
 
+// Mendefinisikan props yang diterima oleh komponen ini.
 interface Props {
   heading: Heading;
 }
 
+// Mengambil heading dari props yang diberikan.
 const { heading } = Astro.props;
 ---
 
-<li class={`pl-${heading.depth === 3 ? "6" : "0"} mb-1`}>
-<a
-  href={"#" + heading.slug}
-  class="grid grid-cols-[auto_1fr] items-center gap-2 text-sm text-gray-700 dark:text-gray-200 no-underline hover:text-blue-600 dark:hover:text-blue-400 w-full"
->
-  <span class="relative z-10 bg-white dark:bg-gray-800 pr-1">
-    {heading.text}
-  </span>
-  <span
-    class="border-b border-dotted border-gray-300 dark:border-gray-600 w-full h-0 translate-y-[0.5em]"
-    aria-hidden="true"
-  ></span>
-</a>
+{/* [PERBAIKAN UTAMA] Menggunakan direktif `class:list` dari Astro.
+  Ini adalah cara yang lebih andal untuk menerapkan kelas secara kondisional
+  agar dapat dideteksi dengan benar oleh compiler Just-in-Time (JIT) dari Tailwind.
+  - "mb-1" akan selalu diterapkan pada setiap list item.
+  - { "pl-6": heading.depth === 3 } berarti kelas "pl-6" HANYA akan ditambahkan
+    jika heading tersebut adalah level 3 (sub-item), sehingga menciptakan indentasi.
+*/}
+<li class:list={["mb-1", { "pl-6": heading.depth === 3 }]}>
+  <a
+    href={"#" + heading.slug}
+    class="grid grid-cols-[auto_1fr] items-center gap-2 text-sm text-gray-700 dark:text-gray-200 no-underline hover:text-blue-600 dark:hover:text-blue-400 w-full"
+  >
+    {/* Teks heading dibungkus dalam span dengan background agar bisa
+      tampil di atas garis putus-putus, menciptakan efek visual yang rapi.
+    */}
+    <span class="relative z-10 bg-white dark:bg-gray-800 pr-1">
+      {heading.text}
+    </span>
+    {/* Garis putus-putus dibuat dengan span kosong yang diberi border bawah.
+      Ini mengisi sisa ruang secara otomatis berkat `grid-cols-[auto_1fr]`.
+    */}
+    <span
+      class="border-b border-dotted border-gray-300 dark:border-gray-600 w-full h-0 translate-y-[0.5em]"
+      aria-hidden="true"
+    ></span>
+  </a>
 
+  {/* Logika rekursif: Jika heading saat ini memiliki subheadings,
+    render komponen ini lagi (Astro.self) untuk setiap subheading tersebut.
+    Ini secara otomatis menangani kedalaman hirarki yang tak terbatas.
+  */}
   {
     heading.subheadings.length > 0 && (
       <ul class="mt-1">
