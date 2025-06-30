@@ -75,7 +75,7 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
       {mainMenu.map((item) => (
         item.hasChildren && item.children ? (
           <div class="mobile-dropdown">
-            <button class="mobile-dropdown-button flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-medium text-gray-500 dark:text-gray-400">
+            <button class="mobile-dropdown-button flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-medium text-gray-500 dark:text-gray-400" aria-expanded="false">
               <span>{item.name}</span>
               <svg class="mobile-dropdown-icon h-4 w-4 shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -109,52 +109,66 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
   </div>
 </header>
 
-<script>
-  function initializeInteractiveHeader() {
-    const header = document.getElementById('main-header');
-    if (!header || header.dataset.listenerAttached) {
-      return;
+<script is:inline>
+  // Fungsi ini akan dijalankan setiap kali halaman dimuat atau dinavigasi
+  function initializeHeaderInteractivity() {
+    // === LOGIKA UNTUK TOMBOL TOGGLE MENU MOBILE UTAMA ===
+    const menuToggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Periksa apakah elemen ada dan belum memiliki listener
+    if (menuToggleButton && mobileMenu && !menuToggleButton.dataset.listenerAttached) {
+      const menuBarsIcon = menuToggleButton.querySelector('.menu-bars');
+      const menuCloseIcon = menuToggleButton.querySelector('.menu-close');
+
+      menuToggleButton.addEventListener('click', () => {
+        // Toggle menu utama
+        mobileMenu.classList.toggle('hidden');
+        
+        // Toggle ikon (hamburger/close)
+        menuBarsIcon.classList.toggle('hidden');
+        menuCloseIcon.classList.toggle('hidden');
+        
+        // Update atribut ARIA untuk aksesibilitas
+        const isExpanded = menuToggleButton.getAttribute('aria-expanded') === 'true';
+        menuToggleButton.setAttribute('aria-expanded', String(!isExpanded));
+      });
+
+      // Tandai bahwa listener sudah ditambahkan untuk mencegah duplikasi
+      menuToggleButton.dataset.listenerAttached = 'true';
     }
 
-    header.addEventListener('click', (event) => {
-      const target = event.target;
+    // === LOGIKA UNTUK DROPDOWN DI DALAM MENU MOBILE ===
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown-button');
 
-      // Logika untuk tombol Theme Toggle
-      if (target.closest('.theme-toggle-button')) {
-        event.preventDefault();
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      }
+    mobileDropdowns.forEach(button => {
+      // Periksa apakah elemen belum memiliki listener
+      if (!button.dataset.listenerAttached) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.mobile-dropdown-icon');
 
-      // Logika untuk tombol menu mobile
-      if (target.closest('#menu-toggle')) {
-        const menuToggleButton = target.closest('#menu-toggle');
-        const mobileMenu = document.getElementById("mobile-menu");
-        const menuBarsIcon = menuToggleButton.querySelector(".menu-bars");
-        const menuCloseIcon = menuToggleButton.querySelector(".menu-close");
-        if (mobileMenu && menuBarsIcon && menuCloseIcon) {
-          mobileMenu.classList.toggle("hidden");
-          const isAriaExpanded = menuToggleButton.getAttribute('aria-expanded') === 'true';
-          menuToggleButton.setAttribute("aria-expanded", String(!isAriaExpanded));
-          menuBarsIcon.classList.toggle("hidden");
-          menuCloseIcon.classList.toggle("hidden");
+        if (content && icon) {
+          button.addEventListener('click', () => {
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', String(!isExpanded));
+          });
         }
-      }
-      
-      // Logika untuk dropdown mobile
-      if (target.closest('.mobile-dropdown-button')) {
-          const dropdownButton = target.closest('.mobile-dropdown-button');
-          const content = dropdownButton.nextElementSibling;
-          const icon = dropdownButton.querySelector(".mobile-dropdown-icon");
-          if (content && icon) {
-            content.classList.toggle("hidden");
-            icon.classList.toggle("rotate-180");
-          }
+        
+        button.dataset.listenerAttached = 'true';
       }
     });
-
-    header.dataset.listenerAttached = 'true';
   }
 
-  document.addEventListener('astro:page-load', initializeInteractiveHeader);
+  // Karena skrip ini inline, kita perlu memastikan event listener 'astro:page-load'
+  // tidak ditambahkan berulang kali.
+  // Kita bisa mengeceknya dengan sebuah flag di window object.
+  if (!window.headerListenersAdded) {
+    document.addEventListener('astro:page-load', initializeHeaderInteractivity);
+    window.headerListenersAdded = true;
+  }
+  
+  // Jalankan juga saat pertama kali load, untuk halaman yang tidak menggunakan transisi
+  initializeHeaderInteractivity();
 </script>
