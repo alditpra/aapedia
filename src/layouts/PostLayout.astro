@@ -115,15 +115,16 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       <!-- Featured Image -->
       {image && (
   <figure class="mb-8 rounded-lg overflow-hidden aspect-video relative">
-    <Image
-      src={image}
-      alt=""
-      aria-hidden="true"
-      width={900}
-      height={600}
-      loading="lazy"
-      class="inset-0 w-full h-full object-cover"
-    />
+<Image
+  src={image}
+  alt=""
+  aria-hidden="true"
+  width={900}
+  height={600}
+  loading="eager"
+  fetchpriority="high"
+  class="w-full h-full object-cover"
+/>
   </figure>
       )}
       
