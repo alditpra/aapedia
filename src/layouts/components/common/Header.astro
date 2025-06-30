@@ -112,25 +112,26 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
   </div>
 </header>
 
+
 <script is:inline>
   function initializeHeaderInteractivity() {
     
     // LOGIKA UNTUK TOMBOL TOGGLE MENU MOBILE UTAMA
     const menuToggleButton = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuToggleButton && mobileMenu && !menuToggleButton.dataset.listenerAttached) {
+    if (menuToggleButton && !menuToggleButton.dataset.listenerAttached) {
+      const mobileMenu = document.getElementById('mobile-menu');
       const menuBarsIcon = menuToggleButton.querySelector('.menu-bars');
       const menuCloseIcon = menuToggleButton.querySelector('.menu-close');
-
-      menuToggleButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        menuBarsIcon.classList.toggle('hidden');
-        menuCloseIcon.classList.toggle('hidden');
-        const isExpanded = menuToggleButton.getAttribute('aria-expanded') === 'true';
-        menuToggleButton.setAttribute('aria-expanded', String(!isExpanded));
-      });
-      menuToggleButton.dataset.listenerAttached = 'true';
+      if (mobileMenu && menuBarsIcon && menuCloseIcon) {
+        menuToggleButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuBarsIcon.classList.toggle('hidden');
+          menuCloseIcon.classList.toggle('hidden');
+          const isExpanded = menuToggleButton.getAttribute('aria-expanded') === 'true';
+          menuToggleButton.setAttribute('aria-expanded', String(!isExpanded));
+        });
+        menuToggleButton.dataset.listenerAttached = 'true';
+      }
     }
 
     // LOGIKA UNTUK DROPDOWN DI DALAM MENU MOBILE
@@ -139,7 +140,6 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
       if (!button.dataset.listenerAttached) {
         const content = button.nextElementSibling;
         const icon = button.querySelector('.mobile-dropdown-icon');
-
         if (content && icon) {
           button.addEventListener('click', () => {
             content.classList.toggle('hidden');
@@ -162,9 +162,16 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
         toggle.addEventListener('click', (event) => {
           event.stopPropagation();
           const currentlyOpen = group.classList.contains('is-open');
-          document.querySelectorAll('.group.is-open').forEach(g => g.classList.remove('is-open'));
+          
+          // Tutup semua dropdown lain dan reset ARIA-nya
+          document.querySelectorAll('.group.is-open').forEach(g => {
+            g.classList.remove('is-open');
+            g.querySelector('.desktop-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+          });
+          
           if (!currentlyOpen) {
             group.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
           }
         });
         toggle.dataset.listenerAttached = 'true';
@@ -186,18 +193,22 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
   }
   
   // LOGIKA UNTUK MENUTUP DROPDOWN DESKTOP SAAT KLIK DI LUAR
-  // Listener ini sengaja dipisah agar hanya ada satu untuk seluruh halaman
   function initializeClickOutsideListener() {
-    if (!document.dataset.clickOutsideListener) {
+    // PERBAIKAN: Gunakan document.documentElement, bukan document
+    if (!document.documentElement.dataset.clickOutsideListener) {
       document.addEventListener('click', () => {
-        document.querySelectorAll('.group.is-open').forEach(g => g.classList.remove('is-open'));
+        document.querySelectorAll('.group.is-open').forEach(g => {
+          g.classList.remove('is-open');
+          // PENINGKATAN: Reset ARIA saat dropdown ditutup
+          g.querySelector('.desktop-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
       });
-      document.dataset.clickOutsideListener = 'true';
+      // PERBAIKAN: Pasang flag pada document.documentElement
+      document.documentElement.dataset.clickOutsideListener = 'true';
     }
   }
 
   // MENJALANKAN SEMUA SKRIP
-  // Dibungkus agar kompatibel dengan Astro View Transitions
   function runScripts() {
     initializeHeaderInteractivity();
     initializeClickOutsideListener();
