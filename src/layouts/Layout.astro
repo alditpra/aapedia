@@ -1,11 +1,10 @@
 ---
+// src/layouts/Layout.astro
 import "@styles/global.css";
 import Header from "@components/common/Header.astro";
 import Footer from "@components/common/Footer.astro";
 import SEO from "@components/common/SEO.astro";
-// import faviconSVG from "@assets/favicons/favicon.svg"; // Removed import
 import { siteConfig } from '@config/site';
-// Import favicon from public directory instead of assets
 
 interface Props {
   title?: string;
@@ -25,7 +24,7 @@ interface Props {
   categories?: string[];
 }
 
-const { 
+const {
   title = siteConfig.title,
   description = siteConfig.description,
   image = siteConfig.ogImage,
@@ -43,187 +42,79 @@ const {
 
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Add script to prevent flash of wrong theme -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light dark" />
+
   <script is:inline>
-    // This script runs immediately on page load to prevent flash of wrong theme
-    (function() {
-      // Check if dark mode is stored in localStorage or use system preference
-      if (localStorage.getItem('theme') === 'dark' || 
-          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    })();
+    // Hanya untuk pemuatan pertama kali, mencegah kedipan awal
+    const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.classList.add('dark');
   </script>
-  
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> {/* Updated path */}
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Added apple-touch-icon */}
-    <meta name="generator" content={Astro.generator} />
-
-<style>
-  @view-transition {
-    navigation: auto; /* enabled! */
-  }
-</style>
 
 
+  <title>{title}</title>
+  <meta name="description" content={description} />
 
+  <style is:inline>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    .prose { max-width: 65ch; color: inherit; }
+    .prose img { margin: 0 auto; }
+    .prose p, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 { margin-top: 1.25em; margin-bottom: 1.25em; }
+    .prose pre { overflow-x: auto; background-color: #f3f4f6; border-radius: 0.375rem; padding: 1rem; }
+    .dark .prose pre { background-color: #1f2937; }
+  </style>
 
+  <SEO
+    title={title}
+    description={description}
+    image={image}
+    article={article}
+    noindex={noindex}
+    canonical={canonical}
+    publishDate={publishDate}
+    modifiedDate={modifiedDate}
+    author={author}
+    tags={tags}
+    categories={categories}
+  />
+</head>
 
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+  <Header />
+  <main class="w-full flex-grow">
+    <div class:list={[ "mx-auto px-4 sm:px-6", wideContent ? "w-full" : "max-w-5xl" ]}>
+      <slot />
+    </div>
+  </main>
+  <Footer />
 
-
-
-
-
-
-
-    
-    <!-- Critical CSS to prevent FOUC -->
-    <style is:inline>
-      /* Critical styles to prevent layout shifts */
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.2s ease;
-      }
-      body.loading {
-        opacity: 0;
-      }
-      /* Critical prose styles */
-      .prose {
-        max-width: 65ch;
-        color: inherit;
-      }
-      .prose img {
-        margin: 0 auto;
-      }
-      .prose p, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-        margin-top: 1.25em;
-        margin-bottom: 1.25em;
-      }
-      .prose pre {
-        overflow-x: auto;
-        background-color: #f3f4f6;
-        border-radius: 0.375rem;
-        padding: 1rem;
-      }
-      .dark .prose pre {
-        background-color: #1f2937;
-      }
-      .dark body {
-        background-color: #030620;
-        color: #fff;
-      }
-      main {
-        flex: 1 0 auto;
-      }
-      .max-w-5xl {
-        max-width: 64rem;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      @media (min-width: 640px) {
-        .max-w-5xl {
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-      }
-    </style>
-    
-    <!-- SEO Component -->
-    <SEO
-      title={title}
-      description={description}
-      image={image}
-      article={article}
-      noindex={noindex}
-      canonical={canonical}
-      publishDate={publishDate}
-      modifiedDate={modifiedDate}
-      author={author}
-      tags={tags}
-      categories={categories}
-    />
-  
-  
-    
-  </head>
-  <body class="loading bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex flex-col">
-    <!-- Script to prevent FOUC -->
-    <script is:inline>
-      // Remove loading class when CSS is loaded
-      document.body.classList.add('loading');
-      
-      // Function to check if stylesheets are loaded
-      function checkStylesheetsLoaded() {
-        const styleSheets = document.styleSheets;
-        let cssLoaded = false;
-        
-        for (let i = 0; i < styleSheets.length; i++) {
-          // Check if the stylesheet is our global.css
-          if (styleSheets[i].href && styleSheets[i].href.includes('global.css')) {
-            try {
-              // If we can access rules, the stylesheet is loaded
-              if (styleSheets[i].cssRules.length > 0) {
-                cssLoaded = true;
-                break;
-              }
-            } catch (e) {
-              // CORS error or stylesheet not loaded yet
-              continue;
-            }
-          }
-        }
-        
-        return cssLoaded;
-      }
-      
-      function revealContent() {
-        document.body.classList.remove('loading');
-      }
-      
-      // Check if stylesheets are already loaded
-      if (checkStylesheetsLoaded()) {
-        revealContent();
+  <script>
+    // Skrip ini mencegah kedipan putih saat navigasi
+    document.addEventListener('astro:before-swap', (event) => {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        event.detail.newDocument.documentElement.classList.add('dark');
       } else {
-        // If not loaded yet, wait for DOMContentLoaded and check again
-        document.addEventListener('DOMContentLoaded', function() {
-          if (checkStylesheetsLoaded()) {
-            revealContent();
-          } else {
-            // If still not loaded, set a timeout as fallback
-            setTimeout(revealContent, 100);
-          }
-        });
-        
-        // Fallback in case other methods fail
-        window.addEventListener('load', revealContent);
+        // Penting: Hapus kelas 'dark' jika tema bukan gelap
+        event.detail.newDocument.documentElement.classList.remove('dark');
       }
-    </script>
-    <!-- Full-width header -->
-    <Header />
-    
-    <!-- Main content area with conditional width -->
-    <main class="flex-grow w-full">
-      <div class={wideContent ? "w-full" : "max-w-5xl mx-auto px-4 sm:px-6"}>
-        <slot />
-      </div>
-    </main>
-    
-    <!-- Full-width footer -->
-    <Footer />
-  </body>
+    });
+  </script>
+</body>
 </html>
