@@ -1,62 +1,88 @@
 ---
 // This component creates a reading progress bar that appears at the top of articles
 // It tracks scroll position and updates the progress bar width accordingly
+// Optimized to use transform: scaleX() for smoother, more performant animations.
 ---
 
 <div class="reading-progress-container fixed top-0 left-0 w-full h-1 z-50 bg-transparent">
-  <div id="reading-progress-bar" class="h-full bg-blue-500 dark:bg-blue-400 w-0 transition-all duration-100"></div>
+  {/* The progress bar now uses transform for animation instead of width */}
+  <div 
+    id="reading-progress-bar" 
+    class="h-full bg-blue-500 dark:bg-blue-400 origin-left transition-transform duration-150 ease-in-out"
+    style="transform: scaleX(0);"
+  ></div>
 </div>
 
 <script>
-  // Initialize the reading progress functionality when the DOM is loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    const progressBar = document.getElementById('reading-progress-bar');
-    
-    // Only proceed if we're on a page with the progress bar and article content
-    if (!progressBar) return;
-    
-    // Get the article element to track
+  const progressBar = document.getElementById('reading-progress-bar');
+  
+  // Exit early if the progress bar element isn't on the page
+  if (progressBar) {
     const article = document.querySelector('article');
-    if (!article) return;
-    
-    // Function to update the progress bar
-    const updateProgress = () => {
-      // Calculate how far the user has scrolled
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const articleHeight = article.offsetHeight;
-      const windowHeight = window.innerHeight;
+
+    // Only run the script if there is an article to track
+    if (article) {
+      let ticking = false;
+
+      const updateProgress = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const articleTop = article.offsetTop;
+        
+        // Ensure we only calculate progress after scrolling past the start of the article
+        const scrollableHeight = article.offsetHeight - window.innerHeight;
+
+        // Calculate how far into the article the user has scrolled
+        let currentScroll = scrollTop - articleTop;
+        if (currentScroll < 0) currentScroll = 0;
+        
+        // Calculate scroll percentage, clamped between 0 and 1
+        let scrollPercentage = 0;
+        if (scrollableHeight > 0) {
+          scrollPercentage = currentScroll / scrollableHeight;
+        }
+
+        // Clamp the value between 0 and 1
+        const progress = Math.min(1, Math.max(0, scrollPercentage));
+        
+        // Update the progress bar's scaleX transform
+        progressBar.style.transform = `scaleX(${progress})`;
+        
+        // Allow the next animation frame to be requested
+        ticking = false;
+      };
+
+      const onScroll = () => {
+        if (!ticking) {
+          // Use requestAnimationFrame to batch updates and sync with the browser's repaint cycle
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      };
+
+      // Add scroll event listener with passive option for better performance
+      window.addEventListener('scroll', onScroll, { passive: true });
       
-      // Calculate scroll percentage
-      // We subtract the window height to get more accurate progress
-      // (100% should mean you've seen all content, not that you've scrolled to the bottom)
-      const scrollPercentage = Math.min(
-        100,
-        Math.max(
-          0,
-          (scrollTop / (articleHeight - windowHeight)) * 100
-        )
-      );
-      
-      // Update the progress bar width
-      progressBar.style.width = `${scrollPercentage}%`;
-    };
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    
-    // Initial update
-    updateProgress();
-    
-    // Clean up on page navigation
-    document.addEventListener('astro:before-swap', () => {
-      window.removeEventListener('scroll', updateProgress);
-    });
-  });
+      // Perform an initial update in case the page loads already scrolled
+      onScroll();
+
+      // Clean up the event listener when navigating away to prevent memory leaks
+      document.addEventListener('astro:before-swap', () => {
+        window.removeEventListener('scroll', onScroll);
+      }, { once: true });
+    }
+  }
 </script>
 
 <style>
   .reading-progress-container {
     /* Subtle shadow to separate from content */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* Ensure the container itself doesn't block clicks on content below it */
+    pointer-events: none;
+  }
+
+  #reading-progress-bar {
+    /* The bar itself should have pointer-events so it's visible */
+    pointer-events: auto;
   }
 </style>
