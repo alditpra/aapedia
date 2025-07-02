@@ -44,12 +44,11 @@ breadcrumbs.push({ name: title, url: canonicalURL });
   publishDate={date}
   author={authors && authors.length > 0 ? { name: authors[0] } : undefined}
   tags={tags}
-  categories={categories}
-  breadcrumbs={breadcrumbs}>
+  categories={categories}>
   <!-- Reading Progress Bar -->
 <ReadingProgress />
 
-<article class="w-full py-8 w-full py-8" style="transition: opacity 0.3s ease;">
+<article class="w-full py-8" style="transition: opacity 0.3s ease;">
     <!-- Breadcrumb Navigation -->
     <Breadcrumb items={breadcrumbs} className="mb-6" />
     
@@ -165,7 +164,7 @@ breadcrumbs.push({ name: title, url: canonicalURL });
     <!-- Social Share Component -->
     <SocialShare
       title={title}
-      description={description}
+      description={description || ''}
       url={canonicalURL}
     />
     
@@ -181,9 +180,11 @@ document.querySelectorAll("pre").forEach((pre) => {
 
   button.addEventListener("click", () => {
     const code = pre.querySelector("code")?.innerText;
-    navigator.clipboard.writeText(code);
-    button.innerText = "Sukses dicopy!";
-    setTimeout(() => (button.innerText = "Copy"), 2000);
+    if (code) {
+      navigator.clipboard.writeText(code);
+      button.innerText = "Sukses dicopy!";
+      setTimeout(() => (button.innerText = "Copy"), 2000);
+    }
   });
 
   pre.appendChild(button);
