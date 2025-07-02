@@ -173,3 +173,20 @@ breadcrumbs.push({ name: title, url: canonicalURL });
     <RelatedPosts currentPost={post} />
   </article>
 </Layout>
+<script>
+document.querySelectorAll("pre").forEach((pre) => {
+  const button = document.createElement("button");
+  button.innerText = "Copy";
+  button.className = "copy-button";
+
+  button.addEventListener("click", () => {
+    const code = pre.querySelector("code")?.innerText;
+    navigator.clipboard.writeText(code);
+    button.innerText = "Copied!";
+    setTimeout(() => (button.innerText = "Copy"), 2000);
+  });
+
+  pre.appendChild(button);
+});
+
+</script>

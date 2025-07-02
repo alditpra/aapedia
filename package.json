@@ -18,6 +18,7 @@
     "astro": "^5.10.1",
     "astro-icon": "^1.1.5",
     "fuse.js": "^7.1.0",
+    "rehype-pretty-code": "^0.14.1",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

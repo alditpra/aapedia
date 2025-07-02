@@ -95,66 +95,128 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Responsive table styles for markdown content */
-.prose table {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
+
+
+
+/* =================================
+   CODE BLOCK STYLING (Tailwind-Compatible)
+   ================================= */
+
+/* === BASE CONTAINER === */
+pre {
+  @apply relative bg-gradient-to-br from-[#0d1117] to-[#161b22] text-[#e6edf3] px-6 py-16 rounded-xl text-sm leading-7 overflow-x-auto font-mono border border-[#30363d] shadow-[0_4px_12px_rgba(0,0,0,0.15),0_2px_4px_rgba(0,0,0,0.1)] transition-all duration-300;
 }
 
-.prose table th {
-  background-color: var(--color-bg-subtle);
-  color: var(--color-text-base);
-  font-weight: 600;
-  padding: 0.75rem 1rem;
-  text-align: left;
-  border: 1px solid var(--color-border-base);
+pre:hover {
+  @apply border-[#484f58] shadow-[0_6px_20px_rgba(0,0,0,0.2),0_3px_6px_rgba(0,0,0,0.15)];
 }
 
-.prose table td {
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--color-border-base);
-  vertical-align: top;
+/* === LANGUAGE LABEL === */
+pre[data-language]::before {
+  content: attr(data-language);
+  @apply absolute top-3 left-6 text-[0.6rem] font-bold uppercase tracking-wider bg-gradient-to-br from-[#30363d] to-[#484f58] text-[#58a6ff] px-[10px] py-[4px] rounded border border-[#484f58] font-sans max-w-[calc(100%-140px)] truncate z-20;
 }
 
-.prose table tr:nth-child(even) {
-  background-color: var(--color-bg-muted);
+/* === COPY BUTTON === */
+pre .copy-button {
+  @apply absolute top-3 right-4 bg-gradient-to-br from-[#238636] to-[#2ea043] text-white border-none px-3 py-[6px] text-[0.7rem] font-medium rounded cursor-pointer font-sans z-20 shadow transition duration-200 ease-in-out;
 }
 
-.prose table tr:hover {
-  background-color: var(--color-bg-subtle);
+pre .copy-button:hover {
+  @apply from-[#2ea043] to-[#46954a] -translate-y-[1px] shadow-md;
 }
 
-/* Add a visual indicator that the table is scrollable */
-.prose table::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background: linear-gradient(to right, transparent, rgba(0,0,0,0.1));
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+pre .copy-button:active {
+  @apply translate-y-0 shadow-sm;
 }
 
-.prose table::-webkit-scrollbar {
-  height: 6px;
+/* === CODE CONTENT === */
+pre code {
+  @apply block w-full pt-12;
+  counter-reset: line;
 }
 
-.prose table::-webkit-scrollbar-track {
-  background: var(--color-bg-muted);
-  border-radius: 3px;
+/* === LINE STYLING === */
+pre code .line {
+  @apply relative pl-5 min-h-[1.7em] transition-colors duration-150;
 }
 
-.prose table::-webkit-scrollbar-thumb {
-  background-color: var(--color-border-base);
-  border-radius: 3px;
+pre code .line:hover {
+  background-color: rgba(56, 139, 253, 0.05);
+  @apply rounded -mx-2 pl-7;
 }
+
+/* === LINE NUMBERS === */
+pre code .line::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply absolute left-[-1rem] w-6 text-right text-[#6e7681] text-xs font-normal select-none pointer-events-none;
+}
+
+/* === SCROLLBAR STYLING (requires tailwind-scrollbar plugin) === */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #161b22;
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #30363d 0%, #484f58 100%);
+  border-radius: 4px;
+  border: 1px solid #21262d;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #484f58 0%, #6e7681 100%);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  pre {
+    @apply px-4 py-14 text-[0.8rem] rounded-lg;
+  }
+
+  pre[data-language]::before {
+    @apply top-2 left-4 text-[0.55rem] px-2 py-[3px] max-w-[calc(100%-100px)];
+  }
+
+  pre .copy-button {
+    @apply top-2 right-3 px-2 py-[4px] text-[0.65rem];
+  }
+
+  pre code .line::before {
+    left: -1.75rem;
+    width: 1.25rem;
+  }
+}
+
+/* === DARK MODE ENHANCEMENT === */
+@media (prefers-color-scheme: dark) {
+  pre {
+    background: linear-gradient(135deg, #0a0d13 0%, #0d1117 100%);
+    border-color: #21262d;
+  }
+
+  pre:hover {
+    border-color: #30363d;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*** Apply Tailwind utility classes based on our CSS variables 
 .bg-white { background-color: var(--color-bg-base); }
