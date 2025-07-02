@@ -58,10 +58,11 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
             </svg>
           </a>
         )}
-        <ThemeToggle class="theme-toggle-button" />
+        <ThemeToggle class="theme-toggle-button hidden md:inline-flex" />
       </nav>
 
-      <div class="flex md:hidden">
+      <div class="flex items-center gap-2 md:hidden">
+        <ThemeToggle class="theme-toggle-button" />
         <button id="menu-toggle" class="rounded-md p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Buka menu</span>
           <svg class="menu-bars block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,12 +107,10 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
             </svg>
           </a>
         )}
-        <ThemeToggle class="theme-toggle-button" />
       </div>
     </div>
   </div>
 </header>
-
 
 <script is:inline>
   function initializeHeaderInteractivity() {
@@ -169,20 +168,18 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
     });
 
     document.querySelectorAll('.theme-toggle-button').forEach(button => {
-        if (!button.dataset.listenerAttached) {
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
-                document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-            });
-            button.dataset.listenerAttached = 'true';
-        }
+      if (!button.dataset.listenerAttached) {
+        button.addEventListener('click', (event) => {
+          event.preventDefault();
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+        button.dataset.listenerAttached = 'true';
+      }
     });
   }
-  
-  // LOGIKA UNTUK MENUTUP DROPDOWN DESKTOP SAAT KLIK DI LUAR
+
   function initializeClickOutsideListener() {
-    // PERBAIKAN "BULLETPROOF": Gunakan flag di `window` object, yang paling aman.
     if (!window.clickOutsideListenerAdded) {
       document.addEventListener('click', () => {
         document.querySelectorAll('.group.is-open').forEach(g => {
@@ -190,17 +187,15 @@ const mobileNavLinkClasses = "block px-3 py-2 rounded-md text-base font-medium t
           g.querySelector('.desktop-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
         });
       });
-      // Set flag di window object
       window.clickOutsideListenerAdded = true;
     }
   }
 
-  // MENJALANKAN SEMUA SKRIP
   function runScripts() {
     initializeHeaderInteractivity();
     initializeClickOutsideListener();
   }
-  
+
   if (!window.headerScriptsAdded) {
     document.addEventListener('astro:page-load', runScripts);
     window.headerScriptsAdded = true;
