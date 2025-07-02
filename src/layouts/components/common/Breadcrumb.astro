@@ -16,7 +16,7 @@ const { items, className = "" } = Astro.props;
 
 <nav
   aria-label="Breadcrumb"
-  class={`breadcrumb opacity-0 translate-y-4 animate-fade-up ${className}`}
+  class={`breadcrumb  ${className}`}
 >
   <ol class="flex flex-wrap items-center space-x-1 md:space-x-2 text-sm md:text-base">
     {items.map((item, index) => (

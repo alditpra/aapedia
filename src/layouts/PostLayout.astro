@@ -54,7 +54,7 @@ breadcrumbs.push({ name: title, url: canonicalURL });
     
     <!-- Post Header -->
     <header class="mb-8">
-      <div class="opacity-0 translate-y-4 animate-fade-up flex flex-wrap items-center text-gray-500 dark:text-gray-400 mb-4 gap-4">
+      <div class=" flex flex-wrap items-center text-gray-500 dark:text-gray-400 mb-4 gap-4">
         <!-- Date -->
         <div class="flex items-center ">
           <Icon name="mdi:calendar" class="w-5 h-5 mr-1" />
@@ -101,20 +101,20 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       </div>
       
       <!-- Title -->
-      <h1 class="opacity-0 translate-y-4 animate-fade-up text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <h1 class=" text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
         {title}
       </h1>
       
       <!-- Description -->
       {description && (
-        <p class="opacity-0 translate-y-4 animate-fade-up text-lg text-gray-700 dark:text-gray-300 mb-6">
+        <p class=" text-lg text-gray-700 dark:text-gray-300 mb-6">
           {description}
         </p>
       )}
       
       <!-- Featured Image -->
       {image && (
-  <figure class=" opacity-0 translate-y-4 animate-fade-up mb-8 rounded-lg overflow-hidden aspect-video relative">
+  <figure class="  mb-8 rounded-lg overflow-hidden aspect-video relative">
     <Image
       src={image}
       alt=""
