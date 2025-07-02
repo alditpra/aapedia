@@ -44,17 +44,18 @@ breadcrumbs.push({ name: title, url: canonicalURL });
   publishDate={date}
   author={authors && authors.length > 0 ? { name: authors[0] } : undefined}
   tags={tags}
-  categories={categories}>
+  categories={categories}
+  breadcrumbs={breadcrumbs}>
   <!-- Reading Progress Bar -->
 <ReadingProgress />
 
-<article class="w-full py-8" style="transition: opacity 0.3s ease;">
+<article class=" w-full py-8" style="transition: opacity 0.3s ease;">
     <!-- Breadcrumb Navigation -->
     <Breadcrumb items={breadcrumbs} className="mb-6" />
     
     <!-- Post Header -->
     <header class="mb-8">
-      <div class="opacity-0 translate-y-4 animate-fade-up flex flex-wrap items-center text-gray-500 dark:text-gray-400 mb-4 gap-4">
+      <div class=" flex flex-wrap items-center text-gray-500 dark:text-gray-400 mb-4 gap-4">
         <!-- Date -->
         <div class="flex items-center ">
           <Icon name="mdi:calendar" class="w-5 h-5 mr-1" />
@@ -101,20 +102,20 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       </div>
       
       <!-- Title -->
-      <h1 class="opacity-0 translate-y-4 animate-fade-up text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <h1 class=" text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
         {title}
       </h1>
       
       <!-- Description -->
       {description && (
-        <p class="opacity-0 translate-y-4 animate-fade-up text-lg text-gray-700 dark:text-gray-300 mb-6">
+        <p class=" text-lg text-gray-700 dark:text-gray-300 mb-6">
           {description}
         </p>
       )}
       
       <!-- Featured Image -->
       {image && (
-  <figure class=" opacity-0 translate-y-4 animate-fade-up mb-8 rounded-lg overflow-hidden aspect-video relative">
+  <figure class="mb-8 rounded-lg overflow-hidden aspect-video relative">
     <Image
       src={image}
       alt=""
@@ -122,6 +123,9 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       width={900}
       height={600}
       loading="eager"
+      fetchpriority="high"
+      quality={80}
+      sizes="(max-width: 768px) 100vw, 1200px"
       class="absolute inset-0 w-full h-full object-cover"
     />
   </figure>
@@ -164,7 +168,7 @@ breadcrumbs.push({ name: title, url: canonicalURL });
     <!-- Social Share Component -->
     <SocialShare
       title={title}
-      description={description || ''}
+      description={description}
       url={canonicalURL}
     />
     
@@ -180,11 +184,9 @@ document.querySelectorAll("pre").forEach((pre) => {
 
   button.addEventListener("click", () => {
     const code = pre.querySelector("code")?.innerText;
-    if (code) {
-      navigator.clipboard.writeText(code);
-      button.innerText = "Sukses dicopy!";
-      setTimeout(() => (button.innerText = "Copy"), 2000);
-    }
+    navigator.clipboard.writeText(code);
+    button.innerText = "Sukses dicopy!";
+    setTimeout(() => (button.innerText = "Copy"), 2000);
   });
 
   pre.appendChild(button);
