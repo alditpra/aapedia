@@ -5,7 +5,6 @@ import Header from "@components/common/Header.astro";
 import Footer from "@components/common/Footer.astro";
 import SEO from "@components/common/SEO.astro";
 import { siteConfig } from '@config/site';
-
 interface Props {
   title?: string;
   description?: string;
@@ -23,7 +22,6 @@ interface Props {
   tags?: string[];
   categories?: string[];
 }
-
 const {
   title = siteConfig.title,
   description = siteConfig.description,
@@ -39,7 +37,6 @@ const {
   categories
 } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,17 +48,13 @@ const {
   <meta name="generator" content={Astro.generator} />
   <meta name="theme-color" content="#ffffff" />
   <meta name="color-scheme" content="light dark" />
-
   <script is:inline>
     // Hanya untuk pemuatan pertama kali, mencegah kedipan awal
     const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     if (theme === 'dark') document.documentElement.classList.add('dark');
   </script>
-
-
   <title>{title}</title>
   <meta name="description" content={description} />
-
   <style is:inline>
     body {
       margin: 0;
@@ -79,7 +72,6 @@ const {
     .prose pre { overflow-x: auto; background-color: #f3f4f6; border-radius: 0.375rem; padding: 1rem; }
     .dark .prose pre { background-color: #1f2937; }
   </style>
-
   <SEO
     title={title}
     description={description}
@@ -94,25 +86,24 @@ const {
     categories={categories}
   />
 </head>
-
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
   <Header />
   <main class="w-full flex-grow">
-    <div class:list={[ "mx-auto px-4 sm:px-6", wideContent ? "w-full" : "max-w-5xl" ]}>
+    <div class:list={[ "mx-auto px-4 sm:px-6", wideContent ? "max-w-none" : "max-w-5xl" ]}>
       <slot />
     </div>
   </main>
   <Footer />
-
   <script>
     // Skrip ini mencegah kedipan putih saat navigasi
     document.addEventListener('astro:before-swap', (event) => {
       const theme = localStorage.getItem('theme');
       if (theme === 'dark') {
-        event.detail.newDocument.documentElement.classList.add('dark');
+        // Akses newDocument langsung dari event
+        event.newDocument.documentElement.classList.add('dark');
       } else {
         // Penting: Hapus kelas 'dark' jika tema bukan gelap
-        event.detail.newDocument.documentElement.classList.remove('dark');
+        event.newDocument.documentElement.classList.remove('dark');
       }
     });
   </script>
