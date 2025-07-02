@@ -49,15 +49,15 @@ breadcrumbs.push({ name: title, url: canonicalURL });
   <!-- Reading Progress Bar -->
 <ReadingProgress />
 
-<article class="w-full py-8" style="transition: opacity 0.3s ease;">
+<article class="w-full py-8 w-full py-8" style="transition: opacity 0.3s ease;">
     <!-- Breadcrumb Navigation -->
     <Breadcrumb items={breadcrumbs} className="mb-6" />
     
     <!-- Post Header -->
     <header class="mb-8">
-      <div class="flex flex-wrap items-center text-gray-500 dark:text-gray-400 mb-4 gap-4">
+      <div class="opacity-0 translate-y-4 animate-fade-up flex flex-wrap items-center text-gray-500 dark:text-gray-400 mb-4 gap-4">
         <!-- Date -->
-        <div class="flex items-center">
+        <div class="flex items-center ">
           <Icon name="mdi:calendar" class="w-5 h-5 mr-1" />
           <time datetime={date?.toISOString()}>
             {date ? formatDate(date) : ''}
@@ -102,20 +102,20 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       </div>
       
       <!-- Title -->
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <h1 class="opacity-0 translate-y-4 animate-fade-up text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
         {title}
       </h1>
       
       <!-- Description -->
       {description && (
-        <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+        <p class="opacity-0 translate-y-4 animate-fade-up text-lg text-gray-700 dark:text-gray-300 mb-6">
           {description}
         </p>
       )}
       
       <!-- Featured Image -->
       {image && (
-  <figure class="mb-8 rounded-lg overflow-hidden aspect-video relative">
+  <figure class=" opacity-0 translate-y-4 animate-fade-up mb-8 rounded-lg overflow-hidden aspect-video relative">
     <Image
       src={image}
       alt=""
@@ -182,7 +182,7 @@ document.querySelectorAll("pre").forEach((pre) => {
   button.addEventListener("click", () => {
     const code = pre.querySelector("code")?.innerText;
     navigator.clipboard.writeText(code);
-    button.innerText = "Copied!";
+    button.innerText = "Sukses dicopy!";
     setTimeout(() => (button.innerText = "Copy"), 2000);
   });
 

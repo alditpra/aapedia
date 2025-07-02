@@ -52,15 +52,15 @@ const paginatedPosts = posts.slice(startIndex, endIndex);
 ---
 
 <Layout 
-  title={`Blog - Page ${currentPage} - ${siteConfig.title}`}
-  description={`Explore our articles, tutorials, and insights - Page ${currentPage}`}
+  title={`Blog - Halaman ${currentPage} - ${siteConfig.title}`}
+  description={`Ide, catatan, dan cerita - Halaman ${currentPage}`}
   noindex={true}
 >
-  <main class="w-full">
+  <main class="w-full opacity-0 translate-y-4 animate-fade-up">
     <header ease-in-out transition-[opacity] transition:persist class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog</h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        Page {currentPage} of {totalPages} - Explore our articles, tutorials, and insights
+        Page {currentPage} of {totalPages} - Eksploarsi ide, catatan, dan cerita terbaru dari kami.
       </p>
     </header>
     
