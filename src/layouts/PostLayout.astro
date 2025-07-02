@@ -13,6 +13,11 @@ import Breadcrumb from '@layouts/components/common/Breadcrumb.astro';
 const { post, headings } = Astro.props;
 const { title, description, image, date, categories, authors, tags } = post.data;
 
+// Optimasi khusus untuk mobile
+const isMobile = new Astro.request.headers.get('sec-ch-ua-mobile') === '?1';
+const mobileWidth = 640;
+const desktopWidth = 900;
+
 // Get the canonical URL for this post
 // Make sure we have a valid site URL to avoid the TypeError: Invalid URL error
 const canonicalURL = Astro.site 
@@ -114,17 +119,23 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       
       <!-- Featured Image -->
       {image && (
-  <figure class="  mb-8 rounded-lg overflow-hidden aspect-video relative">
-    <Image
-      src={image}
-      alt=""
-      aria-hidden="true"
-      width={900}
-      height={600}
-      loading="eager"
-      class="absolute inset-0 w-full h-full object-cover"
-    />
-  </figure>
+<figure class="mb-8 rounded-lg overflow-hidden aspect-video relative">
+  <Image
+    src={image}
+    alt="" // Alt text is not provided, assuming decorative image
+    width={desktopWidth}
+    height={Math.round(desktopWidth * 0.6667)} // 16:9 aspect ratio
+    widths={[375, 640, 900, 1280]} // Mencakup semua ukuran device
+    sizes="(max-width: 480px) 92vw, (max-width: 768px) 88vw, (max-width: 1024px) 82vw, 800px"
+    quality={isMobile ? 75 : 85} // Kompresi lebih agresif di mobile
+    loading={Astro.props.index === 0 ? 'eager' : 'lazy'} // Eager hanya untuk gambar pertama
+    decoding="async"
+    class="absolute inset-0 w-full h-full object-cover"
+    style="background-color: #f3f4f6; transition: opacity 0.4s"
+    densities={[1, 2]} // Support retina displays
+    fetchpriority={Astro.props.index === 0 ? 'high' : 'low'}
+  />
+</figure>
       )}
       
       <!-- Tags -->
