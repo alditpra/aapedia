@@ -136,7 +136,7 @@ import { siteConfig } from '@config/site';
 
       searchResults.classList.remove('hidden');
       noResults.classList.add('hidden');
-      searchInfo.textContent = `Ada ${results.length} ${results.length > 1 ? 's' : ''} hasil dari '${searchInput.value}'`;
+      searchInfo.textContent = `Ada ${results.length} ${results.length > 1 ? : ''} hasil dari '${searchInput.value}'`;
 
       results.forEach(result => {
         const post = result.item;
