@@ -8,7 +8,7 @@ authors: ["alditpra"]
 categories: ["Web Development"]
 tags: ["Astro", "Next.js", "Jamstack", "WordPress"]
 ---
-Memilih fondasi teknologi untuk proyek web di tahun 2025 bukan lagi perkara sederhana. Saya pribadi sudah sering dihadapkan pada dilema memilih antara berbagai framework dan pendekatan arsitektur, dari yang sederhana seperti WordPress dan Blogger, hingga pendekatan modern seperti Astro dan Next.js. 
+Memilih fondasi teknologi untuk proyek web di tahun 2025 bukan lagi perkara sederhana. Saya pribadi sudah sering dihadapkan pada dilema memilih antara berbagai framework dan pendekatan arsitektur, dari yang sederhana seperti WordPress dan Blogger, hingga pendekatan modern seperti Astro dan Next.js.
 
 Tulisan ini saya buat sebagai rangkuman pengalaman pribadi dan opini teknis saya. Bukan bermaksud memberi jawaban pasti, tapi semoga bisa memberi sudut pandang tambahan bagi Anda yang sedang mempertimbangkan teknologi web.
 
@@ -105,7 +105,7 @@ Berikut ini pengalaman dan kesan saya terhadap beberapa platform populer:
 | Next.js     | Hibrida | ✅✅⚠️     | Bisa optimal, asal setting tepat                 |
 | WordPress   | Dinamis | ⚠️⚠️⚠️ | Sangat tergantung plugin & server-side rendering |
 
-> Disclaimer: Skor CWV di atas adalah indikasi umum, bukan hasil benchmark laboratorium.
+> Disclaimer: Skor CWV di atas adalah indikasi umum, bukan hasil benchmark resmi. Kalau bicara optimasi ya semua bisa di optimasi.
 
 ### 3.2 Pengalaman Developer (DX)
 
@@ -155,7 +155,7 @@ Dengan pendekatan ini, tim konten tetap bisa kerja nyaman, sementara frontend te
 | ---------------------------- | ---------------------------------------------------------------------- |
 | Blog pribadi                 | **Astro**, **Hugo**, atau **Blogger** (untuk pemula) |
 | Web App kompleks             | **Next.js** atau **Laravel** (kalau tim besar)             |
-| Klien non-teknis (mayoritas)            | **WordPress (Managed Hosting)** atau **Ghost**             |
+| Klien non-teknis (mayoritas) | **WordPress (Managed Hosting)** atau **Ghost**             |
 
 ---
 
