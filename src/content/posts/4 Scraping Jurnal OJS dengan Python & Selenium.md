@@ -160,7 +160,7 @@ Scraping membebani server. Melakukannya secara etis adalah kewajiban.
 
 ## Bagian 5: Hasil Akhir & Kesimpulan
 
-### Rekomendasi Output
+### Contoh Output
 
 Setelah semua proses selesai, skrip akan menghasilkan file Excel `hasil_scraping_multi_jurnal.xlsx` dengan tabel seperti berikut:
 
@@ -170,9 +170,10 @@ Setelah semua proses selesai, skrip akan menghasilkan file Excel `hasil_scraping
 | 2  | S3    | 2023-11-02     | Implementasi AI dalam Pendidikan Dasar       | AI; pendidikan; teknologi         | Penelitian ini mengeksplorasi penerapan AI pada kurikulum SD. | link buka pdfnya | link ke artikelnya | N/A kalau ga ada | Jurnal Teknologi Edukasi       |
 | 3  | S4    | 2024-01-28     | Pengaruh Sosial Media terhadap Literasi Anak | sosial media; literasi; anak-anak | Studi ini menyoroti efek penggunaan media sosial pada anak... | link buka pdfnya | link ke artikelnya | Link DOI         | Jurnal Komunikasi & Media Baru |
 
-Setiap satu web ojs jurnal bisa ambil satu saja issue terkini dan semua artikelnya, atau ambil semua issue yang pernah rilis. Jika input banyak url web jurnal ojs, ya outputnya bisa ribuan bahkan mungkin lebih.
-
 > Catatan: Data diatas dummy ya, kalau data asli beneran takut kena semprot
+
+Dari satu website jurnal OJS, kita bisa memilih untuk mengambil hanya satu *issue* terbaru (beserta seluruh artikelnya), atau mengambil semua *issue* yang sudah diterbitkan. Kalau kita memasukkan banyak URL jurnal sekaligus, jumlah data yang dihasilkan bisa mencapai ribuan artikel—atau bahkan lebih, tergantung skala jurnalnya. Lumayan lah ya.
+
 
 ### Penutup
 
