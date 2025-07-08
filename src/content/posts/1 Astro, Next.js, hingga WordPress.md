@@ -2,7 +2,7 @@
 title: "Arsitektur Web: Dari Astro, Next.js, WordPress, hingga Blogger"
 meta_title: "Opini pribadi dari Astro, Next.js, WordPress, hingga Blogger"
 description: "Pandangan tentang berbagai pendekatan arsitektur web, dari Astro, Next.js, Hugo, hingga WordPress dan Blogger. Mana yang cocok untuk kebutuhan Anda?"
-date: 2025-06-30
+
 image: "../../assets/images/post1/cover1.webp"
 authors: ["alditpra"]
 categories: ["Web Development"]
