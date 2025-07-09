@@ -1,54 +1,22 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Beranda",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Tentang",
       "url": "/about/"
     },
-    {
-      "name": "Series",
-      "url": "/series/"
-    },
 
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Authors",
-          "url": "/authors/"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories/"
-        },
-        {
-          "name": "Tags",
-          "url": "/tags/"
-        },
-        {
-          "name": "About",
-          "url": "/about/"
-        },
-        {
-          "name": "Privacy Policy",
-          "url": "/privacy/"
-        }
-      ]
-    },
-
-    {
-      "name": "Contact",
+      "name": "Kontak",
       "url": "/contact/"
     }
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "Tentang",
       "url": "/about/"
     },
     {

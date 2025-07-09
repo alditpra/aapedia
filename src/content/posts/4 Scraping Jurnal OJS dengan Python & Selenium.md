@@ -18,7 +18,7 @@ Tulisan ini adalah rangkuman pengalaman saya dalam membangun skrip untuk mengamb
 
 Pertanyaan ini pasti muncul pertama kali. Awalnya, saya juga berpikir `requests` dan `BeautifulSoup` sudah lebih dari cukup. Namun, kenyataannya di lapangan lebih rumit.
 
-Masalah utamanya adalah **banyak situs jurnal modern dilindungi oleh layanan anti-bot seperti Cloudflare**. Setiap kali saya mencoba menggunakan `requests`, hasilnya selalu gagal—diblokir dengan pesan "Access Denied" atau kena *rate limit*. Mengakali proteksi ini dengan *header* palsu atau *proxy* sederhana sudah tidak lagi efektif.
+Masalah utamanya adalah **banyak situs jurnal modern dilindungi oleh layanan anti-bot seperti Cloudflare**. Setiap kali saya mencoba menggunakan `requests`, hasilnya selalu gagal—diblokir dengan pesan "Access Denied" atau kena *rate limit*. Mengakali proteksi ini dengan *header* palsu atau *proxy* sederhana sudah tidak lagi efektif. Saya sudah banyak ngulik disini pak.
 
 > **Selenium menjadi solusi pamungkas.** Karena Selenium mengotomatisasi *browser* sungguhan (seperti Chrome atau Firefox), dari sisi server, aktivitas scraping terlihat seperti lalu lintas pengguna biasa.
 
@@ -31,7 +31,7 @@ Meskipun lebih lambat, **tingkat keberhasilan yang jauh lebih tinggi membuat Sel
 
 ## Bagian 2: Arsitektur Skrip yang Robust
 
-Pengalaman mengajarkan saya bahwa skrip yang baik harus fleksibel dan tahan banting.
+Pengalaman mengajarkan saya bahwa skrip yang baik harus fleksibel dan tahan banting. Meskipun ya itu sulit untuk dipenuhi.
 
 ### 2.1 Konfigurasi Fleksibel di Awal
 
@@ -98,7 +98,7 @@ def temukan_url_arsip(url_utama):
 
 ### 3.2 Tantangan: Struktur HTML yang Berbeda-beda
 
-Untuk mengatasi variasi struktur antar-versi OJS, saya menerapkan **strategi multi-selector** di dua tahap:
+Ini yang paling ribet. Untuk mengatasi variasi struktur antar-versi OJS, saya menerapkan **strategi multi-selector** di dua tahap:
 
 1. Saat mencari link isu
 2. Saat mencari link artikel
@@ -118,7 +118,7 @@ for selector in possible_selectors:
         break
 ```
 
-> Ini seperti mencoba beberapa anak kunci sampai menemukan yang pas—sederhana tapi sangat efektif.
+> Ini seperti mencoba beberapa anak kunci sampai menemukan yang pas—cari mana yang cocok, sering salah juga.
 
 ## Bagian 4: Ekstraksi Data & Etika Scraping
 
