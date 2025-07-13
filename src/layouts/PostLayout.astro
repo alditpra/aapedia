@@ -24,8 +24,7 @@ const canonicalURL = Astro.site
 // Generate breadcrumbs for structured data
 const breadcrumbs = [
   { name: 'Home', url: '/' },
-  { name: 'Blog', url: '/blog/' },
-  { name: 'Kategori', url: '/categories/' }
+  { name: 'Blog', url: '/blog/' }
 ];
 
 if (categories && categories.length > 0) {
@@ -58,15 +57,14 @@ breadcrumbs.push({ name: title, url: canonicalURL });
       <div class=" flex flex-wrap items-center text-gray-500 dark:text-gray-400 mb-4 gap-4">
         <!-- Date -->
         <div class="flex items-center ">
-          <Icon name="mdi:calendar" class="w-5 h-5 mr-1" />
-          <time datetime={date?.toISOString()}>
+          <time datetime="Update: "{date?.toISOString()}>
             {date ? formatDate(date) : ''}
           </time>
-        </div>
+        </div> 
         
 
         
-        <!-- Categories -->
+        <!-- Categories 
         {categories && categories.length > 0 && (
           <div class="flex items-center">
             <Icon name="mdi:folder" class="w-5 h-5 mr-1" />
@@ -81,13 +79,12 @@ breadcrumbs.push({ name: title, url: canonicalURL });
               ))}
             </div>
           </div>
-        )}
+        )} -->
         
         <!-- Author -->
         {authors && authors.length > 0 && (
           <div class="flex items-center">
-            <Icon name="mdi:account" class="w-5 h-5 mr-1" />
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2">Author:
               {authors.map((author: string) => (
                 <a 
                   href={`/authors/${author.toLowerCase()}/`} 
@@ -99,7 +96,7 @@ breadcrumbs.push({ name: title, url: canonicalURL });
             </div>
           </div>
         )}
-      </div>
+      
       
       <!-- Title -->
       <h1 class=" text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
